@@ -1,0 +1,58 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2022",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "@homm3boardgame/battle-ai": [
+        "libs/battle-ai/features/battle-board/src/index.ts"
+      ],
+      "@homm3boardgame/cell-editor": [
+        "libs/map-editor/features/cell-editor/src/index.ts"
+      ],
+      "@homm3boardgame/config": ["libs/shared/config/src/index.ts"],
+      "@homm3boardgame/domain/state": ["libs/map-editor/domain/state/index.ts"],
+      "@homm3boardgame/edit-tile-dialog": [
+        "libs/map-editor/features/edit-tile-dialog/src/index.ts"
+      ],
+      "@homm3boardgame/footer": [
+        "libs/map-editor/features/footer/src/index.ts"
+      ],
+      "@homm3boardgame/grid": ["libs/map-editor/features/grid/src/index.ts"],
+      "@homm3boardgame/import-export": [
+        "libs/map-editor/features/import-export/src/index.ts"
+      ],
+      "@homm3boardgame/map-editor": [
+        "libs/map-editor/features/editor-base/src/index.ts"
+      ],
+      "@homm3boardgame/placed-tiles": [
+        "libs/map-editor/features/placed-tiles/src/index.ts"
+      ],
+      "@homm3boardgame/random-map-dialog": [
+        "libs/map-editor/features/random-map-dialog/src/index.ts"
+      ],
+      "@homm3boardgame/select-tile": [
+        "libs/map-editor/features/select-tile/src/index.ts"
+      ],
+      "@homm3boardgame/shared/ui": ["libs/shared/ui/src/index.ts"],
+      "@homm3boardgame/simulator": [
+        "libs/simulator/features/simulator/src/index.ts"
+      ],
+      "@homm3boardgame/tile": ["libs/map-editor/features/tile/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

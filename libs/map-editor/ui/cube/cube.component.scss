@@ -1,0 +1,91 @@
+i {
+  font-size: 20px;
+}
+
+.color-0 {
+  display: none;
+}
+
+// black
+.color-1 {
+  i {
+    color: black;
+    filter: drop-shadow(0px 0px 2px #ffffff);
+  }
+}
+// necropolis
+.color-2 {
+  i {
+    color: grey;
+    //filter: drop-shadow(0px 0px 2px #000000);
+  }
+}
+
+// castle
+.color-3 {
+  i {
+    color: lightblue;
+    filter: drop-shadow(0px 0px 2px #000000);
+  }
+}
+
+// dungeon
+.color-4 {
+  i {
+    color: rebeccapurple;
+    filter: drop-shadow(0px 0px 2px #fff);
+  }
+}
+
+// tower
+.color-5 {
+  i {
+    color: lightgrey;
+    filter: drop-shadow(0px 0px 2px #000);
+  }
+}
+// rampart
+.color-6 {
+  i {
+    color: green;
+    filter: drop-shadow(0px 0px 4px #fff);
+  }
+}
+// fortress
+.color-7 {
+  i {
+    color: darkolivegreen;
+    filter: drop-shadow(0px 0px 4px #fff);
+  }
+}
+// inferno
+.color-8 {
+  i {
+    color: darkred;
+    filter: drop-shadow(0px 0px 4px #fff);
+  }
+}
+
+// stronghold
+.color-9 {
+  i {
+    color: #CCCC99;
+    filter: drop-shadow(0px 0px 4px #fff);
+  }
+}
+
+// conflux
+.color-10 {
+  i {
+    color: #FF99CC;
+    filter: drop-shadow(0px 0px 4px #fff);
+  }
+}
+
+// cove
+.color-11 {
+  i {
+    color: #66CC99;
+    filter: drop-shadow(0px 0px 4px #fff);
+  }
+}

@@ -1,0 +1,16 @@
+<div class="container">
+  <select name="hero" #hero (change)="selectHero(hero.value)" [(ngModel)]="selectedHero">
+    <option class="first" [value]="''">- No Hero -</option>
+    <optgroup label="{{getFactionDesc(faction)}}" *ngFor="let faction of factions()">
+      <option *ngFor="let hero of getHeroesByFaction(faction)" [value]="hero.value">{{hero.name}}</option>
+    </optgroup>
+  </select>
+
+  <select name="cube" #cube (change)="selectCube(cube.value)" [(ngModel)]="selectedCube">
+    @for(cube of cubes(); track cube) {
+      <option [value]="cube.value">{{cube.name}}</option>
+    }
+  </select>
+</div>
+<app-cube [id]="selectedCube()"></app-cube>
+<app-portrait [id]="selectedHero()"></app-portrait>

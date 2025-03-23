@@ -1,0 +1,38 @@
+:host {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.footer {
+  $gap: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: $gap;
+
+
+  .no-gap-left {
+    margin-left: -$gap;
+  }
+
+
+  background-color: white;
+  //filter: drop-shadow(0 0 2px rgba(0,0,0,.3));
+
+  background-image: url("public/assets/shared/UI/dialog-background.png");
+
+  background-repeat: repeat;
+
+  padding: 10px;
+
+  border-image-source: linear-gradient(to bottom, #b4a46d, #9e8236);
+  border-image-slice: 3;
+  border-image-width: 3px;
+}
+//
+//homm-button {
+//  margin-left: 10px;
+//}

@@ -1,0 +1,144 @@
+{
+  "PORTRAITS": {
+    "CATHERINE": {
+      "image": "assets/map-editor/portraits/catherine.png",
+      "desc": "Catherine",
+      "faction": "CASTLE"
+    },
+    "SANDRO": {
+      "image": "assets/map-editor/portraits/sandro.png",
+      "desc": "Sandro",
+      "faction": "NECROPOLIS"
+    },
+    "MUTARE": {
+      "image": "assets/map-editor/portraits/mutare.png",
+      "desc": "Mutare",
+      "faction": "DUNGEON"
+    },
+    "SOLMYR": {
+      "image": "assets/map-editor/portraits/solmyr.png",
+      "desc": "Solmyr",
+      "faction": "TOWER"
+    },
+    "ALAMAR": {
+      "image": "assets/map-editor/portraits/alamar.png",
+      "desc": "Alamar",
+      "faction": "DUNGEON"
+    },
+    "DRACON": {
+      "image": "assets/map-editor/portraits/dracon.png",
+      "desc": "Dracon",
+      "faction": "TOWER"
+    },
+    "RION": {
+      "image": "assets/map-editor/portraits/rion.png",
+      "desc": "Rion",
+      "faction": "CASTLE"
+    },
+    "TAMIKA": {
+      "image": "assets/map-editor/portraits/tamika.png",
+      "desc": "Tamika",
+      "faction": "NECROPOLIS"
+    },
+    "GEM": {
+      "image": "assets/map-editor/portraits/gem.png",
+      "desc": "Gem",
+      "faction": "RAMPART"
+    },
+    "GELU": {
+      "image": "assets/map-editor/portraits/gelu.png",
+      "desc": "Gelu",
+      "faction": "RAMPART"
+    },
+    "ADRIENNE": {
+      "image": "assets/map-editor/portraits/adrienne.png",
+      "desc": "Adrienne",
+      "faction": "FORTRESS"
+    },
+    "WYSTAN": {
+      "image": "assets/map-editor/portraits/wystan.png",
+      "desc": "Wystan",
+      "faction": "FORTRESS"
+    },
+    "ADELAIDE": {
+      "image": "assets/map-editor/portraits/adelaide.png",
+      "desc": "Adelaide",
+      "faction": "CASTLE"
+    },
+    "JEDDITE": {
+      "image": "assets/map-editor/portraits/jeddite.png",
+      "desc": "Jeddite",
+      "faction": "DUNGEON"
+    },
+    "MEPHALA": {
+      "image": "assets/map-editor/portraits/mephala.png",
+      "desc": "Mephala",
+      "faction": "RAMPART"
+    },
+    "HAART_DEATH": {
+      "image": "assets/map-editor/portraits/haart-dead.png",
+      "desc": "Lord Haart Deathknight",
+      "faction": "NECROPOLIS"
+    },
+    "HAART_KNIGHT": {
+      "image": "assets/map-editor/portraits/haart-knight.png",
+      "desc": "Lord Haart Knight",
+      "faction": "CASTLE"
+    },
+    "VIDOMINA": {
+      "image": "assets/map-editor/portraits/vidomina.png",
+      "desc": "Vidomina",
+      "faction": "NECROPOLIS"
+    },
+    "DEEMER": {
+      "image": "assets/map-editor/portraits/deemer.png",
+      "desc": "Deemer",
+      "faction": "DUNGEON"
+    },
+    "TAZAR": {
+      "image": "assets/map-editor/portraits/tazar.png",
+      "desc": "Tazar",
+      "faction": "FORTRESS"
+    },
+    "BRON": {
+      "image": "assets/map-editor/portraits/bron.png",
+      "desc": "Bron",
+      "faction": "FORTRESS"
+    },
+    "CLANCY": {
+      "image": "assets/map-editor/portraits/clancy.png",
+      "desc": "Clancy",
+      "faction": "RAMPART"
+    },
+    "IONA": {
+      "image": "assets/map-editor/portraits/iona.png",
+      "desc": "Iona",
+      "faction": "TOWER"
+    },
+    "JOSEPHINE": {
+      "image": "assets/map-editor/portraits/josephine.png",
+      "desc": "Josephine",
+      "faction": "TOWER"
+    },
+    "FIONA": {
+      "image": "assets/map-editor/portraits/fiona.png",
+      "desc": "Fiona",
+      "faction": "INFERNO"
+    },
+    "XYRON": {
+      "image": "assets/map-editor/portraits/xyron.png",
+      "desc": "Xyron",
+      "faction": "INFERNO"
+    },
+    "ZYDAR": {
+      "image": "assets/map-editor/portraits/zydar.png",
+      "desc": "Zydar",
+      "faction": "INFERNO"
+    },
+    "RASHKA": {
+      "image": "assets/map-editor/portraits/rashka.png",
+      "desc": "Rashka",
+      "faction": "INFERNO"
+    }
+  }
+}

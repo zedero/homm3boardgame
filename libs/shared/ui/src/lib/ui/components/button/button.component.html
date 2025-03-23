@@ -1,0 +1,12 @@
+<button
+  [disabled]="disabled()"
+  [attr.aria-label]="ariaLabel()"
+  class="button button--{{theme()}}">
+  @if(iconLeft()) {
+    <i class="fa-solid fa-{{iconLeft()}}"></i>
+  }
+  <ng-content></ng-content>
+  @if(iconRight()) {
+    <i class="fa-solid fa-{{iconRight()}}"></i>
+  }
+</button>

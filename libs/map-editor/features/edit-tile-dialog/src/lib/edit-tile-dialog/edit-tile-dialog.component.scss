@@ -1,0 +1,32 @@
+
+.edit-container {
+  padding: 15px;
+}
+
+.tileContainer {
+  width: 100%;
+  height: 100%;
+
+  img {
+    height: 374px;
+    width: 387px;
+  }
+}
+
+.ui {
+  position: absolute;
+
+  .row {
+    display: flex;
+    &:nth-child(1), &:nth-child(3) {
+      margin-left: 64.5px;
+    }
+    margin-bottom: -37px;
+
+    .cell {
+      width: 129px;
+      height: 149px;
+    }
+  }
+}
+

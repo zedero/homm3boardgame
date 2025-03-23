@@ -1,0 +1,54 @@
+<homm-dialog title="Generate random map" (closeDialog)="close()">
+  <div sub-header>
+    <div class="filter" [formGroup]="sets">
+      <span class="formTitle">Expansions:</span>
+      @for (filter of expansionsFilter; track filter) {
+        <mat-checkbox (change)="checkExpansion(filter.name, $event)" [checked]="expansionsFilterSettings()[filter.name]">{{filter.desc}}</mat-checkbox>
+      }
+    </div>
+  </div>
+
+  <div class="formBlock">
+    <div class="formBlock-title">Map size</div>
+    <mat-radio-group
+      aria-labelledby="mapsize-group-label"
+      class="mapSize"
+      [(ngModel)]="selectedMapSize"
+    >
+      @for(size of mapSizeOptions; track size) {
+        <mat-radio-button [value]="size.value" (change)="selectMapSize(size.value)">
+          {{size.name}}
+        </mat-radio-button>
+      }
+    </mat-radio-group>
+  </div>
+
+  <div class="formBlock">
+    <div class="formBlock-title">Player count</div>
+    <mat-radio-group
+      aria-labelledby="player-count-group-label"
+      class="mapSize"
+      [(ngModel)]="selectedPlayers"
+    >
+      @for(count of playerOptions; track count) {
+        <mat-radio-button [value]="count.value" (change)="selectPlayerCount(count.value)">
+          {{count.name}}
+        </mat-radio-button>
+      }
+    </mat-radio-group>
+  </div>
+
+  <div class="formBlock">
+    <div class="formBlock-title">Flip Tiles</div>
+    @if(flip()) {
+      @for (filter of flip(); track filter) {
+        <mat-checkbox (change)="toggleSetting(filter.name, $event)" [checked]="flipTilesSettings()[filter.name]">{{filter.desc}}</mat-checkbox>
+        <br>
+      }
+    }
+  </div>
+  <hr>
+  <homm-button theme="secondary" (click)="generateRandomMap()">Generate Random Map</homm-button>
+
+
+</homm-dialog>

@@ -1,0 +1,11 @@
+<div class="grid" id="grid">
+  @for (row of rows(); track row) {
+    <div class="row">
+      @for (column of columns(); track column) {
+        <div class="column">
+          <app-cell [rowId]="row" [colId]="column"></app-cell>
+        </div>
+      }
+    </div>
+  }
+</div>

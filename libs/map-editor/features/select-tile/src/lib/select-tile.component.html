@@ -1,0 +1,24 @@
+<homm-dialog (closeDialog)="close()" title="Select tile">
+    <div sub-header>
+      <div class="filter" [formGroup]="sets">
+        <span class="formTitle">Expansions:</span>
+        @for (filter of expansionsFilter; track filter) {
+          <mat-checkbox (change)="saveFilterOptions(filter.name, $event)" [checked]="expansionsFilterSettings()[filter.name]">{{filter.desc}}</mat-checkbox>
+        }
+      </div>
+    </div>
+<!--  content-->
+    <div>
+      @for(group of enumToList(this.GROUP); track group;){
+        <div class="tileContainer" *ngIf="getGroup(tilesConfiguration, GROUP[group]).length">
+            <div class="title">{{config.GROUP_DESC()[group]}} <span class="tilesLeft">{{getLeft(group).current + '/' +  getLeft(group).total}}</span></div>
+            @for(tile of getGroup(tilesConfiguration, GROUP[group]); track tile;){
+              <div class="mini-tile">
+                <img src="{{tile.img}}" alt="{{tile.desc}}">
+                <button (click)="selectTile(tile.id)">Add {{tile.desc}}</button>
+              </div>
+            }
+          </div>
+      }
+    </div>
+</homm-dialog>

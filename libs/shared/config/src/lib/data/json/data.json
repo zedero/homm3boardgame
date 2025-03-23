@@ -1,0 +1,88 @@
+{
+  "GROUNDTYPE": [
+    "RANDOM",
+    "GRASS",
+    "SUBTERRAIN",
+    "CURSED",
+    "SNOW",
+    "SWAMP",
+    "LAVA"
+  ],
+  "GROUP": [
+    "RANDOM",
+    "STARTINGTILE",
+    "FAR",
+    "NEAR",
+    "CENTER"
+  ],
+  "GROUP_DESC": {
+    "STARTINGTILE": "Starting Town Tiles",
+    "RANDOM": "Random Tiles",
+    "FAR": "Far Tiles",
+    "NEAR": "Near Tiles",
+    "CENTER": "Center Tiles"
+  },
+  "EXPANSION": [
+    "RANDOM",
+    "CORE",
+    "TOWER",
+    "RAMPART",
+    "FORTRESS",
+    "INFERNO"
+  ],
+  "EXPANSION_CONTENTS": {
+    "RANDOM": {
+      "TOWN": 0,
+      "FAR": 0,
+      "NEAR": 0,
+      "CENTER": 0
+    },
+    "CORE": {
+      "TOWN": 3,
+      "FAR": 9,
+      "NEAR": 6,
+      "CENTER": 2
+    },
+    "TOWER": {
+      "TOWN": 1,
+      "FAR": 10,
+      "NEAR": 2,
+      "CENTER": 1
+    },
+    "RAMPART": {
+      "TOWN": 1,
+      "FAR": 3,
+      "NEAR": 2,
+      "CENTER": 1
+    },
+    "FORTRESS": {
+      "TOWN": 1,
+      "FAR": 3,
+      "NEAR": 2,
+      "CENTER": 1
+    },
+    "INFERNO": {
+      "TOWN": 1,
+      "FAR": 3,
+      "NEAR": 2,
+      "CENTER": 1
+    }
+  },
+  "EXPANSION_FILTER_DESC": {
+    "RANDOM": "Random",
+    "CORE": "Core",
+    "TOWER": "Tower",
+    "RAMPART": "Rampart",
+    "FORTRESS": "Fortress",
+    "INFERNO": "Inferno"
+  },
+  "FACTIONS": {
+    "CASTLE": "Castle",
+    "NECROPOLIS": "Necropolis",
+    "DUNGEON": "Dungeon",
+    "TOWER": "Tower",
+    "RAMPART": "Rampart",
+    "FORTRESS": "Fortress",
+    "INFERNO": "Inferno"
+  }
+}

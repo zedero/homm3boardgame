@@ -1,0 +1,13 @@
+<div class="dialog">
+  <div class="header">
+    <div class="title">{{title()}}</div>
+<!--    <button (click)="close()" class="closeButton"><i class="fa-solid fa-xmark"></i></button>-->
+    <homm-button (click)="closeDialog.emit()" [ariaLabel]="'Close dialog'" [theme]="'secondary'"  [iconLeft]="'xmark'"></homm-button>
+  </div>
+  <div class="sub-header">
+    <ng-content select="[sub-header]"></ng-content>
+  </div>
+  <div class="content">
+    <ng-content></ng-content>
+  </div>
+</div>

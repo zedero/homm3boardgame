@@ -1,0 +1,39 @@
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+  //background: red;
+  background-image: url("../../../../../../public/assets/shared/UI/void.png");
+  background-position: center center;
+
+  &:after {
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
+}
+.invalid-map {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  z-index: 1000;
+  opacity: .75;
+  pointer-events: none;
+  transition: .25s opacity;
+
+  &.show {
+    opacity: .75;
+  }
+}

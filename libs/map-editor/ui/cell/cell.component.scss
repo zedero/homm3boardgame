@@ -1,0 +1,77 @@
+
+.addTile {
+  $height: 100px;
+  $width: 86px;
+
+  clip-path: polygon(50% 0%, 100% 26%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
+  height: $height;
+  width: $width;
+
+  position: absolute;
+  top: 0;
+  z-index: 1;
+
+  cursor: pointer;
+  transition: opacity .2s;
+
+  opacity: .15;
+  background-color: transparent;
+
+  border: none;
+  border-radius: 2px;
+  font-size: 25px;
+
+  color: white;
+
+}
+
+.cell {
+  //border: 1px solid red;
+  width: 86px;
+  height: 100px;
+  margin-left: 0px;
+  margin-right: 0px;
+  position: relative;
+
+  &:hover .addTile {
+    opacity: 1;
+  }
+}
+
+
+img {
+  width: 86px;
+  height: 100px;
+  opacity: .3;
+  transition: opacity .2s;
+
+  &:hover {
+    //opacity: 1;
+  }
+
+}
+
+.cellNr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: .5;
+
+  &.blocked {
+    background-color: rgba(255,0,0,.3);
+    clip-path: polygon(50% 0%, 100% 26%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    pointer-events: none;
+  }
+  &.connected {
+    background-color: rgba(0,255,0,.3);
+    clip-path: polygon(50% 0%, 100% 26%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    pointer-events: none;
+  }
+
+}

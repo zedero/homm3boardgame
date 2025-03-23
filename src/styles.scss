@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; width: 100%; box-sizing: border-box; padding: 0; margin: 0; }
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+:root {
+  --primary: #ffe98c;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+
+//#############################################################
+//######################    MOVE LATER     ####################
+//#############################################################
+select {
+  //font-family: "Times New Roman", serif;
+  font-family: "Times New Roman";
+  font-size: 1.6rem;
+  font-weight: lighter;
+  color: var(--primary);
+  background: url("public/assets/shared/UI/panelcoloredbg.jpg");
+
+  option {
+    font-size: 1.6rem;
+    font-weight: lighter;
+    background: #2b4289;
+
+    &.first {
+      font-size: 1.7rem;
+      text-align: center;
+    }
+  }
+
+  optgroup {
+    background: #2b4289;
+    font-weight: lighter;
+    font-size: 1.8rem;
+  }
+}

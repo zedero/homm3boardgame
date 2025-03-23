@@ -1,0 +1,17 @@
+<homm-dialog title="Import / Export Map" (closeDialog)="close()">
+  <div class="container">
+    <div class="column">
+      <label>Import Map</label>
+      <textarea [(ngModel)]="importValue"></textarea>
+      <homm-button (click)="import()" theme="secondary">Import Map</homm-button>
+    </div>
+
+<!--      <hr>-->
+
+    <div class="column">
+      <label>Export Map</label>
+      <textarea>{{exportValue()}}</textarea>
+      <homm-button [cdkCopyToClipboard]="exportValue()" theme="secondary">Copy to clipboard</homm-button>
+    </div>
+  </div>
+</homm-dialog>

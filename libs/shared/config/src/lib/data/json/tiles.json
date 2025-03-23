@@ -1,0 +1,724 @@
+{
+  "RANDOM_TILES": {
+    "S0": {
+      "id": "S0",
+      "img": "assets/map-editor/tiles/special/random-1.png",
+      "desc": "Random Starting tile",
+      "expansionID": "EXPANSION.RANDOM",
+      "groundType": "GROUNDTYPE.RANDOM",
+      "group": "GROUP.RANDOM",
+      "blocked": [0,0,0,0,0,0,0]
+    },
+    "F0": {
+      "id": "F0",
+      "img": "assets/map-editor/tiles/special/random-2-3.png",
+      "desc": "Random Far Tile",
+      "expansionID": "EXPANSION.RANDOM",
+      "groundType": "GROUNDTYPE.RANDOM",
+      "group": "GROUP.RANDOM",
+      "blocked": [0,0,0,0,0,0,0]
+    },
+    "N0": {
+      "id": "N0",
+      "img": "assets/map-editor/tiles/special/random-4-5.png",
+      "desc": "Random Near Tile",
+      "expansionID": "EXPANSION.RANDOM",
+      "groundType": "GROUNDTYPE.RANDOM",
+      "group": "GROUP.RANDOM",
+      "blocked": [0,0,0,0,0,0,0]
+    },
+    "C0": {
+      "id": "C0",
+      "img": "assets/map-editor/tiles/special/random-6-7.png",
+      "desc": "Random Center Tile",
+      "expansionID": "EXPANSION.RANDOM",
+      "groundType": "GROUNDTYPE.RANDOM",
+      "group": "GROUP.RANDOM",
+      "blocked": [0,0,0,0,0,0,0]
+    },
+    "PLACEHOLDER": {
+      "id": "PLACEHOLDER",
+      "img": "assets/map-editor/tiles/special/placeholder-debug.png",
+      "desc": "Random Center Tile",
+      "expansionID": "EXPANSION.RANDOM",
+      "groundType": "GROUNDTYPE.RANDOM",
+      "group": "GROUP.RANDOM",
+      "blocked": [0,0,0,0,0,0,0]
+    }
+  },
+  "TILES": {
+    "#C1": {
+      "id": "#C1",
+      "img": "assets/map-editor/tiles/_C1.png",
+      "desc": "Center Tile #C1",
+      "expansionID": "EXPANSION.TOWER",
+      "groundType": "GROUNDTYPE.SNOW",
+      "group": "GROUP.CENTER",
+      "blocked": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "#F1": {
+      "id": "#F1",
+      "img": "assets/map-editor/tiles/_F1.png",
+      "desc": "Far Tile #F1",
+      "expansionID": "EXPANSION.TOWER",
+      "groundType": "GROUNDTYPE.SNOW",
+      "group": "GROUP.FAR",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "#F2": {
+      "id": "#F2",
+      "img": "assets/map-editor/tiles/_F2.png",
+      "desc": "Far Tile #F2",
+      "expansionID": "EXPANSION.TOWER",
+      "groundType": "GROUNDTYPE.SNOW",
+      "group": "GROUP.FAR",
+      "blocked": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "#F3": {
+      "id": "#F3",
+      "img": "assets/map-editor/tiles/_F3.png",
+      "desc": "Far Tile #F3",
+      "expansionID": "EXPANSION.TOWER",
+      "groundType": "GROUNDTYPE.SNOW",
+      "group": "GROUP.FAR",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "#F4": {
+      "id": "#F4",
+      "img": "assets/map-editor/tiles/_F4.png",
+      "desc": "Far Tile #F4",
+      "expansionID": "EXPANSION.TOWER",
+      "groundType": "GROUNDTYPE.GRASS",
+      "group": "GROUP.FAR",
+      "blocked": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "#F5": {
+      "id": "#F5",
+      "img": "assets/map-editor/tiles/_F5.png",
+      "desc": "Far Tile #F5",
+      "expansionID": "EXPANSION.TOWER",
+      "groundType": "GROUNDTYPE.SUBTERRAIN",
+      "group": "GROUP.FAR",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "#F6": {
+      "id": "#F6",
+      "img": "assets/map-editor/tiles/_F6.png",
+      "desc": "Far Tile #F6",
+      "expansionID": "EXPANSION.TOWER",
+      "groundType": "GROUNDTYPE.CURSED",
+      "group": "GROUP.FAR",
+      "blocked": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "#F7": {
+      "id": "#F7",
+      "img": "assets/map-editor/tiles/_F7.png",
+      "desc": "Far Tile #F7",
+      "expansionID": "EXPANSION.TOWER",
+      "groundType": "GROUNDTYPE.SNOW",
+      "group": "GROUP.FAR",
+      "blocked": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "#F8": {
+      "id": "#F8",
+      "img": "assets/map-editor/tiles/_F8.png",
+      "desc": "Far Tile #F8",
+      "expansionID": "EXPANSION.TOWER",
+      "groundType": "GROUNDTYPE.GRASS",
+      "group": "GROUP.FAR",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    "#F9": {
+      "id": "#F9",
+      "img": "assets/map-editor/tiles/_F9.png",
+      "desc": "Far Tile #F9",
+      "expansionID": "EXPANSION.TOWER",
+      "groundType": "GROUNDTYPE.GRASS",
+      "group": "GROUP.FAR",
+      "blocked": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "#F10": {
+      "id": "#F10",
+      "img": "assets/map-editor/tiles/_F10.png",
+      "desc": "Far Tile #F10",
+      "expansionID": "EXPANSION.TOWER",
+      "groundType": "GROUNDTYPE.LAVA",
+      "group": "GROUP.FAR",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "#N1": {
+      "id": "#N1",
+      "img": "assets/map-editor/tiles/_N1.png",
+      "desc": "Near Tile #N1",
+      "expansionID": "EXPANSION.TOWER",
+      "groundType": "GROUNDTYPE.SNOW",
+      "group": "GROUP.NEAR",
+      "blocked": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "#N2": {
+      "id": "#N2",
+      "img": "assets/map-editor/tiles/_N2.png",
+      "desc": "Far Tile #N2",
+      "expansionID": "EXPANSION.TOWER",
+      "groundType": "GROUNDTYPE.SNOW",
+      "group": "GROUP.NEAR",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    "#N3": {
+      "id": "#N3",
+      "img": "assets/map-editor/tiles/_N3.png",
+      "desc": "Far Tile #N3",
+      "expansionID": "EXPANSION.TOWER",
+      "groundType": "GROUNDTYPE.GRASS",
+      "group": "GROUP.NEAR",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    "F10": { "id": "F10", "img": "assets/map-editor/tiles/F10.png", "desc": "Far Tile F10", "expansionID": "EXPANSION.RAMPART", "groundType": "GROUNDTYPE.GRASS", "group": "GROUP.FAR", "blocked": [ 0, 0, 0, 0, 1, 0 ] },
+    "F11": { "id": "F11", "img": "assets/map-editor/tiles/F11.png", "desc": "Far Tile F11", "expansionID": "EXPANSION.RAMPART", "groundType": "GROUNDTYPE.GRASS", "group": "GROUP.FAR", "blocked": [ 0, 0, 1, 0, 0, 0 ] },
+    "F12": { "id": "F12", "img": "assets/map-editor/tiles/F12.png", "desc": "Far Tile F12", "expansionID": "EXPANSION.RAMPART", "groundType": "GROUNDTYPE.GRASS", "group": "GROUP.FAR", "blocked": [ 1, 0, 0, 0, 0, 0 ] },
+    "F13": { "id": "F13", "img": "assets/map-editor/tiles/F13.png", "desc": "Far Tile F13", "expansionID": "EXPANSION.FORTRESS", "groundType": "GROUNDTYPE.SWAMP", "group": "GROUP.FAR", "blocked": [ 1, 0, 0, 0, 0, 0 ] },
+    "F14": { "id": "F14", "img": "assets/map-editor/tiles/F14.png", "desc": "Far Tile F14", "expansionID": "EXPANSION.FORTRESS", "groundType": "GROUNDTYPE.SWAMP", "group": "GROUP.FAR", "blocked": [ 0, 0, 0, 0, 0, 0 ] },
+    "F15": { "id": "F15", "img": "assets/map-editor/tiles/F15.png", "desc": "Far Tile F15", "expansionID": "EXPANSION.FORTRESS", "groundType": "GROUNDTYPE.SWAMP", "group": "GROUP.FAR", "blocked": [ 0, 0, 0, 1, 0, 0 ] },
+    "F17": { "id": "F17", "img": "assets/map-editor/tiles/F17.png", "desc": "Far Tile F17", "expansionID": "EXPANSION.INFERNO", "groundType": "GROUNDTYPE.LAVA", "group": "GROUP.FAR", "blocked": [ 0, 0, 1, 0, 0, 0 ] },
+    "F18": { "id": "F18", "img": "assets/map-editor/tiles/F18.png", "desc": "Far Tile F18", "expansionID": "EXPANSION.INFERNO", "groundType": "GROUNDTYPE.LAVA", "group": "GROUP.FAR", "blocked": [ 1, 0, 0, 0, 0, 0 ] },
+    "C3": { "id": "C3", "img": "assets/map-editor/tiles/C3.png", "desc": "Center Tile C3", "expansionID": "EXPANSION.RAMPART", "groundType": "GROUNDTYPE.GRASS", "group": "GROUP.CENTER", "blocked": [ 0, 0, 0, 0, 1, 0 ] },
+    "C4": { "id": "C4", "img": "assets/map-editor/tiles/C4.png", "desc": "Center Tile C4", "expansionID": "EXPANSION.FORTRESS", "groundType": "GROUNDTYPE.SWAMP", "group": "GROUP.CENTER", "blocked": [ 0, 0, 0, 0, 1, 0 ] },
+    "N7": { "id": "N7", "img": "assets/map-editor/tiles/N7.png", "desc": "Near Tile N7", "expansionID": "EXPANSION.RAMPART", "groundType": "GROUNDTYPE.GRASS", "group": "GROUP.NEAR", "blocked": [ 0, 0, 1, 0, 0, 0 ] },
+    "N8": { "id": "N8", "img": "assets/map-editor/tiles/N8.png", "desc": "Near Tile N8", "expansionID": "EXPANSION.RAMPART", "groundType": "GROUNDTYPE.GRASS", "group": "GROUP.NEAR", "blocked": [ 0, 0, 1, 0, 0, 0 ] },
+    "N9": { "id": "N9", "img": "assets/map-editor/tiles/N9.png", "desc": "Near Tile N9", "expansionID": "EXPANSION.FORTRESS", "groundType": "GROUNDTYPE.SWAMP", "group": "GROUP.NEAR", "blocked": [ 0, 0, 0, 0, 0, 1 ] },
+    "N10":{ "id": "N10", "img": "assets/map-editor/tiles/N10.png", "desc": "Near Tile N10", "expansionID": "EXPANSION.FORTRESS", "groundType": "GROUNDTYPE.SWAMP", "group": "GROUP.NEAR", "blocked": [ 0, 0, 0, 1, 0, 0 ] },
+    "N11": { "id": "N11", "img": "assets/map-editor/tiles/N11.png", "desc": "Near Tile N11", "expansionID": "EXPANSION.INFERNO", "groundType": "GROUNDTYPE.LAVA", "group": "GROUP.NEAR", "blocked": [ 0, 0, 0, 0, 0, 1 ] },
+
+
+    "#S1": {
+      "id": "#S1",
+      "img": "assets/map-editor/tiles/_S1.png",
+      "desc": "Startingtile Tile #S1",
+      "expansionID": "EXPANSION.TOWER",
+      "groundType": "GROUNDTYPE.SNOW",
+      "group": "GROUP.STARTINGTILE",
+      "blocked": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    "C1": {
+      "id": "C1",
+      "img": "assets/map-editor/tiles/C1.png",
+      "desc": "Center Tile C1",
+      "expansionID": "EXPANSION.CORE",
+      "groundType": "GROUNDTYPE.SUBTERRAIN",
+      "group": "GROUP.CENTER",
+      "blocked": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "C2": {
+      "id": "C2",
+      "img": "assets/map-editor/tiles/C2.png",
+      "desc": "Center Tile C2",
+      "expansionID": "EXPANSION.CORE",
+      "groundType": "GROUNDTYPE.SUBTERRAIN",
+      "group": "GROUP.CENTER",
+      "blocked": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "C5": {
+      "id": "C5",
+      "img": "assets/map-editor/tiles/C5.png",
+      "desc": "Center Tile C5",
+      "expansionID": "EXPANSION.INFERNO",
+      "groundType": "GROUNDTYPE.LAVA",
+      "group": "GROUP.CENTER",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    "F1": {
+      "id": "F1",
+      "img": "assets/map-editor/tiles/F1.png",
+      "desc": "Far Tile F1",
+      "expansionID": "EXPANSION.CORE",
+      "groundType": "GROUNDTYPE.CURSED",
+      "group": "GROUP.FAR",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    "F2": {
+      "id": "F2",
+      "img": "assets/map-editor/tiles/F2.png",
+      "desc": "Far Tile F2",
+      "expansionID": "EXPANSION.CORE",
+      "groundType": "GROUNDTYPE.SUBTERRAIN",
+      "group": "GROUP.FAR",
+      "blocked": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "F3": {
+      "id": "F3",
+      "img": "assets/map-editor/tiles/F3.png",
+      "desc": "Far Tile F3",
+      "expansionID": "EXPANSION.CORE",
+      "groundType": "GROUNDTYPE.GRASS",
+      "group": "GROUP.FAR",
+      "blocked": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "F4": {
+      "id": "F4",
+      "img": "assets/map-editor/tiles/F4.png",
+      "desc": "Far Tile F4",
+      "expansionID": "EXPANSION.CORE",
+      "groundType": "GROUNDTYPE.CURSED",
+      "group": "GROUP.FAR",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "F5": {
+      "id": "F5",
+      "img": "assets/map-editor/tiles/F5.png",
+      "desc": "Far Tile F5",
+      "expansionID": "EXPANSION.CORE",
+      "groundType": "GROUNDTYPE.SUBTERRAIN",
+      "group": "GROUP.FAR",
+      "blocked": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "F6": {
+      "id": "F6",
+      "img": "assets/map-editor/tiles/F6.png",
+      "desc": "Far Tile F6",
+      "expansionID": "EXPANSION.CORE",
+      "groundType": "GROUNDTYPE.GRASS",
+      "group": "GROUP.FAR",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "F7": {
+      "id": "F7",
+      "img": "assets/map-editor/tiles/F7.png",
+      "desc": "Far Tile F7",
+      "expansionID": "EXPANSION.CORE",
+      "groundType": "GROUNDTYPE.CURSED",
+      "group": "GROUP.FAR",
+      "blocked": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "F8": {
+      "id": "F8",
+      "img": "assets/map-editor/tiles/F8.png",
+      "desc": "Far Tile F8",
+      "expansionID": "EXPANSION.CORE",
+      "groundType": "GROUNDTYPE.SUBTERRAIN",
+      "group": "GROUP.FAR",
+      "blocked": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "F9": {
+      "id": "F9",
+      "img": "assets/map-editor/tiles/F9.png",
+      "desc": "Far Tile F9",
+      "expansionID": "EXPANSION.CORE",
+      "groundType": "GROUNDTYPE.GRASS",
+      "group": "GROUP.FAR",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    "F16": {
+      "id": "F16",
+      "img": "assets/map-editor/tiles/F16.png",
+      "desc": "Far Tile F16",
+      "expansionID": "EXPANSION.INFERNO",
+      "groundType": "GROUNDTYPE.LAVA",
+      "group": "GROUP.FAR",
+      "blocked": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "N1": {
+      "id": "N1",
+      "img": "assets/map-editor/tiles/N1.png",
+      "desc": "Near Tile N1",
+      "expansionID": "EXPANSION.CORE",
+      "groundType": "GROUNDTYPE.CURSED",
+      "group": "GROUP.NEAR",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "N2": {
+      "id": "N2",
+      "img": "assets/map-editor/tiles/N2.png",
+      "desc": "Near Tile N2",
+      "expansionID": "EXPANSION.CORE",
+      "groundType": "GROUNDTYPE.SUBTERRAIN",
+      "group": "GROUP.NEAR",
+      "blocked": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "N3": {
+      "id": "N3",
+      "img": "assets/map-editor/tiles/N3.png",
+      "desc": "Near Tile N3",
+      "expansionID": "EXPANSION.CORE",
+      "groundType": "GROUNDTYPE.GRASS",
+      "group": "GROUP.NEAR",
+      "blocked": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "N4": {
+      "id": "N4",
+      "img": "assets/map-editor/tiles/N4.png",
+      "desc": "Near Tile N4",
+      "expansionID": "EXPANSION.CORE",
+      "groundType": "GROUNDTYPE.CURSED",
+      "group": "GROUP.NEAR",
+      "blocked": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "N5": {
+      "id": "N5",
+      "img": "assets/map-editor/tiles/N5.png",
+      "desc": "Near Tile N5",
+      "expansionID": "EXPANSION.CORE",
+      "groundType": "GROUNDTYPE.SUBTERRAIN",
+      "group": "GROUP.NEAR",
+      "blocked": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "N6": {
+      "id": "N6",
+      "img": "assets/map-editor/tiles/N6.png",
+      "desc": "Near Tile N6",
+      "expansionID": "EXPANSION.CORE",
+      "groundType": "GROUNDTYPE.GRASS",
+      "group": "GROUP.NEAR",
+      "blocked": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "N12": {
+      "id": "N12",
+      "img": "assets/map-editor/tiles/N12.png",
+      "desc": "Near Tile N12",
+      "expansionID": "EXPANSION.INFERNO",
+      "groundType": "GROUNDTYPE.LAVA",
+      "group": "GROUP.NEAR",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "S1": {
+      "id": "S1",
+      "img": "assets/map-editor/tiles/S1.png",
+      "desc": "Startingtile Tile S1",
+      "expansionID": "EXPANSION.CORE",
+      "groundType": "GROUNDTYPE.CURSED",
+      "group": "GROUP.STARTINGTILE",
+      "blocked": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    "S2": {
+      "id": "S2",
+      "img": "assets/map-editor/tiles/S2.png",
+      "desc": "Startingtile Tile S2",
+      "expansionID": "EXPANSION.CORE",
+      "groundType": "GROUNDTYPE.SUBTERRAIN",
+      "group": "GROUP.STARTINGTILE",
+      "blocked": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    "S3": {
+      "id": "S3",
+      "img": "assets/map-editor/tiles/S3.png",
+      "desc": "Startingtile Tile S3",
+      "expansionID": "EXPANSION.CORE",
+      "groundType": "GROUNDTYPE.GRASS",
+      "group": "GROUP.STARTINGTILE",
+      "blocked": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    "S4": {
+      "id": "S4",
+      "img": "assets/map-editor/tiles/S4.png",
+      "desc": "Startingtile Tile S4",
+      "expansionID": "EXPANSION.RAMPART",
+      "groundType": "GROUNDTYPE.GRASS",
+      "group": "GROUP.STARTINGTILE",
+      "blocked": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    "S5": {
+      "id": "S5",
+      "img": "assets/map-editor/tiles/S5.png",
+      "desc": "Startingtile Tile S5",
+      "expansionID": "EXPANSION.FORTRESS",
+      "groundType": "GROUNDTYPE.SWAMP",
+      "group": "GROUP.STARTINGTILE",
+      "blocked": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    "S6": {
+      "id": "S6",
+      "img": "assets/map-editor/tiles/S6.png",
+      "desc": "Startingtile Tile S6",
+      "expansionID": "EXPANSION.INFERNO",
+      "groundType": "GROUNDTYPE.LAVA",
+      "group": "GROUP.STARTINGTILE",
+      "blocked": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ]
+    }
+  }
+}

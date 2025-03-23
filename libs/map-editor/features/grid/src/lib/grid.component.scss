@@ -1,0 +1,28 @@
+:host {
+  display: block;
+  position: relative;
+  max-height: 100vh;
+  height: 100vh;
+  //overflow: scroll;
+}
+
+.grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+
+  :nth-child(odd of .row) {
+    margin-left: -43px;
+  }
+  z-index: 0;
+}
+
+.row {
+  display: flex;
+  margin-bottom: -26px;
+}
+
+.column {
+}
+
