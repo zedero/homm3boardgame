@@ -1,8 +1,8 @@
 {
-  "name": "ui",
+  "name": "shared/ui",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/shared/ui/src",
-  "prefix": "lib",
+  "prefix": "homm",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -15,6 +15,52 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint"
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "libs/shared/ui/.storybook",
+        "browserTarget": "shared/ui:build-storybook",
+        "experimentalZoneless": true,
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/shared/ui",
+        "configDir": "libs/shared/ui/.storybook",
+        "browserTarget": "shared/ui:build-storybook",
+        "experimentalZoneless": true,
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "static-storybook": {
+      "executor": "@nx/web:file-server",
+      "dependsOn": ["build-storybook"],
+      "options": {
+        "buildTarget": "shared/ui:build-storybook",
+        "staticFilePath": "dist/storybook/shared/ui",
+        "experimentalZoneless": true,
+        "spa": true
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "shared/ui:build-storybook:ci"
+        }
+      }
     }
   }
 }
