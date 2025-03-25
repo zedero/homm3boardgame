@@ -1,0 +1,144 @@
+{
+  "PORTRAITS": {
+    "CATHERINE": {
+      "image": "assets/portraits/catherine.png",
+      "desc": "Catherine",
+      "faction": "CASTLE"
+    },
+    "SANDRO": {
+      "image": "assets/portraits/sandro.png",
+      "desc": "Sandro",
+      "faction": "NECROPOLIS"
+    },
+    "MUTARE": {
+      "image": "assets/portraits/mutare.png",
+      "desc": "Mutare",
+      "faction": "DUNGEON"
+    },
+    "SOLMYR": {
+      "image": "assets/portraits/solmyr.png",
+      "desc": "Solmyr",
+      "faction": "TOWER"
+    },
+    "ALAMAR": {
+      "image": "assets/portraits/alamar.png",
+      "desc": "Alamar",
+      "faction": "DUNGEON"
+    },
+    "DRACON": {
+      "image": "assets/portraits/dracon.png",
+      "desc": "Dracon",
+      "faction": "TOWER"
+    },
+    "RION": {
+      "image": "assets/portraits/rion.png",
+      "desc": "Rion",
+      "faction": "CASTLE"
+    },
+    "TAMIKA": {
+      "image": "assets/portraits/tamika.png",
+      "desc": "Tamika",
+      "faction": "NECROPOLIS"
+    },
+    "GEM": {
+      "image": "assets/portraits/gem.png",
+      "desc": "Gem",
+      "faction": "RAMPART"
+    },
+    "GELU": {
+      "image": "assets/portraits/gelu.png",
+      "desc": "Gelu",
+      "faction": "RAMPART"
+    },
+    "ADRIENNE": {
+      "image": "assets/portraits/adrienne.png",
+      "desc": "Adrienne",
+      "faction": "FORTRESS"
+    },
+    "WYSTAN": {
+      "image": "assets/portraits/wystan.png",
+      "desc": "Wystan",
+      "faction": "FORTRESS"
+    },
+    "ADELAIDE": {
+      "image": "assets/portraits/adelaide.png",
+      "desc": "Adelaide",
+      "faction": "CASTLE"
+    },
+    "JEDDITE": {
+      "image": "assets/portraits/jeddite.png",
+      "desc": "Jeddite",
+      "faction": "DUNGEON"
+    },
+    "MEPHALA": {
+      "image": "assets/portraits/mephala.png",
+      "desc": "Mephala",
+      "faction": "RAMPART"
+    },
+    "HAART_DEATH": {
+      "image": "assets/portraits/haart-dead.png",
+      "desc": "Lord Haart Deathknight",
+      "faction": "NECROPOLIS"
+    },
+    "HAART_KNIGHT": {
+      "image": "assets/portraits/haart-knight.png",
+      "desc": "Lord Haart Knight",
+      "faction": "CASTLE"
+    },
+    "VIDOMINA": {
+      "image": "assets/portraits/vidomina.png",
+      "desc": "Vidomina",
+      "faction": "NECROPOLIS"
+    },
+    "DEEMER": {
+      "image": "assets/portraits/deemer.png",
+      "desc": "Deemer",
+      "faction": "DUNGEON"
+    },
+    "TAZAR": {
+      "image": "assets/portraits/tazar.png",
+      "desc": "Tazar",
+      "faction": "FORTRESS"
+    },
+    "BRON": {
+      "image": "assets/portraits/bron.png",
+      "desc": "Bron",
+      "faction": "FORTRESS"
+    },
+    "CLANCY": {
+      "image": "assets/portraits/clancy.png",
+      "desc": "Clancy",
+      "faction": "RAMPART"
+    },
+    "IONA": {
+      "image": "assets/portraits/iona.png",
+      "desc": "Iona",
+      "faction": "TOWER"
+    },
+    "JOSEPHINE": {
+      "image": "assets/portraits/josephine.png",
+      "desc": "Josephine",
+      "faction": "TOWER"
+    },
+    "FIONA": {
+      "image": "assets/portraits/fiona.png",
+      "desc": "Fiona",
+      "faction": "INFERNO"
+    },
+    "XYRON": {
+      "image": "assets/portraits/xyron.png",
+      "desc": "Xyron",
+      "faction": "INFERNO"
+    },
+    "ZYDAR": {
+      "image": "assets/portraits/zydar.png",
+      "desc": "Zydar",
+      "faction": "INFERNO"
+    },
+    "RASHKA": {
+      "image": "assets/portraits/rashka.png",
+      "desc": "Rashka",
+      "faction": "INFERNO"
+    }
+  }
+}

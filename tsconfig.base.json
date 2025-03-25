@@ -13,11 +13,15 @@
     "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
+
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "baseUrl": ".",
     "paths": {
       "@homm3boardgame/battle-ai": [
         "libs/battle-ai/features/battle-board/src/index.ts"
       ],
+      "@homm3boardgame/config": ["libs/shared/config/src/index.ts"],
       "@homm3boardgame/map-editor": [
         "libs/map-editor/features/grid/src/index.ts"
       ],
