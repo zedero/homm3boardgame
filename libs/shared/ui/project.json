@@ -23,7 +23,7 @@
         "configDir": "libs/shared/ui/.storybook",
         "browserTarget": "shared/ui:build-storybook",
         "experimentalZoneless": true,
-        "compodoc": false
+        "compodoc": true
       },
       "configurations": {
         "ci": {
@@ -39,7 +39,7 @@
         "configDir": "libs/shared/ui/.storybook",
         "browserTarget": "shared/ui:build-storybook",
         "experimentalZoneless": true,
-        "compodoc": false
+        "compodoc": true
       },
       "configurations": {
         "ci": {

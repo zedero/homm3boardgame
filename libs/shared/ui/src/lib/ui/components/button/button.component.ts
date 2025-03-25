@@ -10,7 +10,6 @@ import { MatButton } from '@angular/material/button';
   standalone: true,
 })
 export class ButtonComponent {
-  // info about input
   @Input({ required: true }) title: string = '';
   @Output() clicked = new EventEmitter<void>();
 
