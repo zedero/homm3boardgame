@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'lib-grid',
+  selector: 'feature-grid',
   imports: [CommonModule],
   templateUrl: './map-editor.component.html',
   styleUrl: './map-editor.component.css',

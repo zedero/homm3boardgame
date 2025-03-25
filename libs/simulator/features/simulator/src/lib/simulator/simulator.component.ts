@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'lib-simulator',
+  selector: 'feature-simulator',
   imports: [CommonModule],
   templateUrl: './simulator.component.html',
   styleUrl: './simulator.component.css',
