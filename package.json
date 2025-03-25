@@ -40,6 +40,7 @@
     "@nx/web": "20.6.2",
     "@nx/workspace": "20.6.2",
     "@schematics/angular": "~19.2.0",
+    "@storybook/addon-a11y": "^8.6.9",
     "@storybook/addon-essentials": "^8.4.6",
     "@storybook/angular": "^8.4.6",
     "@storybook/core-server": "^8.4.6",
