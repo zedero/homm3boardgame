@@ -15,11 +15,16 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@homm3boardgame/battle-ai": ["libs/battle-ai/features/battle-board/src/index.ts"],
+      "@homm3boardgame/battle-ai": [
+        "libs/battle-ai/features/battle-board/src/index.ts"
+      ],
       "@homm3boardgame/map-editor": [
         "libs/map-editor/features/grid/src/index.ts"
       ],
-      "@homm3boardgame/simulator": ["libs/simulator/features/simulator/src/index.ts"]
+      "@homm3boardgame/simulator": [
+        "libs/simulator/features/simulator/src/index.ts"
+      ],
+      "@homm3boardgame/ui": ["libs/shared/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
