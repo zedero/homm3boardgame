@@ -9,5 +9,7 @@ export default meta;
 type Story = StoryObj<ButtonComponent>;
 
 export const Primary: Story = {
-  args: {},
+  args: {
+    title: 'default button',
+  },
 };
