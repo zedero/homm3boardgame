@@ -5,6 +5,8 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+permissions:
+  contents: write 
 
 env:
   NG_CLI_ANALYTICS: "false"
