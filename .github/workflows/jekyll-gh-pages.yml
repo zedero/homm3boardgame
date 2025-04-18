@@ -42,6 +42,9 @@ jobs:
     - name: Build Map Editor
       run: npm run build -- --output-path dist --base-href /homm3boardgame/
 
+    - name: Lint Map Editor
+      run: npm run nx lint
+
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
