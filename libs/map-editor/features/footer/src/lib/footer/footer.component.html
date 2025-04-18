@@ -1,4 +1,6 @@
 <div class="footer">
+  <homm-number-input labelLeft="Rows:" [value]="signalStore.grid.rows()" (change)="updateRows($event)"></homm-number-input>
+  <homm-number-input labelLeft="Cols:" [value]="signalStore.grid.columns()" (change)="updateCols($event)"></homm-number-input>
   <homm-button (click)="moveTiles()" iconLeft="up-down-left-right"></homm-button>
   <homm-button (click)="generateRandomMap()">Generate Random Map</homm-button>
   <homm-button (click)="showMapGenerator()" class="no-gap-left" iconLeft="gear"></homm-button>

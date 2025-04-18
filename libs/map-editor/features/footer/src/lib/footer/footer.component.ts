@@ -1,6 +1,9 @@
 import { Component, inject, Inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ButtonComponent } from '@homm3boardgame/shared/ui';
+import {
+  ButtonComponent,
+  NumberInputComponent,
+} from '@homm3boardgame/shared/ui';
 import { Store } from '@ngrx/store';
 import { domainEventActions } from '../../../../../domain/state/tile-map/tile-map.actions';
 import { EditTileDialogComponent } from '@homm3boardgame/edit-tile-dialog';
@@ -13,12 +16,12 @@ import { TileMapService } from '../../../../../domain/state/tile-map/tile-map.se
 
 @Component({
   selector: 'feature-footer',
-  imports: [CommonModule, ButtonComponent],
+  imports: [CommonModule, ButtonComponent, NumberInputComponent],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
-  private signalStore = inject(TileMapStore);
+  protected signalStore = inject(TileMapStore);
   private tileMapService = inject(TileMapService);
   generateImage() {
     this.store.dispatch(domainEventActions.generateImage());
@@ -56,6 +59,14 @@ export class FooterComponent {
   moveTiles() {
     //moveAllUpLeft
     // this.tileMapService.moveAllUpRight();
+  }
+
+  updateRows(rows: number) {
+    this.signalStore.setGrid(rows, this.signalStore.grid.columns());
+  }
+
+  updateCols(cols: number) {
+    this.signalStore.setGrid(this.signalStore.grid.rows(), cols);
   }
 
   constructor(private store: Store, public dialog: MatDialog) {}

@@ -1,0 +1,25 @@
+input {
+  border: .2rem solid #777777;
+  border-radius: .5rem;
+  height: 3rem;
+  width: 7.5rem
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+label {
+  color: var(--primary);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+label.left {
+  margin-right: 1rem;
+}
+label.right {
+  margin-left: 1rem;
+}
