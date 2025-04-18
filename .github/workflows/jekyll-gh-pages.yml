@@ -40,7 +40,7 @@ jobs:
         npm install
 
     - name: Build Map Editor
-      run: npm run build -- --output-path dist --base-href /HoMM3Boardgame/
+      run: npm run build -- --output-path dist --base-href /homm3boardgame/
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
