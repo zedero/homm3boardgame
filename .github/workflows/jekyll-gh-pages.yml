@@ -1,0 +1,47 @@
+name: Deploy Board game app
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  NG_CLI_ANALYTICS: "false"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    #defaults:
+     # run:
+     #   working-directory: map editor
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+    - name: Clone repository
+      uses: actions/checkout@v4
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+        cache-dependency-path: '**/package-lock.json'
+
+    - name: Install Depenedencies
+      run: |
+        npm install -g @angular/cli
+        npm install
+
+    - name: Build Map Editor
+      run: npm run build -- --output-path dist --base-href /HoMM3BoardgameScenarioEditor/
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
