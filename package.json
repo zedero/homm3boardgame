@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx serve",
+    "start": "nx serve --no-cloud --verbose",
     "build": "nx build --no-cloud",
     "test": "nx test"
   },
