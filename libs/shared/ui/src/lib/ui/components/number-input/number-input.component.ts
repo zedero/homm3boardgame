@@ -1,6 +1,5 @@
 import { Component, input, output } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { isNumber } from '@ngrx/store/src/meta-reducers/utils';
 
 @Component({
   selector: 'homm-number-input',
@@ -18,7 +17,7 @@ export class NumberInputComponent {
 
   onChange(event: any) {
     const value = event.target.value;
-    if (isNumber(value) && !isNaN(value)) {
+    if (typeof value === 'number' && !isNaN(value)) {
       this.change.emit(value);
     }
   }
