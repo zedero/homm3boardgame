@@ -3,9 +3,7 @@ import { CommonModule } from '@angular/common';
 import { DataConfigService } from '@homm3boardgame/config';
 import { GridComponent } from '@homm3boardgame/grid';
 import { Store } from '@ngrx/store';
-import { featureEventActions } from './map-editor.actions';
 import { PlacedTilesComponent } from '@homm3boardgame/placed-tiles';
-import { ButtonComponent } from '@homm3boardgame/shared/ui';
 import { FooterComponent } from '@homm3boardgame/footer';
 import { TileMapService } from '../../../../domain/state/tile-map/tile-map.service';
 

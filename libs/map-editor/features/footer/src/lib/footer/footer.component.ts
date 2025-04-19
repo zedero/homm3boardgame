@@ -62,6 +62,7 @@ export class FooterComponent {
   }
 
   updateRows(rows: number) {
+    console.log(rows);
     this.signalStore.setGrid(rows, this.signalStore.grid.columns());
   }
 
