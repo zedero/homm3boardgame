@@ -2,7 +2,7 @@ import { effect, inject, Injectable, Signal, signal } from '@angular/core';
 import { Tile } from '../../../util/types/tile';
 import { Store } from '@ngrx/store';
 import { domainEventActions } from './tile-map.actions';
-import { TileMapStore } from './tile-map.reducer';
+import { Grid, TileMapStore } from './tile-map.reducer';
 import { DataConfigService } from '@homm3boardgame/config';
 
 const storageKey = 'scenarioCreatorData';
@@ -15,8 +15,9 @@ export class TileMapService {
   private signalStore = inject(TileMapStore);
   private config = inject(DataConfigService);
 
-  saveTileMap(tileList: Tile[]) {
+  saveTileMap(tileList: Tile[], grid: Grid) {
     const save = {
+      grid,
       default: tileList,
     };
     localStorage.setItem(storageKey, JSON.stringify(save));
@@ -25,7 +26,15 @@ export class TileMapService {
   loadTileMap() {
     const data = localStorage.getItem(storageKey);
     if (data) {
-      this.signalStore.setTileList(JSON.parse(data)[this.selectedMap()]);
+      const selectedMap = JSON.parse(data)?.[this.selectedMap()];
+      if (selectedMap) {
+        this.signalStore.setTileList(selectedMap);
+      }
+
+      const grid = JSON.parse(data)['grid'];
+      if (grid) {
+        this.signalStore.setGrid(grid.rows, grid.columns);
+      }
     }
   }
 
@@ -204,96 +213,11 @@ export class TileMapService {
     });
     this.signalStore.setTileList(list);
   }
-  //
-  // moveAllRight() {
-  //   const list = JSON.parse(JSON.stringify(this.tileList));
-  //   const HighestRightPos = list.reduce((acc, value) => {
-  //     if (acc === -1 || value.col > acc) {
-  //       return value.col;
-  //     } else {
-  //       return acc;
-  //     }
-  //   }, -1);
-  //
-  //   if (HighestRightPos >= this.rows.length - 2) {
-  //     return
-  //   }
-  //
-  //   list.map((tile) => {
-  //     tile.col = tile.col + 1;
-  //     this.updateTileData(tile);
-  //   });
-  //   this.tileList = list;
-  // }
-  //
-  // moveAllDownRight() {
-  //   const list = JSON.parse(JSON.stringify(this.tileList));
-  //   const highestTopPos = list.reduce((acc, value) => {
-  //     if (acc === -1 || value.row > acc) {
-  //       return value.row;
-  //     } else {
-  //       return acc;
-  //     }
-  //   }, -1)
-  //
-  //   const HighestRightPos = list.reduce((acc, value) => {
-  //     if (acc === 0 || value.col > acc) {
-  //       return value.col;
-  //     } else {
-  //       return acc;
-  //     }
-  //   }, -1);
-  //
-  //   if (highestTopPos >= this.columns.length - 2 || HighestRightPos >= this.rows.length - 2) { // TODO ADD RIGHT MAX CHECK
-  //     return
-  //   }
-  //
-  //   list.map((tile: any) => {
-  //     if ((tile.row & 1)) {
-  //       tile.col = tile.col + 1;
-  //     }
-  //     tile.row = tile.row +1;
-  //     this.updateTileData(tile);
-  //   });
-  //   this.tileList = list;
-  // }
-  //
-  // moveAllDownLeft() {
-  //   const list = JSON.parse(JSON.stringify(this.tileList));
-  //   const highestTopPos = list.reduce((acc, value) => {
-  //     if (acc === -1 || value.row > acc) {
-  //       return value.row;
-  //     } else {
-  //       return acc;
-  //     }
-  //   }, -1)
-  //
-  //   const lowestLeftPos = list.reduce((acc, value) => {
-  //     if (acc === -1 || value.col < acc) {
-  //       return value.col;
-  //     } else {
-  //       return acc;
-  //     }
-  //   }, -1);
-  //
-  //   if (highestTopPos >= this.columns.length - 2 || lowestLeftPos <=  2) { // TODO ADD RIGHT MAX CHECK
-  //     return
-  //   }
-  //
-  //   list.map((tile: any) => {
-  //     if (!(tile.row & 1)) {
-  //       tile.col = tile.col -1;
-  //     }
-  //     tile.row = tile.row + 1;
-  //     this.updateTileData(tile);
-  //   });
-  //   this.tileList = list;
-  // }
 
   constructor() {
     this.loadTileMap();
     effect(() => {
-      this.saveTileMap(this.signalStore.tileList());
+      this.saveTileMap(this.signalStore.tileList(), this.signalStore.grid());
     });
   }
 }

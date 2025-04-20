@@ -14,11 +14,6 @@ export const selectGeneratorSettings = createSelector(
   (state) => state.generatorSettings
 );
 
-export const selectGridSettings = createSelector(
-  selectSettingsState,
-  (state) => state.grid
-);
-
 export const selectFilterSettingByName = (name: string) =>
   createSelector(selectFilterSettings, (settings) => settings[name]);
 
@@ -30,16 +25,6 @@ export const selectMapSize = createSelector(
 export const selectPlayerCount = createSelector(
   selectGeneratorSettings,
   (settings) => settings.playerCount
-);
-
-export const selectRows = createSelector(
-  selectGridSettings,
-  (settings) => settings.rows
-);
-
-export const selectColumns = createSelector(
-  selectGridSettings,
-  (settings) => settings.columns
 );
 
 export const selectTownsFlipped = createSelector(

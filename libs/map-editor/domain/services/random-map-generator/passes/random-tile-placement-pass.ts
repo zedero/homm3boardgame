@@ -11,8 +11,8 @@ export class RandomTilePlacementPass {
   private settings = inject(SettingsFacade);
   private signalStore = inject(TileMapStore);
 
-  private rows = this.settings.rows;
-  private columns = this.settings.columns;
+  private rows = this.signalStore.grid.rows;
+  private columns = this.signalStore.grid.columns;
 
   public run() {
     this.clearMap();

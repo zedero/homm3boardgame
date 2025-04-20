@@ -16,10 +16,10 @@ export class SettingsFacade {
   // loaded$ = this.store.pipe(select(SettingsSelectors.selectSettingsLoaded));
   // allSettings$ = this.store.pipe(select(SettingsSelectors.selectAllSettings));
   // selectedSettings$ = this.store.pipe(select(SettingsSelectors.selectEntity));
-  rows$ = this.store.pipe(select(SettingsSelectors.selectRows));
-  columns$ = this.store.pipe(select(SettingsSelectors.selectColumns));
-  rows = this.store.selectSignal(SettingsSelectors.selectRows);
-  columns = this.store.selectSignal(SettingsSelectors.selectColumns);
+  // rows$ = this.store.pipe(select(SettingsSelectors.selectRows));
+  // columns$ = this.store.pipe(select(SettingsSelectors.selectColumns));
+  // rows = this.store.selectSignal(SettingsSelectors.selectRows);
+  // columns = this.store.selectSignal(SettingsSelectors.selectColumns);
   playerCount = this.store.selectSignal(SettingsSelectors.selectPlayerCount);
   mapSize = this.store.selectSignal(SettingsSelectors.selectMapSize);
   filterSettings = this.store.selectSignal(

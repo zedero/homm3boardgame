@@ -5,13 +5,9 @@ import { TileMapStore } from '../../../state/tile-map/tile-map.reducer';
 import { DataConfigService } from '@homm3boardgame/config';
 
 export class ReplacePlaceholderTilesPass {
-  private store = inject(Store);
   private settings = inject(SettingsFacade);
   private signalStore = inject(TileMapStore);
   private config = inject(DataConfigService);
-
-  private rows = this.settings.rows;
-  private columns = this.settings.columns;
 
   public run() {
     this.replace();

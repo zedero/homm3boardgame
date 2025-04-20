@@ -9,12 +9,8 @@ import {
 } from '../../../state/tile-map/tile-map.reducer';
 
 export class SetupPass {
-  private store = inject(Store);
   private settings = inject(SettingsFacade);
   private signalStore = inject(TileMapStore);
-
-  private rows = this.settings.rows;
-  private columns = this.settings.columns;
 
   public run() {
     this.setup();

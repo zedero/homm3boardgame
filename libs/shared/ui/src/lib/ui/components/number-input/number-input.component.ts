@@ -1,4 +1,4 @@
-import { Component, input, output } from '@angular/core';
+import { Component, EventEmitter, input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -13,12 +13,12 @@ export class NumberInputComponent {
   labelRight = input<string>();
   value = input.required<number>();
 
-  change = output<number>();
+  @Output() valueChange = new EventEmitter<number>();
 
   onChange(event: any) {
-    const value = event.target.value;
-    if (typeof value === 'number' && !isNaN(value)) {
-      this.change.emit(value);
+    const value = Number(event.target.value);
+    if (!isNaN(value)) {
+      this.valueChange.emit(value);
     }
   }
 }

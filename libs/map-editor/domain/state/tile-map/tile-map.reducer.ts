@@ -14,12 +14,14 @@ import { computed } from '@angular/core';
 
 export const TILE_MAP_FEATURE_KEY = 'tileMap';
 
+export type Grid = {
+  rows: number;
+  columns: number;
+};
+
 export interface TileMapState {
   tileList: Tile[];
-  grid: {
-    rows: number;
-    columns: number;
-  };
+  grid: Grid;
 }
 
 export interface TileMapPartialState {

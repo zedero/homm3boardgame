@@ -18,10 +18,6 @@ export interface SettingsState {
   filterSettings: {
     [key: string]: boolean;
   };
-  grid: {
-    rows: number;
-    columns: number;
-  };
 }
 
 export interface SettingsPartialState {
@@ -44,10 +40,6 @@ export const initialSettingsState: SettingsState = {
     RAMPART: true,
     RANDOM: true,
     TOWER: true,
-  },
-  grid: {
-    rows: 12,
-    columns: 12,
   },
 };
 

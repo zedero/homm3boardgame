@@ -1,5 +1,5 @@
 <div class="input-group">
   <label for="input" class="left">{{labelLeft()}}</label>
-  <input type="number" id="input" placeholder="{{placeholder()}}" value="{{value()}}" (change)="onChange($event)"/>
+  <input type="number" id="input" placeholder="{{placeholder()}}" [value]="value()" (change)="onChange($event)"/>
   <label for="input" class="right">{{labelRight()}}</label>
 </div>
