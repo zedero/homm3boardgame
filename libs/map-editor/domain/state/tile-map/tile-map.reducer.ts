@@ -1,7 +1,6 @@
-import { createReducer, on, Action } from '@ngrx/store';
+import { createReducer, Action } from '@ngrx/store';
 
-import { Tile } from '../../../util/types/tile';
-import { domainEventActions } from './tile-map.actions';
+import { BASE_TILE, Tile } from '../../../util/types/tile';
 import { generateGuid } from '../../../util/guid/guid';
 import {
   patchState,
@@ -107,13 +106,11 @@ export const TileMapStore = signalStore(
   withMethods((store) => ({
     addTile: (tileBaseData: TileBaseData) => {
       const tile: Tile = {
+        ...BASE_TILE,
         row: tileBaseData.row,
         col: tileBaseData.column,
         tileId: tileBaseData.tileId,
         id: generateGuid(),
-        cubes: [0, 0, 0, 0, 0, 0, 0],
-        hero: ['', '', '', '', '', '', ''],
-        rotation: 0,
       };
       patchState(store, (state) => ({
         tileList: [...state.tileList, tile],

@@ -1,5 +1,5 @@
 import { effect, inject, Injectable, Signal, signal } from '@angular/core';
-import { Tile } from '../../../util/types/tile';
+import { BASE_TILE, Tile } from '../../../util/types/tile';
 import { Store } from '@ngrx/store';
 import { domainEventActions } from './tile-map.actions';
 import { Grid, TileMapStore } from './tile-map.reducer';
@@ -28,6 +28,7 @@ export class TileMapService {
     if (data) {
       const selectedMap = JSON.parse(data)?.[this.selectedMap()];
       if (selectedMap) {
+        this.updateTileListData(selectedMap);
         this.signalStore.setTileList(selectedMap);
       }
 
@@ -36,6 +37,16 @@ export class TileMapService {
         this.signalStore.setGrid(grid.rows, grid.columns);
       }
     }
+  }
+
+  updateTileListData(tileList: Tile[]) {
+    const updatedTileList = tileList.map((tile) => {
+      return {
+        ...BASE_TILE,
+        ...tile,
+      };
+    });
+    console.log(updatedTileList);
   }
 
   isValid() {
