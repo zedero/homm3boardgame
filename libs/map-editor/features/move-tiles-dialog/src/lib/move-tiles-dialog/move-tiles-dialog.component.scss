@@ -1,0 +1,25 @@
+:host ::ng-deep {
+  .rot-left i {
+    rotate: -45deg;
+  }
+
+  .rot-right i {
+    rotate: 45deg;
+  }
+
+  homm-button button{
+    margin: 0;
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.more-space {
+  margin-right: 55px;
+}
+
+.moveMenu div {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+}

@@ -13,6 +13,7 @@ import { ImportExportComponent } from '@homm3boardgame/import-export';
 import { RandomMapDialogComponent } from '@homm3boardgame/random-map-dialog';
 import { TileMapStore } from '../../../../../domain/state/tile-map/tile-map.reducer';
 import { TileMapService } from '../../../../../domain/state/tile-map/tile-map.service';
+import { MoveTilesDialogComponent } from '../../../../move-tiles-dialog/src';
 
 @Component({
   selector: 'feature-footer',
@@ -57,8 +58,10 @@ export class FooterComponent {
   }
 
   moveTiles() {
-    //moveAllUpLeft
-    // this.tileMapService.moveAllUpRight();
+    let dialogRef = this.dialog.open(MoveTilesDialogComponent, {
+      height: '250px',
+      width: '55px',
+    });
   }
 
   updateRows(rows: number) {

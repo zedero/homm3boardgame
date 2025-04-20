@@ -1,0 +1,16 @@
+<homm-dialog (closeDialog)="close()" title="Move tiles">
+  <div class="moveMenu dialog">
+    <div>
+      <homm-button (click)="moveUpLeft()" [iconLeft]="'up-long'" class="rot-left"></homm-button>
+      <homm-button (click)="moveUpRight()" [iconLeft]="'up-long'" class="rot-right"></homm-button>
+    </div>
+    <div>
+      <homm-button (click)="moveLeft()" [iconLeft]="'left-long'" class="more-space"></homm-button>
+      <homm-button (click)="moveRight()" [iconLeft]="'right-long'"></homm-button>
+    </div>
+    <div>
+      <homm-button (click)="moveDownLeft()" [iconLeft]="'down-long'" class="rot-right"></homm-button>
+      <homm-button (click)="moveDownRight()" [iconLeft]="'down-long'" class="rot-left"></homm-button>
+    </div>
+  </div>
+</homm-dialog>

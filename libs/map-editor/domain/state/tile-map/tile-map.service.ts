@@ -214,6 +214,102 @@ export class TileMapService {
     this.signalStore.setTileList(list);
   }
 
+  moveAllRight() {
+    const list = JSON.parse(
+      JSON.stringify(this.signalStore.tileList())
+    ) as Tile[];
+    const HighestRightPos = list.reduce((acc, value) => {
+      if (acc === -1 || value.col > acc) {
+        return value.col;
+      } else {
+        return acc;
+      }
+    }, -1);
+
+    if (HighestRightPos >= this.signalStore.grid.rows() - 2) {
+      return;
+    }
+
+    list.map((tile) => {
+      tile.col = tile.col + 1;
+    });
+    this.signalStore.setTileList(list);
+  }
+
+  moveDownLeft() {
+    const list = JSON.parse(
+      JSON.stringify(this.signalStore.tileList())
+    ) as Tile[];
+    const highestTopPos = list.reduce((acc, value) => {
+      if (acc === -1 || value.row > acc) {
+        return value.row;
+      } else {
+        return acc;
+      }
+    }, -1);
+
+    const lowestLeftPos = list.reduce((acc, value) => {
+      if (acc === -1 || value.col < acc) {
+        return value.col;
+      } else {
+        return acc;
+      }
+    }, -1);
+
+    if (
+      highestTopPos >= this.signalStore.grid.columns() - 2 ||
+      lowestLeftPos <= 2
+    ) {
+      // TODO ADD RIGHT MAX CHECK
+      return;
+    }
+
+    list.map((tile: any) => {
+      if (!(tile.row & 1)) {
+        tile.col = tile.col - 1;
+      }
+      tile.row = tile.row + 1;
+    });
+    this.signalStore.setTileList(list);
+  }
+
+  moveDownRight() {
+    const list = JSON.parse(
+      JSON.stringify(this.signalStore.tileList())
+    ) as Tile[];
+    const highestTopPos = list.reduce((acc, value) => {
+      if (acc === -1 || value.row > acc) {
+        return value.row;
+      } else {
+        return acc;
+      }
+    }, -1);
+
+    const HighestRightPos = list.reduce((acc, value) => {
+      if (acc === 0 || value.col > acc) {
+        return value.col;
+      } else {
+        return acc;
+      }
+    }, -1);
+
+    if (
+      highestTopPos >= this.signalStore.grid.columns() - 2 ||
+      HighestRightPos >= this.signalStore.grid.rows() - 2
+    ) {
+      // TODO ADD RIGHT MAX CHECK
+      return;
+    }
+
+    list.map((tile: any) => {
+      if (tile.row & 1) {
+        tile.col = tile.col + 1;
+      }
+      tile.row = tile.row + 1;
+    });
+    this.signalStore.setTileList(list);
+  }
+
   constructor() {
     this.loadTileMap();
     effect(() => {

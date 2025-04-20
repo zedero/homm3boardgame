@@ -38,6 +38,9 @@
       "@homm3boardgame/map-editor": [
         "libs/map-editor/features/editor-base/src/index.ts"
       ],
+      "@homm3boardgame/move-tiles-dialog": [
+        "libs/map-editor/features/move-tiles-dialog/src/index.ts"
+      ],
       "@homm3boardgame/placed-tiles": [
         "libs/map-editor/features/placed-tiles/src/index.ts"
       ],

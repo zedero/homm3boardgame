@@ -17,7 +17,6 @@ import { TileMapService } from '../../../../domain/state/tile-map/tile-map.servi
 export class MapEditorComponent {
   private tileMapService = inject(TileMapService);
   isValid = computed(() => {
-    console.log('VALIDATING');
     return this.tileMapService.isValid();
   });
   constructor(

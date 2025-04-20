@@ -1,11 +1,4 @@
-import {
-  Component,
-  computed,
-  inject,
-  Inject,
-  Signal,
-  signal,
-} from '@angular/core';
+import { Component, computed, inject, Inject, Signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { DataConfigService } from '@homm3boardgame/config';
@@ -13,7 +6,6 @@ import { Tile } from '../../../../../util/types/tile';
 import { CellEditorComponent } from '@homm3boardgame/cell-editor';
 import { DialogComponent } from '@homm3boardgame/shared/ui';
 import { FormsModule } from '@angular/forms';
-import { MatCheckbox } from '@angular/material/checkbox';
 
 @Component({
   selector: 'feature-edit-tile-dialog',
