@@ -15,11 +15,8 @@ import { CubeComponent } from '../../../../../ui/cube/cube.component';
 import { PortraitComponent } from '../../../../../ui/portrait/portrait.component';
 import { FormsModule } from '@angular/forms';
 import { Store } from '@ngrx/store';
-import { domainEventActions } from '@homm3boardgame/domain/state';
-import { Subject, takeUntil } from 'rxjs';
+import { Subject } from 'rxjs';
 import { TileMapStore } from '../../../../../domain/state/tile-map/tile-map.reducer';
-
-class WriteableSignal<T> {}
 
 @Component({
   selector: 'feature-cell-editor',

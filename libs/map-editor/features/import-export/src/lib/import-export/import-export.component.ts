@@ -11,12 +11,10 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { ButtonComponent, DialogComponent } from '@homm3boardgame/shared/ui';
 import { FormsModule } from '@angular/forms';
 import { Store } from '@ngrx/store';
-// import { selectTileList } from '../../../../../domain/state/tile-map/tile-map.selectors';
 import { Tile } from '../../../../../util/types/tile';
 import * as zlib from 'pako';
 import { Data, DeflateFunctionOptions } from 'pako';
 import { CdkCopyToClipboard } from '@angular/cdk/clipboard';
-import { domainEventActions } from '@homm3boardgame/domain/state';
 import { TileMapStore } from '../../../../../domain/state/tile-map/tile-map.reducer';
 
 @Component({
