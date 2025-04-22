@@ -16,6 +16,7 @@ import { PortraitComponent } from '../../../../../ui/portrait/portrait.component
 import { MatDialog } from '@angular/material/dialog';
 import { EditTileDialogComponent } from '@homm3boardgame/edit-tile-dialog';
 import { TileMapStore } from '../../../../../domain/state/tile-map/tile-map.reducer';
+import { BlockedHexComponent } from '../../../../../ui/blocked-hex/blocked-hex.component';
 
 @Component({
   selector: 'feature-tile',
@@ -25,6 +26,7 @@ import { TileMapStore } from '../../../../../domain/state/tile-map/tile-map.redu
     CdkDragHandle,
     CubeComponent,
     PortraitComponent,
+    BlockedHexComponent,
   ],
   templateUrl: './tile.component.html',
   styleUrl: './tile.component.scss',

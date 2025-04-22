@@ -21,6 +21,4 @@
 </div>
 <app-cube [id]="selectedCube()"></app-cube>
 <app-portrait [id]="selectedHero()"></app-portrait>
-@if (blockedHex()) {
-  <div class="blockedHex">TT</div>
-}
+<app-blocked-hex [visible]="blockedHex()"></app-blocked-hex>

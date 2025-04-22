@@ -19,6 +19,7 @@ import { Store } from '@ngrx/store';
 import { Subject } from 'rxjs';
 import { TileMapStore } from '../../../../../domain/state/tile-map/tile-map.reducer';
 import { CheckboxComponent } from '../../../../../../shared/ui/src/lib/ui/components/checkbox/checkbox.component';
+import { BlockedHexComponent } from '../../../../../ui/blocked-hex/blocked-hex.component';
 
 @Component({
   selector: 'feature-cell-editor',
@@ -28,6 +29,7 @@ import { CheckboxComponent } from '../../../../../../shared/ui/src/lib/ui/compon
     PortraitComponent,
     FormsModule,
     CheckboxComponent,
+    BlockedHexComponent,
   ],
   templateUrl: './cell-editor.component.html',
   styleUrl: './cell-editor.component.scss',
