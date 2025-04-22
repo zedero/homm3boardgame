@@ -54,7 +54,7 @@ export class TileComponent implements OnInit {
     return this.tileData().rotation * 60 + 'deg';
   });
   protected suggestedPlacement: Signal<number> = computed(() => {
-    return this.tileData().suggestedPlacement ? 0.5 : 1;
+    return this.tileData().suggestedPlacement ? 0.4 : 1;
   });
 
   ngOnInit() {

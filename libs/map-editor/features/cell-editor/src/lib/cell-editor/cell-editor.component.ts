@@ -66,16 +66,6 @@ export class CellEditorComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    // this.store
-    //   .select(selectTileByGuid(this.tileGuid()))
-    //   .pipe(takeUntil(this.destroyed$))
-    //   .subscribe((tile) => {
-    //     if (tile) {
-    //       this.tileData.set(tile);
-    //     }
-    //     this.selectedCube.set(this.tileData().cubes[this.index()]);
-    //     this.selectedHero.set(this.tileData().hero[this.index()]);
-    //   });
     const data = this.signalStore.selectTileByGuid(this.tileGuid()) as Tile;
     this.tileData.set(data);
     this.selectedCube.set(this.tileData().cubes[this.index()]);

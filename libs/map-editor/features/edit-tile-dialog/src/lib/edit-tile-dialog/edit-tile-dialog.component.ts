@@ -7,15 +7,24 @@ import { CellEditorComponent } from '@homm3boardgame/cell-editor';
 import { DialogComponent } from '@homm3boardgame/shared/ui';
 import { FormsModule } from '@angular/forms';
 import { TileComponent } from '@homm3boardgame/tile';
+import { CheckboxComponent } from '../../../../../../shared/ui/src/lib/ui/components/checkbox/checkbox.component';
+import { TileMapStore } from '../../../../../domain/state/tile-map/tile-map.reducer';
 
 @Component({
   selector: 'feature-edit-tile-dialog',
-  imports: [CommonModule, CellEditorComponent, DialogComponent, FormsModule],
+  imports: [
+    CommonModule,
+    CellEditorComponent,
+    DialogComponent,
+    FormsModule,
+    CheckboxComponent,
+  ],
   templateUrl: './edit-tile-dialog.component.html',
   styleUrl: './edit-tile-dialog.component.scss',
 })
 export class EditTileDialogComponent {
   private configService = inject(DataConfigService);
+  private signalStore = inject(TileMapStore);
   protected image: Signal<string>;
   protected desc: Signal<string>;
   protected suggestedPlacement: Signal<number>;
@@ -36,6 +45,13 @@ export class EditTileDialogComponent {
     });
     this.suggestedPlacement = computed(() => {
       return this.data.suggestedPlacement ? 0.5 : 1;
+    });
+  }
+
+  changeSuggestionState(event: boolean) {
+    this.signalStore.updateTile({
+      ...this.data,
+      suggestedPlacement: event,
     });
   }
 

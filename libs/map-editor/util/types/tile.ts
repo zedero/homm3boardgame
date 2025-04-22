@@ -20,6 +20,6 @@ export const BASE_TILE: Tile = {
   cubes: [0, 0, 0, 0, 0, 0, 0],
   hero: ['', '', '', '', '', '', ''],
   rotation: 0,
-  suggestedPlacement: true,
+  suggestedPlacement: false,
   // showBlockedField: [false, false, false, false, false, false, false],
 };

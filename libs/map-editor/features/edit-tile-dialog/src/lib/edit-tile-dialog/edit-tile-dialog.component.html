@@ -1,22 +1,29 @@
 <homm-dialog (closeDialog)="close()" title="Edit tile">
-  <div class="edit-container">
-    <div class="ui">
-      <div class="row">
-        <div class="cell"><feature-cell-editor [tileGuid]="data.id" [index]="0"></feature-cell-editor></div>
-        <div class="cell"><feature-cell-editor [tileGuid]="data.id" [index]="1"></feature-cell-editor></div>
+  <div class="container">
+    <div class="edit-container">
+      <div class="ui">
+        <div class="row">
+          <div class="cell"><feature-cell-editor [tileGuid]="data.id" [index]="0"></feature-cell-editor></div>
+          <div class="cell"><feature-cell-editor [tileGuid]="data.id" [index]="1"></feature-cell-editor></div>
+        </div>
+        <div class="row">
+          <div class="cell"><feature-cell-editor [tileGuid]="data.id" [index]="2"></feature-cell-editor></div>
+          <div class="cell"><feature-cell-editor [tileGuid]="data.id" [index]="3"></feature-cell-editor></div>
+          <div class="cell"><feature-cell-editor [tileGuid]="data.id" [index]="4"></feature-cell-editor></div>
+        </div>
+        <div class="row">
+          <div class="cell"><feature-cell-editor [tileGuid]="data.id" [index]="5"></feature-cell-editor></div>
+          <div class="cell"><feature-cell-editor [tileGuid]="data.id" [index]="6"></feature-cell-editor></div>
+        </div>
       </div>
-      <div class="row">
-        <div class="cell"><feature-cell-editor [tileGuid]="data.id" [index]="2"></feature-cell-editor></div>
-        <div class="cell"><feature-cell-editor [tileGuid]="data.id" [index]="3"></feature-cell-editor></div>
-        <div class="cell"><feature-cell-editor [tileGuid]="data.id" [index]="4"></feature-cell-editor></div>
+      <div class="tileContainer">
+        <img src="{{image()}}" alt="{{desc()  }}" [style.opacity]="suggestedPlacement()">
       </div>
-      <div class="row">
-        <div class="cell"><feature-cell-editor [tileGuid]="data.id" [index]="5"></feature-cell-editor></div>
-        <div class="cell"><feature-cell-editor [tileGuid]="data.id" [index]="6"></feature-cell-editor></div>
-      </div>
+
     </div>
-    <div class="tileContainer">
-      <img src="{{image()}}" alt="{{desc()  }}" [style.opacity]="suggestedPlacement()">
+    <div>
+      <div class="title">Special tile settings</div>
+      <homm-checkbox label="Placement is a suggestion (fade the tile)" (checkedChange)="changeSuggestionState($event)" [checked]="data.suggestedPlacement"></homm-checkbox>
     </div>
   </div>
 </homm-dialog>
