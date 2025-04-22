@@ -9,7 +9,7 @@ export interface Tile {
   hero: TileHexArray<string>;
   rotation: number;
   suggestedPlacement: boolean;
-  // showBlockedField: TileHexArray<boolean>;
+  blockedHex: TileHexArray<boolean>;
 }
 
 export const BASE_TILE: Tile = {
@@ -21,5 +21,5 @@ export const BASE_TILE: Tile = {
   hero: ['', '', '', '', '', '', ''],
   rotation: 0,
   suggestedPlacement: false,
-  // showBlockedField: [false, false, false, false, false, false, false],
+  blockedHex: [false, false, false, false, false, false, false],
 };

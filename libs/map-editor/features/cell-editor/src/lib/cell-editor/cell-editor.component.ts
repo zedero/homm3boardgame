@@ -1,5 +1,6 @@
 import {
   Component,
+  computed,
   inject,
   input,
   OnDestroy,
@@ -17,23 +18,28 @@ import { FormsModule } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { Subject } from 'rxjs';
 import { TileMapStore } from '../../../../../domain/state/tile-map/tile-map.reducer';
+import { CheckboxComponent } from '../../../../../../shared/ui/src/lib/ui/components/checkbox/checkbox.component';
 
 @Component({
   selector: 'feature-cell-editor',
-  imports: [CommonModule, CubeComponent, PortraitComponent, FormsModule],
+  imports: [
+    CommonModule,
+    CubeComponent,
+    PortraitComponent,
+    FormsModule,
+    CheckboxComponent,
+  ],
   templateUrl: './cell-editor.component.html',
   styleUrl: './cell-editor.component.scss',
 })
 export class CellEditorComponent implements OnInit, OnDestroy {
   // Injects
   private configService = inject(DataConfigService);
-  private signalStore = inject(TileMapStore);
+  protected signalStore = inject(TileMapStore);
 
   // Inputs
   tileData: WritableSignal<Tile> = signal({} as Tile);
   tileGuid = input.required<string>();
-  //TODO Make sure that the tileData is from the domain store and that the input turn to the guid of the tile
-
   index = input.required<number>();
 
   // Properties
@@ -43,6 +49,7 @@ export class CellEditorComponent implements OnInit, OnDestroy {
   heroes: WritableSignal<any[]> = signal([
     { value: '0', name: '- No Hero -', faction: 'NONE' },
   ]);
+  blockedHex;
 
   selectedCube: WritableSignal<number> = signal(0);
   cubes: Signal<any[]> = signal([
@@ -60,9 +67,16 @@ export class CellEditorComponent implements OnInit, OnDestroy {
     { value: '11', name: 'Cove cube' },
   ]);
 
-  constructor(private store: Store) {
+  constructor() {
     this.factions.set(Object.keys(this.configService.FACTIONS()));
     this.createHeroesSelect();
+    this.blockedHex = computed(() => {
+      return (
+        this.signalStore.selectTileByGuid(this.tileGuid())?.blockedHex?.[
+          this.index()
+        ] || false
+      );
+    });
   }
 
   ngOnInit() {
@@ -121,6 +135,18 @@ export class CellEditorComponent implements OnInit, OnDestroy {
     });
   }
 
+  setBlockedState(state: boolean) {
+    this.signalStore.updateTile({
+      ...this.tileData(),
+      blockedHex: this.tileData().blockedHex.map((h, i) => {
+        if (i === this.index()) {
+          return state;
+        }
+        return h;
+      }) as TileHexArray<boolean>,
+    });
+  }
+
   getFactionDesc(faction: string) {
     return this.configService.FACTIONS()[faction];
   }
@@ -137,4 +163,6 @@ export class CellEditorComponent implements OnInit, OnDestroy {
     this.destroyed$.next(1);
     this.destroyed$.complete();
   }
+
+  protected readonly signal = signal;
 }

@@ -1,4 +1,5 @@
 <div class="container">
+  <homm-checkbox (checkedChange)="setBlockedState($event)" [checked]="blockedHex()" label="block hex"></homm-checkbox>
   <select name="hero" #hero (change)="selectHero(hero.value)" [(ngModel)]="selectedHero">
     <option class="first" [value]="''">- No Hero -</option>
     <optgroup label="{{getFactionDesc(faction)}}" *ngFor="let faction of factions()">
@@ -11,6 +12,15 @@
       <option [value]="cube.value">{{cube.name}}</option>
     }
   </select>
+<!--  For single hex placement-->
+<!--  <select name="cube" #cube (change)="selectCube(cube.value)" [(ngModel)]="selectedCube">-->
+<!--    @for(cube of cubes(); track cube) {-->
+<!--      <option [value]="cube.value">{{cube.name}}</option>-->
+<!--    }-->
+<!--  </select>-->
 </div>
 <app-cube [id]="selectedCube()"></app-cube>
 <app-portrait [id]="selectedHero()"></app-portrait>
+@if (blockedHex()) {
+  <div class="blockedHex">TT</div>
+}
