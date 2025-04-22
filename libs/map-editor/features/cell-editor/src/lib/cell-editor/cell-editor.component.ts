@@ -9,7 +9,7 @@ import {
   WritableSignal,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FieldArray, Tile } from '../../../../../util/types/tile';
+import { TileHexArray, Tile } from '../../../../../util/types/tile';
 import { DataConfigService } from '@homm3boardgame/config';
 import { CubeComponent } from '../../../../../ui/cube/cube.component';
 import { PortraitComponent } from '../../../../../ui/portrait/portrait.component';
@@ -116,7 +116,7 @@ export class CellEditorComponent implements OnInit, OnDestroy {
           return cube;
         }
         return c;
-      }) as FieldArray<number>,
+      }) as TileHexArray<number>,
     });
   }
   selectHero(hero: string) {
@@ -127,7 +127,7 @@ export class CellEditorComponent implements OnInit, OnDestroy {
           return hero;
         }
         return h;
-      }) as FieldArray<string>,
+      }) as TileHexArray<string>,
     });
   }
 

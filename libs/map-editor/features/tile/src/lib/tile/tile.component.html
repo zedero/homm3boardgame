@@ -22,6 +22,6 @@
       <div class="cell"><app-cube [id]="tileData().cubes[6]" ></app-cube><app-portrait [id]="tileData().hero[6]"></app-portrait></div>
     </div>
   </div>
-  <img src="{{image()}}" alt="{{desc()}}" [style.rotate]="rotation()">
+  <img src="{{image()}}" alt="{{desc()}}" [style.rotate]="rotation()" [style.opacity]="suggestedPlacement()">
 </div>
 

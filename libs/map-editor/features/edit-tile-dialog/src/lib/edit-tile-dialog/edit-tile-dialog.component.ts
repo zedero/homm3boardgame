@@ -6,6 +6,7 @@ import { Tile } from '../../../../../util/types/tile';
 import { CellEditorComponent } from '@homm3boardgame/cell-editor';
 import { DialogComponent } from '@homm3boardgame/shared/ui';
 import { FormsModule } from '@angular/forms';
+import { TileComponent } from '@homm3boardgame/tile';
 
 @Component({
   selector: 'feature-edit-tile-dialog',
@@ -17,6 +18,7 @@ export class EditTileDialogComponent {
   private configService = inject(DataConfigService);
   protected image: Signal<string>;
   protected desc: Signal<string>;
+  protected suggestedPlacement: Signal<number>;
 
   constructor(
     public dialogRef: MatDialogRef<EditTileDialogComponent>,
@@ -31,6 +33,9 @@ export class EditTileDialogComponent {
     });
     this.desc = computed(() => {
       return this.data.tileId;
+    });
+    this.suggestedPlacement = computed(() => {
+      return this.data.suggestedPlacement ? 0.5 : 1;
     });
   }
 

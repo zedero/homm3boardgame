@@ -53,6 +53,9 @@ export class TileComponent implements OnInit {
   protected rotation: Signal<string> = computed(() => {
     return this.tileData().rotation * 60 + 'deg';
   });
+  protected suggestedPlacement: Signal<number> = computed(() => {
+    return this.tileData().suggestedPlacement ? 0.5 : 1;
+  });
 
   ngOnInit() {
     this.snapToCell(this.generateId(this.tileData()));

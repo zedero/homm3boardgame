@@ -1,7 +1,5 @@
-import { effect, inject, Injectable, Signal, signal } from '@angular/core';
+import { effect, inject, Injectable, signal } from '@angular/core';
 import { BASE_TILE, Tile } from '../../../util/types/tile';
-import { Store } from '@ngrx/store';
-import { domainEventActions } from './tile-map.actions';
 import { Grid, TileMapStore } from './tile-map.reducer';
 import { DataConfigService } from '@homm3boardgame/config';
 
@@ -28,8 +26,8 @@ export class TileMapService {
     if (data) {
       const selectedMap = JSON.parse(data)?.[this.selectedMap()];
       if (selectedMap) {
-        this.updateTileListData(selectedMap);
-        this.signalStore.setTileList(selectedMap);
+        // this.updateTileListData(selectedMap);
+        this.signalStore.setTileList(this.updateTileListData(selectedMap));
       }
 
       const grid = JSON.parse(data)['grid'];
@@ -40,13 +38,12 @@ export class TileMapService {
   }
 
   updateTileListData(tileList: Tile[]) {
-    const updatedTileList = tileList.map((tile) => {
+    return tileList.map((tile) => {
       return {
         ...BASE_TILE,
         ...tile,
       };
     });
-    console.log(updatedTileList);
   }
 
   isValid() {
