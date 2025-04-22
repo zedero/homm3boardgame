@@ -1,5 +1,5 @@
 import { effect, inject, Injectable, signal } from '@angular/core';
-import { BASE_TILE, Tile } from '../../../util/types/tile';
+import { BASE_TILE, Tile, TileHexArray } from '../../../util/types/tile';
 import { Grid, TileMapStore } from './tile-map.reducer';
 import { DataConfigService } from '@homm3boardgame/config';
 
@@ -38,10 +38,25 @@ export class TileMapService {
   }
 
   updateTileListData(tileList: Tile[]) {
-    return tileList.map((tile) => {
+    const updatedTileList = tileList.map((tile) => {
       return {
         ...BASE_TILE,
         ...tile,
+      };
+    });
+
+    // make sure that the 0 for heroes in the old format is converted to string
+    return updatedTileList.map((tile) => {
+      const hero = tile.hero.map((hero) => {
+        // @ts-ignore
+        if (hero === 0) {
+          return '';
+        }
+        return hero;
+      }) as TileHexArray<string>;
+      return {
+        ...tile,
+        hero,
       };
     });
   }
