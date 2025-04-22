@@ -138,9 +138,10 @@ export class CellEditorComponent implements OnInit, OnDestroy {
   }
 
   setBlockedState(state: boolean) {
+    const tile = this.signalStore.selectTileByGuid(this.tileGuid()) as Tile;
     this.signalStore.updateTile({
-      ...this.tileData(),
-      blockedHex: this.tileData().blockedHex.map((h, i) => {
+      ...tile,
+      blockedHex: tile.blockedHex.map((h, i) => {
         if (i === this.index()) {
           return state;
         }
