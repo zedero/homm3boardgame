@@ -74,7 +74,10 @@
     "TOWER": "Tower",
     "RAMPART": "Rampart",
     "FORTRESS": "Fortress",
-    "INFERNO": "Inferno"
+    "INFERNO": "Inferno",
+    "STRONGHOLD": "Stronghold",
+    "CONFLUX": "Conflux",
+    "COVE": "Cove"
   },
   "FACTIONS": {
     "CASTLE": "Castle",
@@ -83,6 +86,9 @@
     "TOWER": "Tower",
     "RAMPART": "Rampart",
     "FORTRESS": "Fortress",
-    "INFERNO": "Inferno"
+    "INFERNO": "Inferno",
+    "STRONGHOLD": "Stronghold",
+    "CONFLUX": "Conflux",
+    "COVE": "Cove"
   }
 }

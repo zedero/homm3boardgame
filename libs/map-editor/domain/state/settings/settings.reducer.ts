@@ -40,6 +40,9 @@ export const initialSettingsState: SettingsState = {
     RAMPART: true,
     RANDOM: true,
     TOWER: true,
+    STRONGHOLD: false,
+    CONFLUX: false,
+    COVE: false,
   },
 };
 
@@ -48,7 +51,7 @@ const reducer = createReducer(
   on(
     domainSettingsEventActions.changeExpansionFilter,
     (state, { set, isChecked }) => {
-      console.log(set, isChecked);
+      // console.log(set, isChecked);
       return {
         ...state,
         filterSettings: {

@@ -120,6 +120,9 @@ export class SelectTileComponent {
         this.config.EXPANSION_CONTENTS()[
           this.config.EXPANSION()[selectedExpansion]
         ];
+      if (!content) {
+        return;
+      }
       totals.TOWN += content.TOWN;
       totals.FAR += content.FAR;
       totals.NEAR += content.NEAR;
@@ -264,7 +267,7 @@ export class SelectTileComponent {
   }
 
   saveFilterOptions(name: string, event: any) {
-    console.log(name, event);
+    // console.log(name, event);
     this.store.dispatch(
       domainSettingsEventActions.changeExpansionFilter({
         set: name,
