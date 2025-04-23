@@ -11,7 +11,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { ButtonComponent, DialogComponent } from '@homm3boardgame/shared/ui';
 import { FormsModule } from '@angular/forms';
 import { Store } from '@ngrx/store';
-import { Tile } from '../../../../../util/types/tile';
+import { BASE_TILE, Tile, TileHexArray } from '../../../../../util/types/tile';
 import * as zlib from 'pako';
 import { Data, DeflateFunctionOptions } from 'pako';
 import { CdkCopyToClipboard } from '@angular/cdk/clipboard';
@@ -55,11 +55,35 @@ export class ImportExportComponent {
     const fromBase64 = atob(this.importValue()) as unknown;
     const unzipped = zlib.inflate(fromBase64 as Data, conf) as unknown;
     const parsed = JSON.parse(unzipped as string);
-    this.signalStore.setTileList(parsed);
+    this.signalStore.setTileList(this.updateTileListData(parsed));
     this.close();
   }
 
   close(): void {
     this.dialogRef.close();
+  }
+
+  updateTileListData(tileList: Tile[]) {
+    const updatedTileList = tileList.map((tile) => {
+      return {
+        ...BASE_TILE,
+        ...tile,
+      };
+    });
+
+    // make sure that the 0 for heroes in the old format is converted to string
+    return updatedTileList.map((tile) => {
+      const hero = tile.hero.map((hero) => {
+        // @ts-ignore
+        if (hero === 0) {
+          return '';
+        }
+        return hero;
+      }) as TileHexArray<string>;
+      return {
+        ...tile,
+        hero,
+      };
+    });
   }
 }
