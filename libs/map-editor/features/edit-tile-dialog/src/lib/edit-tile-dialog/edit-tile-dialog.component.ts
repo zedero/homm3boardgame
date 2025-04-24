@@ -15,7 +15,6 @@ import { Tile } from '../../../../../util/types/tile';
 import { CellEditorComponent } from '@homm3boardgame/cell-editor';
 import { DialogComponent } from '@homm3boardgame/shared/ui';
 import { FormsModule } from '@angular/forms';
-import { TileComponent } from '@homm3boardgame/tile';
 import { CheckboxComponent } from '../../../../../../shared/ui/src/lib/ui/components/checkbox/checkbox.component';
 import { TileMapStore } from '../../../../../domain/state/tile-map/tile-map.reducer';
 
@@ -51,6 +50,10 @@ export class EditTileDialogComponent implements OnInit {
     { value: 'stronghold', name: 'Stronghold' },
     { value: 'conflux', name: 'Conflux' },
     { value: 'cove', name: 'Cove' },
+    { value: 'earth', name: 'Elemental Earth' },
+    { value: 'fire', name: 'Elemental Fire' },
+    { value: 'water', name: 'Elemental Water' },
+    { value: 'air', name: 'Elemental Air' },
   ]);
 
   protected canHaveFactionBorder: WritableSignal<boolean> = signal(false);

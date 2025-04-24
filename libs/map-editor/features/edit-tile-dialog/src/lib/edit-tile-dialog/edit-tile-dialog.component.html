@@ -59,6 +59,7 @@
       </div>
       @if(canHaveFactionBorder()) {
         <div class="setting">
+          <div class="setting-title">Option to select an faction to this random tile</div>
           <select name="factionBorder" #faction (change)="selectFaction(faction.value)" [(ngModel)]="selectedFaction">
             @for(faction of factionBorder(); track faction) {
               <option [value]="faction.value">{{faction.name}}</option>
