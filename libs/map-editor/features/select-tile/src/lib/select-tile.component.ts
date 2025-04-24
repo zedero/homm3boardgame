@@ -137,6 +137,39 @@ export class SelectTileComponent {
       totals.CENTER_MAX += content.CENTER;
     });
 
+    this.signalStore.tileList().forEach((tile) => {
+      const groupId =
+        this.config.GROUP()[this.config.TILES()[tile.tileId].group];
+      if (
+        this.config.GROUP()[groupId] === this.config.GROUP()['STARTINGTILE']
+      ) {
+        totals.TOWN--;
+      }
+      if (this.config.GROUP()[groupId] === this.config.GROUP()['FAR']) {
+        totals.FAR--;
+      }
+      if (this.config.GROUP()[groupId] === this.config.GROUP()['NEAR']) {
+        totals.NEAR--;
+      }
+      if (this.config.GROUP()[groupId] === this.config.GROUP()['CENTER']) {
+        totals.CENTER--;
+      }
+      if (this.config.GROUP()[groupId] === this.config.GROUP()['RANDOM']) {
+        if (tile.tileId === 'S0') {
+          totals.TOWN--;
+        }
+        if (tile.tileId === 'F0') {
+          totals.FAR--;
+        }
+        if (tile.tileId === 'N0') {
+          totals.NEAR--;
+        }
+        if (tile.tileId === 'C0') {
+          totals.CENTER--;
+        }
+      }
+    });
+
     // this.tilesService.tileList.forEach((tile) => {
     //   const groupId = this.config.GROUP[this.config.TILES[tile.tileId].group];
     //   if (this.config.GROUP[groupId] === this.config.GROUP.STARTINGTILE) {
