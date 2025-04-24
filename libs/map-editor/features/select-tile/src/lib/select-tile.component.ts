@@ -84,7 +84,14 @@ export class SelectTileComponent {
   }
   getExpansionSelection() {
     const selectedExpansions = new Set();
-    Object.entries(this.sets.value).map((entry) => {
+    let sets;
+    try {
+      sets = this.expansionsFilterSettings();
+    } catch (e) {}
+    if (!sets) {
+      return new Set();
+    }
+    Object.entries(sets).map((entry) => {
       if (entry[1]) {
         selectedExpansions.add(this.EXPANSION[entry[0]]);
       }
