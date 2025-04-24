@@ -16,7 +16,7 @@ i {
 // necropolis
 .color-2 {
   i {
-    color: grey;
+    color: var(--necropolis);
     //filter: drop-shadow(0px 0px 2px #000000);
   }
 }
@@ -24,7 +24,7 @@ i {
 // castle
 .color-3 {
   i {
-    color: lightblue;
+    color: var(--castle);
     filter: drop-shadow(0px 0px 2px #000000);
   }
 }
@@ -32,7 +32,7 @@ i {
 // dungeon
 .color-4 {
   i {
-    color: rebeccapurple;
+    color: var(--dungeon);
     filter: drop-shadow(0px 0px 2px #fff);
   }
 }
@@ -40,28 +40,28 @@ i {
 // tower
 .color-5 {
   i {
-    color: lightgrey;
+    color: var(--tower);
     filter: drop-shadow(0px 0px 2px #000);
   }
 }
 // rampart
 .color-6 {
   i {
-    color: green;
+    color: var(--rampart);
     filter: drop-shadow(0px 0px 4px #fff);
   }
 }
 // fortress
 .color-7 {
   i {
-    color: darkolivegreen;
+    color: var(--fortress);
     filter: drop-shadow(0px 0px 4px #fff);
   }
 }
 // inferno
 .color-8 {
   i {
-    color: darkred;
+    color: var(--inferno);
     filter: drop-shadow(0px 0px 4px #fff);
   }
 }
@@ -69,7 +69,7 @@ i {
 // stronghold
 .color-9 {
   i {
-    color: #CCCC99;
+    color: var(--stronghold);
     filter: drop-shadow(0px 0px 4px #fff);
   }
 }
@@ -77,7 +77,7 @@ i {
 // conflux
 .color-10 {
   i {
-    color: #FF99CC;
+    color: var(--conflux);
     filter: drop-shadow(0px 0px 4px #fff);
   }
 }
@@ -85,7 +85,7 @@ i {
 // cove
 .color-11 {
   i {
-    color: #66CC99;
+    color: var(--cove);
     filter: drop-shadow(0px 0px 4px #fff);
   }
 }
