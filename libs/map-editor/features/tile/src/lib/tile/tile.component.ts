@@ -59,6 +59,10 @@ export class TileComponent implements OnInit {
     return this.tileData().suggestedPlacement ? 0.5 : 1;
   });
 
+  protected factionBorder: Signal<string> = computed(() => {
+    return this.tileData().faction;
+  });
+
   ngOnInit() {
     this.snapToCell(this.generateId(this.tileData()));
   }

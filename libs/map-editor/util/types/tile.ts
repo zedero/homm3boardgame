@@ -10,6 +10,7 @@ export interface Tile {
   rotation: number;
   suggestedPlacement: boolean;
   blockedHex: TileHexArray<boolean>;
+  faction: string;
 }
 
 export const BASE_TILE: Tile = {
@@ -22,4 +23,5 @@ export const BASE_TILE: Tile = {
   rotation: 0,
   suggestedPlacement: false,
   blockedHex: [false, false, false, false, false, false, false],
+  faction: '',
 };

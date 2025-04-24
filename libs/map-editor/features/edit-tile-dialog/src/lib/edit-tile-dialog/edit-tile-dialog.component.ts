@@ -1,4 +1,13 @@
-import { Component, computed, inject, Inject, Signal } from '@angular/core';
+import {
+  Component,
+  computed,
+  inject,
+  Inject,
+  OnInit,
+  signal,
+  Signal,
+  WritableSignal,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { DataConfigService } from '@homm3boardgame/config';
@@ -22,12 +31,27 @@ import { TileMapStore } from '../../../../../domain/state/tile-map/tile-map.redu
   templateUrl: './edit-tile-dialog.component.html',
   styleUrl: './edit-tile-dialog.component.scss',
 })
-export class EditTileDialogComponent {
+export class EditTileDialogComponent implements OnInit {
   private configService = inject(DataConfigService);
   private signalStore = inject(TileMapStore);
   protected image: Signal<string>;
   protected desc: Signal<string>;
   protected suggestedPlacement: Signal<number>;
+
+  selectedFaction: WritableSignal<string> = signal('');
+  factionBorder: Signal<any[]> = signal([
+    { value: '', name: '- none -' },
+    { value: 'necropolis', name: 'Necropolis' },
+    { value: 'castle', name: 'Castle' },
+    { value: 'dungeon', name: 'Dungeon' },
+    { value: 'tower', name: 'Tower' },
+    { value: 'rampart', name: 'Rampart' },
+    { value: 'fortress', name: 'Fortress' },
+    { value: 'inferno', name: 'Inferno' },
+    { value: 'stronghold', name: 'Stronghold' },
+    { value: 'conflux', name: 'Conflux' },
+    { value: 'cove', name: 'Cove' },
+  ]);
 
   constructor(
     public dialogRef: MatDialogRef<EditTileDialogComponent>,
@@ -48,10 +72,22 @@ export class EditTileDialogComponent {
     });
   }
 
+  ngOnInit() {
+    // const data = this.signalStore.selectTileByGuid(this.tileGuid()) as Tile;
+    this.selectedFaction.set(this.data.faction);
+  }
+
   changeSuggestionState(event: boolean) {
     this.signalStore.updateTile({
       ...this.data,
       suggestedPlacement: event,
+    });
+  }
+
+  selectFaction(event: any) {
+    this.signalStore.updateTile({
+      ...this.data,
+      faction: event,
     });
   }
 
