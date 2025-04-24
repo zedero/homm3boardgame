@@ -83,15 +83,17 @@ export class EditTileDialogComponent implements OnInit {
   }
 
   changeSuggestionState(event: boolean) {
+    const tile = this.signalStore.selectTileByGuid(this.data.id) as Tile;
     this.signalStore.updateTile({
-      ...this.data,
+      ...tile,
       suggestedPlacement: event,
     });
   }
 
   selectFaction(event: any) {
+    const tile = this.signalStore.selectTileByGuid(this.data.id) as Tile;
     this.signalStore.updateTile({
-      ...this.data,
+      ...tile,
       faction: event,
     });
   }
