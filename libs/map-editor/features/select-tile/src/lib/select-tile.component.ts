@@ -4,7 +4,6 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { DataConfigService } from '@homm3boardgame/config';
 import { MatCheckbox } from '@angular/material/checkbox';
-import { domainEventActions } from '@homm3boardgame/domain/state';
 import { Store } from '@ngrx/store';
 import { DialogComponent } from '@homm3boardgame/shared/ui';
 import { selectFilterSettings } from '../../../../domain/state/settings/settings.selectors';
@@ -169,36 +168,6 @@ export class SelectTileComponent {
         }
       }
     });
-
-    // this.tilesService.tileList.forEach((tile) => {
-    //   const groupId = this.config.GROUP[this.config.TILES[tile.tileId].group];
-    //   if (this.config.GROUP[groupId] === this.config.GROUP.STARTINGTILE) {
-    //     totals.TOWN--;
-    //   }
-    //   if (this.config.GROUP[groupId] === this.config.GROUP.FAR) {
-    //     totals.FAR--;
-    //   }
-    //   if (this.config.GROUP[groupId] === this.config.GROUP.NEAR) {
-    //     totals.NEAR--;
-    //   }
-    //   if (this.config.GROUP[groupId] === this.config.GROUP.CENTER) {
-    //     totals.CENTER--;
-    //   }
-    //   if (this.config.GROUP[groupId] === this.config.GROUP.RANDOM) {
-    //     if (tile.tileId === "S0") {
-    //       totals.TOWN--;
-    //     }
-    //     if (tile.tileId === "F0") {
-    //       totals.FAR--;
-    //     }
-    //     if (tile.tileId === "N0") {
-    //       totals.NEAR--;
-    //     }
-    //     if (tile.tileId === "C0") {
-    //       totals.CENTER--;
-    //     }
-    //   }
-    // })
 
     this.tilesLeft = totals;
     return totals;
