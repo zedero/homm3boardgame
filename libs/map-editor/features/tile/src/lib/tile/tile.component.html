@@ -7,19 +7,19 @@
     <button (click)="delete()"><i class="fa-regular fa-trash-can"></i></button>
     <button class="rotate-button" (click)="rotate()"><i class="fa-solid fa-rotate-right"></i></button>
   </div>
-  <div class="game-components" [style.rotate]="rotation()">
+  <div class="game-components" [style.rotate]="rotation()" [style.opacity]="suggestedPlacement()">
     <div class="row">
-      <div class="cell"><app-cube [id]="tileData().cubes[0]" ></app-cube><app-portrait [id]="tileData().hero[0]"></app-portrait><app-blocked-hex [visible]="tileData().blockedHex[0]" [style.opacity]="suggestedPlacement()"></app-blocked-hex></div>
-      <div class="cell"><app-cube [id]="tileData().cubes[1]" ></app-cube><app-portrait [id]="tileData().hero[1]"></app-portrait><app-blocked-hex [visible]="tileData().blockedHex[1]" [style.opacity]="suggestedPlacement()"></app-blocked-hex></div>
+      <div class="cell"><app-cube [id]="tileData().cubes[0]" ></app-cube><app-portrait [id]="tileData().hero[0]"></app-portrait><app-blocked-hex [visible]="tileData().blockedHex[0]"></app-blocked-hex></div>
+      <div class="cell"><app-cube [id]="tileData().cubes[1]" ></app-cube><app-portrait [id]="tileData().hero[1]"></app-portrait><app-blocked-hex [visible]="tileData().blockedHex[1]"></app-blocked-hex></div>
     </div>
     <div class="row">
-      <div class="cell"><app-cube [id]="tileData().cubes[2]" ></app-cube><app-portrait [id]="tileData().hero[2]"></app-portrait><app-blocked-hex [visible]="tileData().blockedHex[2]" [style.opacity]="suggestedPlacement()"></app-blocked-hex></div>
-      <div class="cell"><app-cube [id]="tileData().cubes[3]" ></app-cube><app-portrait [id]="tileData().hero[3]"></app-portrait><app-blocked-hex [visible]="tileData().blockedHex[3]" [style.opacity]="suggestedPlacement()"></app-blocked-hex></div>
-      <div class="cell"><app-cube [id]="tileData().cubes[4]" ></app-cube><app-portrait [id]="tileData().hero[4]"></app-portrait><app-blocked-hex [visible]="tileData().blockedHex[4]" [style.opacity]="suggestedPlacement()"></app-blocked-hex></div>
+      <div class="cell"><app-cube [id]="tileData().cubes[2]" ></app-cube><app-portrait [id]="tileData().hero[2]"></app-portrait><app-blocked-hex [visible]="tileData().blockedHex[2]"></app-blocked-hex></div>
+      <div class="cell"><app-cube [id]="tileData().cubes[3]" ></app-cube><app-portrait [id]="tileData().hero[3]"></app-portrait><app-blocked-hex [visible]="tileData().blockedHex[3]"></app-blocked-hex></div>
+      <div class="cell"><app-cube [id]="tileData().cubes[4]" ></app-cube><app-portrait [id]="tileData().hero[4]"></app-portrait><app-blocked-hex [visible]="tileData().blockedHex[4]"></app-blocked-hex></div>
     </div>
     <div class="row">
-      <div class="cell"><app-cube [id]="tileData().cubes[5]" ></app-cube><app-portrait [id]="tileData().hero[5]"></app-portrait><app-blocked-hex [visible]="tileData().blockedHex[5]" [style.opacity]="suggestedPlacement()"></app-blocked-hex></div>
-      <div class="cell"><app-cube [id]="tileData().cubes[6]" ></app-cube><app-portrait [id]="tileData().hero[6]"></app-portrait><app-blocked-hex [visible]="tileData().blockedHex[6]" [style.opacity]="suggestedPlacement()"></app-blocked-hex></div>
+      <div class="cell"><app-cube [id]="tileData().cubes[5]" ></app-cube><app-portrait [id]="tileData().hero[5]"></app-portrait><app-blocked-hex [visible]="tileData().blockedHex[5]"></app-blocked-hex></div>
+      <div class="cell"><app-cube [id]="tileData().cubes[6]" ></app-cube><app-portrait [id]="tileData().hero[6]"></app-portrait><app-blocked-hex [visible]="tileData().blockedHex[6]"></app-blocked-hex></div>
     </div>
   </div>
   <img src="{{image()}}" alt="{{desc()}}" [style.rotate]="rotation()" [style.opacity]="suggestedPlacement()">
