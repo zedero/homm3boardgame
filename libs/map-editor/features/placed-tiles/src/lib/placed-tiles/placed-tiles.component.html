@@ -1,5 +1,5 @@
 <div id="placedTiles" [style.height]="containerHeight$()" [style.width]="containerWidth$()">
-  @for (tile of signalStore.tileList(); track tile.id + tile.row + tile.col) {
+  @for (tile of signalStore.tileList(); track tile) {
     <feature-tile [tileData]="tile"></feature-tile>
   }
 </div>
