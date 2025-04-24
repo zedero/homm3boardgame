@@ -115,9 +115,10 @@ export class CellEditorComponent implements OnInit, OnDestroy {
 
   selectCube(_cube: string) {
     const cube = parseInt(_cube);
+    const tile = this.signalStore.selectTileByGuid(this.tileGuid()) as Tile;
     this.signalStore.updateTile({
-      ...this.tileData(),
-      cubes: this.tileData().cubes.map((c, i) => {
+      ...tile,
+      cubes: tile.cubes.map((c, i) => {
         if (i === this.index()) {
           return cube;
         }
@@ -126,9 +127,10 @@ export class CellEditorComponent implements OnInit, OnDestroy {
     });
   }
   selectHero(hero: string) {
+    const tile = this.signalStore.selectTileByGuid(this.tileGuid()) as Tile;
     this.signalStore.updateTile({
-      ...this.tileData(),
-      hero: this.tileData().hero.map((h, i) => {
+      ...tile,
+      hero: tile.hero.map((h, i) => {
         if (i === this.index()) {
           return hero;
         }
