@@ -52,3 +52,59 @@
     margin-bottom: 1rem;
   }
 }
+.town-overlay {
+  position: absolute;
+  pointer-events: none;
+  top: 22px;
+  left: 40px;
+
+  svg {
+    width: 387px;
+    height: 374px;
+  }
+
+  &.castle svg g {
+    fill: var(--castle);
+  }
+  &.dungeon svg g {
+    fill: var(--dungeon);
+  }
+  &.necropolis svg g {
+    fill: var(--necropolis);
+  }
+  &.tower svg g {
+    fill: var(--towers);
+  }
+  &.rampart svg g {
+    fill: var(--rampart);
+  }
+  &.fortress svg g {
+    fill: var(--fortress);
+  }
+  &.inferno svg g {
+    fill: var(--inferno);
+  }
+  &.stronghold svg g {
+    fill: var(--stronghold);
+  }
+  &.conflux svg g {
+    fill: var(--conflux);
+  }
+  &.cove svg g {
+    fill: var(--cove);
+  }
+
+  &.earth svg g {
+    fill: var(--elemental-earth);
+  }
+  &.fire svg g {
+    fill: var(--elemental-fire);
+  }
+  &.water svg g {
+    fill: var(--elemental-water);
+  }
+  &.air svg g {
+    fill: var(--elemental-air);
+  }
+
+}
