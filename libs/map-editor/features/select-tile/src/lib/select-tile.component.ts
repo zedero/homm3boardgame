@@ -96,11 +96,15 @@ export class SelectTileComponent {
   getPlacedTiles() {
     this.getTilesLeft();
     const placed = new Set();
-    // this.tilesService.tileList.forEach((tile) => {
-    //   if (this.config.EXPANSION[this.config.TILES[tile.tileId].expansionID] !== "RANDOM") {
-    //     placed.add(tile.tileId)
-    //   }
-    // });
+    this.signalStore.tileList().forEach((tile) => {
+      if (
+        this.config.EXPANSION()[
+          this.config.TILES()[tile.tileId].expansionID
+        ] !== 'RANDOM'
+      ) {
+        placed.add(tile.tileId);
+      }
+    });
     return placed;
   }
 
