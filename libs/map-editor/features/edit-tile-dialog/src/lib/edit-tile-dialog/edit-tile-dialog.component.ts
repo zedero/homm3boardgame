@@ -53,6 +53,8 @@ export class EditTileDialogComponent implements OnInit {
     { value: 'cove', name: 'Cove' },
   ]);
 
+  protected canHaveFactionBorder: WritableSignal<boolean> = signal(false);
+
   constructor(
     public dialogRef: MatDialogRef<EditTileDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Tile
@@ -75,6 +77,9 @@ export class EditTileDialogComponent implements OnInit {
   ngOnInit() {
     // const data = this.signalStore.selectTileByGuid(this.tileGuid()) as Tile;
     this.selectedFaction.set(this.data.faction);
+    if (this.configService.getTileGroupById(this.data.tileId) == 'RANDOM') {
+      this.canHaveFactionBorder.set(true);
+    }
   }
 
   changeSuggestionState(event: boolean) {

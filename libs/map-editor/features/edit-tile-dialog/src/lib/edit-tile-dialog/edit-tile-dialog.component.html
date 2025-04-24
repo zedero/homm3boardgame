@@ -26,13 +26,15 @@
       <div class="setting">
         <homm-checkbox label="Placement is a suggestion (fade the tile)" (checkedChange)="changeSuggestionState($event)" [checked]="data.suggestedPlacement"></homm-checkbox>
       </div>
-      <div class="setting">
-        <select name="factionBorder" #cube (change)="selectFaction(cube.value)" [(ngModel)]="selectedFaction">
-          @for(cube of factionBorder(); track cube) {
-            <option [value]="cube.value">{{cube.name}}</option>
-          }
-        </select>
-      </div>
+      @if(canHaveFactionBorder()) {
+        <div class="setting">
+          <select name="factionBorder" #cube (change)="selectFaction(cube.value)" [(ngModel)]="selectedFaction">
+            @for(cube of factionBorder(); track cube) {
+              <option [value]="cube.value">{{cube.name}}</option>
+            }
+          </select>
+        </div>
+      }
     </div>
   </div>
 </homm-dialog>

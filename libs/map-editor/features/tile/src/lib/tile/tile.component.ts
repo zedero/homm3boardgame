@@ -59,8 +59,14 @@ export class TileComponent implements OnInit {
     return this.tileData().suggestedPlacement ? 0.5 : 1;
   });
 
+  protected canHaveFactionBorder: Signal<boolean> = computed(() => {
+    return (
+      this.configService.getTileGroupById(this.tileData().tileId) == 'RANDOM'
+    );
+  });
+
   protected factionBorder: Signal<string> = computed(() => {
-    return this.tileData().faction;
+    return this.canHaveFactionBorder() ? this.tileData().faction : '';
   });
 
   ngOnInit() {

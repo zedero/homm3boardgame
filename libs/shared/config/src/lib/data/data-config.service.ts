@@ -14,7 +14,7 @@ type ExpansionContents = {
   [key: string]: { TOWN: number; FAR: number; NEAR: number; CENTER: number };
 };
 
-type Tile = {
+type TileConfig = {
   id: string;
   img: string;
   desc: string;
@@ -25,7 +25,7 @@ type Tile = {
 };
 
 interface TileMap {
-  [key: string]: Tile;
+  [key: string]: TileConfig;
 }
 
 interface PortraitMap {
@@ -86,5 +86,14 @@ export class DataConfigService {
     });
 
     return Object.fromEntries(result);
+  }
+
+  public getTileGroupById(id: string) {
+    const tile: TileConfig = this.TILES()[id];
+    const group = this.GROUP()[tile.group];
+    if (group) {
+      return group;
+    }
+    return null;
   }
 }
