@@ -17,6 +17,7 @@
         </div>
       </div>
       <div class="tileContainer">
+<!--        <feature-tile [tileGuid]="data.id" *ngIf="data?.id"></feature-tile>-->
         <img src="{{image()}}" alt="{{desc()  }}" [style.opacity]="suggestedPlacement()">
         @if(canHaveFactionBorder() && selectedFaction() !== '') {
           <div [ngClass]="['town-overlay', selectedFaction()]">

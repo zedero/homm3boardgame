@@ -17,6 +17,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { EditTileDialogComponent } from '@homm3boardgame/edit-tile-dialog';
 import { TileMapStore } from '../../../../../domain/state/tile-map/tile-map.reducer';
 import { BlockedHexComponent } from '../../../../../ui/blocked-hex/blocked-hex.component';
+import { TileUtil } from './tile.util';
 
 @Component({
   selector: 'feature-tile',
@@ -36,6 +37,7 @@ export class TileComponent implements OnInit {
   // Injects
   private configService = inject(DataConfigService);
   private signalStore = inject(TileMapStore);
+  private tileUtil = inject(TileUtil);
 
   // Inputs
   tileGuid = input.required<string>();
@@ -146,11 +148,7 @@ export class TileComponent implements OnInit {
   }
 
   protected editTile() {
-    let dialogRef = this.dialog.open(EditTileDialogComponent, {
-      height: '500px',
-      width: '100%',
-      data: this.tileData(),
-    });
+    this.tileUtil.openDialog(this.tileData());
   }
 
   private generateId(data: Tile) {
