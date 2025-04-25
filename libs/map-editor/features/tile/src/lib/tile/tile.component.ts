@@ -8,7 +8,7 @@ import {
   Signal,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Tile } from '../../../../../util/types/tile';
+import { BASE_TILE, Tile } from '../../../../../util/types/tile';
 import { DataConfigService } from '@homm3boardgame/config';
 import { CdkDrag, CdkDragHandle } from '@angular/cdk/drag-drop';
 import { CubeComponent } from '../../../../../ui/cube/cube.component';
@@ -38,16 +38,17 @@ export class TileComponent implements OnInit {
   private signalStore = inject(TileMapStore);
 
   // Inputs
-  tileData = input.required<Tile>();
+  tileGuid = input.required<string>();
+  tileData = computed(() => {
+    const tile = this.signalStore.selectTileByGuid(this.tileGuid());
+    return tile ?? BASE_TILE;
+  });
 
   public dragPosition = signal({ x: 0, y: 0 });
 
   protected image: Signal<string> = computed(() => {
     const tile = this.configService.TILES()[this.tileData().tileId];
-    if (tile) {
-      return tile.img;
-    }
-    return 'default'; // this.tileData().tileId;
+    return tile?.img ?? 'default';
   });
   protected desc: Signal<string> = computed(() => {
     return this.tileData().tileId;
@@ -142,11 +143,6 @@ export class TileComponent implements OnInit {
       row: pos[0],
       col: pos[1],
     });
-
-    // console.log(pos, this.tileData());
-    // this.config.row = pos[0];
-    // this.config.col = pos[1];
-    // this.saveTileData();
   }
 
   protected editTile() {
@@ -155,13 +151,6 @@ export class TileComponent implements OnInit {
       width: '100%',
       data: this.tileData(),
     });
-    //
-    // dialogRef.afterClosed().subscribe(result => {
-    //   if (result) {
-    //     this.config = result;
-    //     this.tilesService.updateTileData(this.config);
-    //   }
-    // });
   }
 
   private generateId(data: Tile) {
