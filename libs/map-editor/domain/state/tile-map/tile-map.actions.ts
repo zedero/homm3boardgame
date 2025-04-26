@@ -24,5 +24,6 @@ export const domainEventActions = createActionGroup({
   events: {
     'generate image': emptyProps(),
     'generate random map': emptyProps(),
+    'edit tile': props<{ tile: Tile }>(),
   },
 });

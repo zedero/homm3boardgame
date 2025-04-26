@@ -3,6 +3,7 @@ import { createEffect, Actions, ofType } from '@ngrx/effects';
 import { tap } from 'rxjs';
 import { domainEventActions } from './tile-map.actions';
 import { RandomMapGeneratorService } from '../../services/random-map-generator/random-map-generator';
+import { TileUtil } from '../../../features/tile/src/lib/tile/tile.util';
 
 @Injectable()
 export class TileMapEffects {
@@ -19,4 +20,17 @@ export class TileMapEffects {
       ),
     { dispatch: false }
   );
+
+  test$ = createEffect(
+    () =>
+      this.actions$.pipe(
+        ofType(domainEventActions.editTile),
+        tap(({ tile }) => {
+          this.tileUtil.openDialog(tile);
+        })
+      ),
+    { dispatch: false }
+  );
+
+  constructor(private tileUtil: TileUtil) {}
 }

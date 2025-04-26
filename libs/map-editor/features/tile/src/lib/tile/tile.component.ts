@@ -14,10 +14,10 @@ import { CdkDrag, CdkDragHandle } from '@angular/cdk/drag-drop';
 import { CubeComponent } from '../../../../../ui/cube/cube.component';
 import { PortraitComponent } from '../../../../../ui/portrait/portrait.component';
 import { MatDialog } from '@angular/material/dialog';
-import { EditTileDialogComponent } from '@homm3boardgame/edit-tile-dialog';
 import { TileMapStore } from '../../../../../domain/state/tile-map/tile-map.reducer';
 import { BlockedHexComponent } from '../../../../../ui/blocked-hex/blocked-hex.component';
-import { TileUtil } from './tile.util';
+import { Store } from '@ngrx/store';
+import { domainEventActions } from '@homm3boardgame/domain/state';
 
 @Component({
   selector: 'feature-tile',
@@ -37,10 +37,10 @@ export class TileComponent implements OnInit {
   // Injects
   private configService = inject(DataConfigService);
   private signalStore = inject(TileMapStore);
-  private tileUtil = inject(TileUtil);
 
   // Inputs
   tileGuid = input.required<string>();
+  displayMode = input<boolean>(false);
   tileData = computed(() => {
     const tile = this.signalStore.selectTileByGuid(this.tileGuid());
     return tile ?? BASE_TILE;
@@ -73,7 +73,9 @@ export class TileComponent implements OnInit {
   });
 
   ngOnInit() {
-    this.snapToCell(this.generateId(this.tileData()));
+    if (!this.displayMode()) {
+      this.snapToCell(this.generateId(this.tileData()));
+    }
   }
 
   public snap(event: any) {
@@ -148,12 +150,17 @@ export class TileComponent implements OnInit {
   }
 
   protected editTile() {
-    this.tileUtil.openDialog(this.tileData());
+    // this.tileUtil.openDialog(this.tileData());
+    this.store.dispatch(
+      domainEventActions.editTile({
+        tile: this.tileData(),
+      })
+    );
   }
 
   private generateId(data: Tile) {
     return `${data.row}.${data.col}`;
   }
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, private store: Store) {}
 }

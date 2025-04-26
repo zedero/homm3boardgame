@@ -1,12 +1,15 @@
-<div class="tile" cdkDrag [cdkDragFreeDragPosition]="dragPosition()">
-  <div class="controls">
-    <button><i class="fa-solid fa-pen" (click)="editTile()"></i></button>
-    <span cdkDragHandle class="move" (mouseup)="snap($event)" (touchend)="snap($event)">
+<div class="tile" cdkDrag [cdkDragFreeDragPosition]="dragPosition()" [class.display-mode]="displayMode()">
+  @if(!displayMode())
+  {
+    <div class="controls">
+      <button><i class="fa-solid fa-pen" (click)="editTile()"></i></button>
+      <span cdkDragHandle class="move" (mouseup)="snap($event)" (touchend)="snap($event)">
       <i class="fa-solid fa-up-down-left-right"></i>
     </span>
-    <button (click)="delete()"><i class="fa-regular fa-trash-can"></i></button>
-    <button class="rotate-button" (click)="rotate()"><i class="fa-solid fa-rotate-right"></i></button>
-  </div>
+      <button (click)="delete()"><i class="fa-regular fa-trash-can"></i></button>
+      <button class="rotate-button" (click)="rotate()"><i class="fa-solid fa-rotate-right"></i></button>
+    </div>
+  }
   <div class="game-components" [style.rotate]="rotation()" [style.opacity]="suggestedPlacement()">
     <div class="row">
       <div class="cell"><app-cube [id]="tileData().cubes[0]" ></app-cube><app-portrait [id]="tileData().hero[0]"></app-portrait><app-blocked-hex [visible]="tileData().blockedHex[0]"></app-blocked-hex></div>

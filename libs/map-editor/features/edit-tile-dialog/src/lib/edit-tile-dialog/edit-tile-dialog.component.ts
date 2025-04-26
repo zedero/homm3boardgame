@@ -27,6 +27,7 @@ import { TileComponent } from '@homm3boardgame/tile';
     DialogComponent,
     FormsModule,
     CheckboxComponent,
+    TileComponent,
   ],
   templateUrl: './edit-tile-dialog.component.html',
   styleUrl: './edit-tile-dialog.component.scss',
