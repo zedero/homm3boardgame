@@ -52,10 +52,10 @@ export class EditTileDialogComponent implements OnInit {
     { value: 'stronghold', name: 'Stronghold' },
     { value: 'conflux', name: 'Conflux' },
     { value: 'cove', name: 'Cove' },
-    { value: 'earth', name: 'Elemental Earth' },
-    { value: 'fire', name: 'Elemental Fire' },
-    { value: 'water', name: 'Elemental Water' },
-    { value: 'air', name: 'Elemental Air' },
+    { value: 'elemental-earth', name: 'Elemental Earth' },
+    { value: 'elemental-fire', name: 'Elemental Fire' },
+    { value: 'elemental-water', name: 'Elemental Water' },
+    { value: 'elemental-air', name: 'Elemental Air' },
   ]);
 
   protected canHaveFactionBorder: WritableSignal<boolean> = signal(false);

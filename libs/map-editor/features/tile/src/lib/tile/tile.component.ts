@@ -46,6 +46,11 @@ export class TileComponent implements OnInit {
     return tile ?? BASE_TILE;
   });
 
+  borderColor = computed(() => {
+    const style = window.getComputedStyle(document.body);
+    return style.getPropertyValue(`--${this.factionBorder()}`);
+  });
+
   public dragPosition = signal({ x: 0, y: 0 });
 
   protected image: Signal<string> = computed(() => {
