@@ -18,7 +18,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "StorybookConfig",
-                "defaultValue": "{\n  stories: ['../**/*.@(mdx|stories.@(js|jsx|ts|tsx))'],\n  addons: [\n    '@storybook/addon-essentials',\n    '@storybook/addon-a11y',\n    '@storybook/addon-docs',\n  ],\n  framework: {\n    name: '@storybook/angular',\n    options: {},\n  },\n  docs: {\n    autodocs: true,\n    defaultName: 'Docs',\n  },\n  staticDirs: ['../../../../public/assets'],\n}"
+                "defaultValue": "{\n  stories: ['../**/*.@(mdx|stories.@(js|jsx|ts|tsx))'],\n  addons: [\n    '@storybook/addon-essentials',\n    '@storybook/addon-a11y',\n    '@storybook/addon-docs',\n  ],\n  framework: {\n    name: '@storybook/angular',\n    options: {},\n  },\n  docs: {\n    autodocs: true,\n    defaultName: 'Docs',\n  },\n  staticDirs: ['../../../..', '../../../../public'],\n}"
             },
             {
                 "name": "meta",
@@ -28,7 +28,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ButtonComponent>",
-                "defaultValue": "{\n  component: ButtonComponent,\n  title: 'ButtonComponent',\n  argTypes: {\n    title: {\n      control: 'text',\n      description: 'The title of the button',\n    },\n  },\n}"
+                "defaultValue": "{\n  component: ButtonComponent,\n  title: 'ButtonComponent',\n  argTypes: {\n    theme: {\n      control: 'text',\n      description: 'The title of the button',\n    },\n  },\n}"
             },
             {
                 "name": "preview",
@@ -38,7 +38,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Preview",
-                "defaultValue": "{\n  // ...rest of preview\n  //👇 Enables auto-generated documentation for all stories\n  tags: ['autodocs'],\n}"
+                "defaultValue": "{\r\n  // ...rest of preview\r\n  //👇 Enables auto-generated documentation for all stories\r\n  tags: ['autodocs'],\r\n}"
             },
             {
                 "name": "Primary",
@@ -48,7 +48,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    title: 'default button',\n  },\n}"
+                "defaultValue": "{\n  args: {\n    theme: 'primary',\n  },\n}"
             }
         ],
         "functions": [],
@@ -76,7 +76,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "StorybookConfig",
-                    "defaultValue": "{\n  stories: ['../**/*.@(mdx|stories.@(js|jsx|ts|tsx))'],\n  addons: [\n    '@storybook/addon-essentials',\n    '@storybook/addon-a11y',\n    '@storybook/addon-docs',\n  ],\n  framework: {\n    name: '@storybook/angular',\n    options: {},\n  },\n  docs: {\n    autodocs: true,\n    defaultName: 'Docs',\n  },\n  staticDirs: ['../../../../public/assets'],\n}"
+                    "defaultValue": "{\n  stories: ['../**/*.@(mdx|stories.@(js|jsx|ts|tsx))'],\n  addons: [\n    '@storybook/addon-essentials',\n    '@storybook/addon-a11y',\n    '@storybook/addon-docs',\n  ],\n  framework: {\n    name: '@storybook/angular',\n    options: {},\n  },\n  docs: {\n    autodocs: true,\n    defaultName: 'Docs',\n  },\n  staticDirs: ['../../../..', '../../../../public'],\n}"
                 }
             ],
             "libs/shared/ui/src/lib/ui/components/button/button.component.stories.ts": [
@@ -88,7 +88,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ButtonComponent>",
-                    "defaultValue": "{\n  component: ButtonComponent,\n  title: 'ButtonComponent',\n  argTypes: {\n    title: {\n      control: 'text',\n      description: 'The title of the button',\n    },\n  },\n}"
+                    "defaultValue": "{\n  component: ButtonComponent,\n  title: 'ButtonComponent',\n  argTypes: {\n    theme: {\n      control: 'text',\n      description: 'The title of the button',\n    },\n  },\n}"
                 },
                 {
                     "name": "Primary",
@@ -98,7 +98,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    title: 'default button',\n  },\n}"
+                    "defaultValue": "{\n  args: {\n    theme: 'primary',\n  },\n}"
                 }
             ],
             "libs/shared/ui/.storybook/preview.ts": [
@@ -110,7 +110,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Preview",
-                    "defaultValue": "{\n  // ...rest of preview\n  //👇 Enables auto-generated documentation for all stories\n  tags: ['autodocs'],\n}"
+                    "defaultValue": "{\r\n  // ...rest of preview\r\n  //👇 Enables auto-generated documentation for all stories\r\n  tags: ['autodocs'],\r\n}"
                 }
             ]
         },

@@ -5,7 +5,7 @@ const meta: Meta<ButtonComponent> = {
   component: ButtonComponent,
   title: 'ButtonComponent',
   argTypes: {
-    title: {
+    theme: {
       control: 'text',
       description: 'The title of the button',
     },
@@ -16,6 +16,6 @@ type Story = StoryObj<ButtonComponent>;
 
 export const Primary: Story = {
   args: {
-    title: 'default button',
+    theme: 'primary',
   },
 };

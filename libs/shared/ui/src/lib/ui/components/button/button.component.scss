@@ -13,7 +13,7 @@
   border-left-color   .2s,
   border-right-color  .2s;
 
-  background-image: url("public/assets/shared/UI/dialog-background.png");
+  background-image: url("/assets/shared/UI/dialog-background.png");
 
   background-repeat: repeat;
   border-radius: 0;
@@ -43,7 +43,7 @@
   }
 
   &--secondary {
-    background-image: url("public/assets/shared/UI/panelcoloredbg.jpg");
+    background-image: url("/assets/shared/UI/panelcoloredbg.jpg");
     $color-horizon: #2b4289;
     border-left-color: $color-horizon;
     &:active {

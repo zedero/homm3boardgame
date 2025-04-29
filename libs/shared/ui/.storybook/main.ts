@@ -15,7 +15,7 @@ const config: StorybookConfig = {
     autodocs: true,
     defaultName: 'Docs',
   },
-  staticDirs: ['../../../../public/assets'],
+  staticDirs: ['../../../..', '../../../../public'],
 };
 
 export default config;
