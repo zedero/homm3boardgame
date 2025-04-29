@@ -57,4 +57,16 @@
   ::ng-deep homm-button {
     margin: -8px -10px -8px 10px;
   }
+
+  .icon-left ~ .content:not(:empty) {
+    margin-left: .5rem;
+  }
+
+  .content:not(:empty) + .icon-right {
+    margin-left: .5rem;
+  }
+
+  .content {
+
+  }
 }

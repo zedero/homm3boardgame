@@ -11,6 +11,10 @@ const config: StorybookConfig = {
     name: '@storybook/angular',
     options: {},
   },
+  previewHead: (head) => `
+    ${head}
+    ${'<script src="https://kit.fontawesome.com/8451a2c6af.js" crossorigin="anonymous"></script>'}
+  `,
   docs: {
     autodocs: true,
     defaultName: 'Docs',

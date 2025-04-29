@@ -1,36 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
-html, body { height: 100%; width: 100%; box-sizing: border-box; padding: 0; margin: 0; }
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
-:root {
-  --primary: #ffe98c;
-
-  --castle: #549ad2;//lightblue;
-  --dungeon: #6a4a97;//rebeccapurple;
-  --necropolis: #a8a8a7;//grey;
-  --towers: lightgrey;
-  --rampart: #a1c564;//green
-  --fortress: #3e4a2e;//darkolivegreen;
-  --inferno: #951d1e;//darkred
-  --stronghold: #CCCC99;
-  --conflux: #f5b2cd; //#FF99CC
-  --cove: #66CC99;
-
-  --elemental-earth: #a24f18;
-  --elemental-fire: #e63323;
-  --elemental-water: #3a5ba7;
-  --elemental-air: #dadada;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-size: 1.6rem;
-}
+@import "../libs/shared/ui/src/lib/styles/styles.scss";
 
 
 //#############################################################

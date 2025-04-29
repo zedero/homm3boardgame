@@ -3,10 +3,10 @@
   [attr.aria-label]="ariaLabel()"
   class="button button--{{theme()}}">
   @if(iconLeft()) {
-    <i class="fa-solid fa-{{iconLeft()}}"></i>
+    <i class="fa-solid fa-{{iconLeft()}} icon-left"></i>
   }
-  <ng-content></ng-content>
+  <span class="content"><ng-content></ng-content></span>
   @if(iconRight()) {
-    <i class="fa-solid fa-{{iconRight()}}"></i>
+    <i class="fa-solid fa-{{iconRight()}} icon-right"></i>
   }
 </button>

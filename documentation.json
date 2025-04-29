@@ -18,7 +18,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "StorybookConfig",
-                "defaultValue": "{\n  stories: ['../**/*.@(mdx|stories.@(js|jsx|ts|tsx))'],\n  addons: [\n    '@storybook/addon-essentials',\n    '@storybook/addon-a11y',\n    '@storybook/addon-docs',\n  ],\n  framework: {\n    name: '@storybook/angular',\n    options: {},\n  },\n  docs: {\n    autodocs: true,\n    defaultName: 'Docs',\n  },\n  staticDirs: ['../../../..', '../../../../public'],\n}"
+                "defaultValue": "{\n  stories: ['../**/*.@(mdx|stories.@(js|jsx|ts|tsx))'],\n  addons: [\n    '@storybook/addon-essentials',\n    '@storybook/addon-a11y',\n    '@storybook/addon-docs',\n  ],\n  framework: {\n    name: '@storybook/angular',\n    options: {},\n  },\n  previewHead: (head) => `\n    ${head}\n    ${'<script src=\"https://kit.fontawesome.com/8451a2c6af---.js\" crossorigin=\"anonymous\"></script>'}\n  `,\n  docs: {\n    autodocs: true,\n    defaultName: 'Docs',\n  },\n  staticDirs: ['../../../..', '../../../../public'],\n}"
+            },
+            {
+                "name": "Icon",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/shared/ui/src/lib/ui/components/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    theme: 'primary',\n    iconLeft: 'fa-gear',\n    iconRight: 'right-icon',\n    ariaLabel: 'Primary Button',\n    disabled: false,\n  },\n}"
             },
             {
                 "name": "meta",
@@ -28,7 +38,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ButtonComponent>",
-                "defaultValue": "{\n  component: ButtonComponent,\n  title: 'ButtonComponent',\n  argTypes: {\n    theme: {\n      control: 'text',\n      description: 'The title of the button',\n    },\n  },\n}"
+                "defaultValue": "{\n  component: ButtonComponent,\n  title: 'Components/Button',\n  tags: ['autodocs'],\n  argTypes: {\n    theme: {\n      control: 'text',\n      description: 'The theme of the button (e.g., primary, secondary)',\n    },\n    iconLeft: {\n      control: 'text',\n      description: 'Icon displayed on the left side of the button',\n    },\n    iconRight: {\n      control: 'text',\n      description: 'Icon displayed on the right side of the button',\n    },\n    ariaLabel: {\n      control: 'text',\n      description: 'Accessible label for the button',\n    },\n    disabled: {\n      control: 'boolean',\n      description: 'Disables the button when true',\n    },\n  },\n}"
             },
             {
                 "name": "preview",
@@ -48,7 +58,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    theme: 'primary',\n  },\n}"
+                "defaultValue": "{\n  args: {\n    theme: 'primary',\n    iconLeft: 'left-icon',\n    iconRight: 'right-icon',\n    ariaLabel: 'Primary Button',\n    disabled: false,\n  },\n}"
+            },
+            {
+                "name": "Secondary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/shared/ui/src/lib/ui/components/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    theme: 'secondary',\n    ariaLabel: 'Secondary Button',\n  },\n}"
             }
         ],
         "functions": [],
@@ -76,10 +96,20 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "StorybookConfig",
-                    "defaultValue": "{\n  stories: ['../**/*.@(mdx|stories.@(js|jsx|ts|tsx))'],\n  addons: [\n    '@storybook/addon-essentials',\n    '@storybook/addon-a11y',\n    '@storybook/addon-docs',\n  ],\n  framework: {\n    name: '@storybook/angular',\n    options: {},\n  },\n  docs: {\n    autodocs: true,\n    defaultName: 'Docs',\n  },\n  staticDirs: ['../../../..', '../../../../public'],\n}"
+                    "defaultValue": "{\n  stories: ['../**/*.@(mdx|stories.@(js|jsx|ts|tsx))'],\n  addons: [\n    '@storybook/addon-essentials',\n    '@storybook/addon-a11y',\n    '@storybook/addon-docs',\n  ],\n  framework: {\n    name: '@storybook/angular',\n    options: {},\n  },\n  previewHead: (head) => `\n    ${head}\n    ${'<script src=\"https://kit.fontawesome.com/8451a2c6af---.js\" crossorigin=\"anonymous\"></script>'}\n  `,\n  docs: {\n    autodocs: true,\n    defaultName: 'Docs',\n  },\n  staticDirs: ['../../../..', '../../../../public'],\n}"
                 }
             ],
             "libs/shared/ui/src/lib/ui/components/button/button.component.stories.ts": [
+                {
+                    "name": "Icon",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/shared/ui/src/lib/ui/components/button/button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    theme: 'primary',\n    iconLeft: 'fa-gear',\n    iconRight: 'right-icon',\n    ariaLabel: 'Primary Button',\n    disabled: false,\n  },\n}"
+                },
                 {
                     "name": "meta",
                     "ctype": "miscellaneous",
@@ -88,7 +118,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ButtonComponent>",
-                    "defaultValue": "{\n  component: ButtonComponent,\n  title: 'ButtonComponent',\n  argTypes: {\n    theme: {\n      control: 'text',\n      description: 'The title of the button',\n    },\n  },\n}"
+                    "defaultValue": "{\n  component: ButtonComponent,\n  title: 'Components/Button',\n  tags: ['autodocs'],\n  argTypes: {\n    theme: {\n      control: 'text',\n      description: 'The theme of the button (e.g., primary, secondary)',\n    },\n    iconLeft: {\n      control: 'text',\n      description: 'Icon displayed on the left side of the button',\n    },\n    iconRight: {\n      control: 'text',\n      description: 'Icon displayed on the right side of the button',\n    },\n    ariaLabel: {\n      control: 'text',\n      description: 'Accessible label for the button',\n    },\n    disabled: {\n      control: 'boolean',\n      description: 'Disables the button when true',\n    },\n  },\n}"
                 },
                 {
                     "name": "Primary",
@@ -98,7 +128,17 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    theme: 'primary',\n  },\n}"
+                    "defaultValue": "{\n  args: {\n    theme: 'primary',\n    iconLeft: 'left-icon',\n    iconRight: 'right-icon',\n    ariaLabel: 'Primary Button',\n    disabled: false,\n  },\n}"
+                },
+                {
+                    "name": "Secondary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/shared/ui/src/lib/ui/components/button/button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    theme: 'secondary',\n    ariaLabel: 'Secondary Button',\n  },\n}"
                 }
             ],
             "libs/shared/ui/.storybook/preview.ts": [
@@ -162,6 +202,16 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "Icon",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/shared/ui/src/lib/ui/components/button/button.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "meta",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
@@ -173,6 +223,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/shared/ui/src/lib/ui/components/button/button.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Secondary",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
