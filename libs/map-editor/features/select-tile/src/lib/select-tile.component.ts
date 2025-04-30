@@ -206,6 +206,12 @@ export class SelectTileComponent {
           if (item.id === 'C0' && left.CENTER > 0) {
             return true;
           }
+          if (item.id === 'NW0' && left.NEAR > 0) {
+            return true;
+          }
+          if (item.id === 'CW0' && left.CENTER > 0) {
+            return true;
+          }
           return false;
         });
     }

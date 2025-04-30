@@ -36,6 +36,24 @@
       "group": "GROUP.RANDOM",
       "blocked": [0,0,0,0,0,0,0]
     },
+    "NW0": {
+      "id": "NW0",
+      "img": "assets/map-editor/tiles/special/random-4-5-water.png",
+      "desc": "Random Near Water Tile",
+      "expansionID": "EXPANSION.RANDOM",
+      "groundType": "GROUNDTYPE.WATER",
+      "group": "GROUP.RANDOM",
+      "blocked": [0,0,0,0,0,0,0]
+    },
+    "CW0": {
+      "id": "CW0",
+      "img": "assets/map-editor/tiles/special/random-6-7-water.png",
+      "desc": "Random Center Water Tile",
+      "expansionID": "EXPANSION.RANDOM",
+      "groundType": "GROUNDTYPE.WATER",
+      "group": "GROUP.RANDOM",
+      "blocked": [0,0,0,0,0,0,0]
+    },
     "PLACEHOLDER": {
       "id": "PLACEHOLDER",
       "img": "assets/map-editor/tiles/special/placeholder-debug.png",

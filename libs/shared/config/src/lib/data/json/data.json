@@ -1,12 +1,15 @@
 {
   "GROUNDTYPE": [
     "RANDOM",
+    "RANDOM-WATER",
     "GRASS",
     "SUBTERRAIN",
     "CURSED",
     "SNOW",
     "SWAMP",
-    "LAVA"
+    "LAVA",
+    "UNDERGROUND",
+    "WATER"
   ],
   "GROUP": [
     "RANDOM",
@@ -29,43 +32,108 @@
     "RAMPART",
     "FORTRESS",
     "INFERNO"
+
   ],
   "EXPANSION_CONTENTS": {
     "RANDOM": {
       "TOWN": 0,
       "FAR": 0,
       "NEAR": 0,
-      "CENTER": 0
+      "CENTER": 0,
+      "NEAR-SUBTERRANEAN": 0,
+      "CENTER-SUBTERRANEAN": 0,
+      "NEAR-WATER": 0,
+      "CENTER-WATER": 0
     },
     "CORE": {
       "TOWN": 3,
       "FAR": 9,
       "NEAR": 6,
-      "CENTER": 2
+      "CENTER": 2,
+      "NEAR-SUBTERRANEAN": 0,
+      "CENTER-SUBTERRANEAN": 0,
+      "NEAR-WATER": 0,
+      "CENTER-WATER": 0
     },
     "TOWER": {
       "TOWN": 1,
       "FAR": 10,
       "NEAR": 2,
-      "CENTER": 1
+      "CENTER": 1,
+      "NEAR-SUBTERRANEAN": 0,
+      "CENTER-SUBTERRANEAN": 0,
+      "NEAR-WATER": 0,
+      "CENTER-WATER": 0
     },
     "RAMPART": {
       "TOWN": 1,
       "FAR": 3,
       "NEAR": 2,
-      "CENTER": 1
+      "CENTER": 1,
+      "NEAR-SUBTERRANEAN": 0,
+      "CENTER-SUBTERRANEAN": 0,
+      "NEAR-WATER": 0,
+      "CENTER-WATER": 0
     },
     "FORTRESS": {
       "TOWN": 1,
       "FAR": 3,
       "NEAR": 2,
-      "CENTER": 1
+      "CENTER": 1,
+      "NEAR-SUBTERRANEAN": 0,
+      "CENTER-SUBTERRANEAN": 0,
+      "NEAR-WATER": 0,
+      "CENTER-WATER": 0
     },
     "INFERNO": {
       "TOWN": 1,
       "FAR": 3,
       "NEAR": 2,
-      "CENTER": 1
+      "CENTER": 1,
+      "NEAR-SUBTERRANEAN": 0,
+      "CENTER-SUBTERRANEAN": 0,
+      "NEAR-WATER": 0,
+      "CENTER-WATER": 0
+    },
+    "STRONGHOLD": {
+      "TOWN": 1,
+      "FAR": 3,
+      "NEAR": 1,
+      "CENTER": 0,
+      "NEAR-SUBTERRANEAN": 6,
+      "CENTER-SUBTERRANEAN": 1,
+      "NEAR-WATER": 0,
+      "CENTER-WATER": 0
+    },
+    "CONFLUX": {
+      "TOWN": 1,
+      "FAR": 3,
+      "NEAR": 8,
+      "CENTER": 0,
+      "NEAR-SUBTERRANEAN": 0,
+      "CENTER-SUBTERRANEAN": 0,
+      "NEAR-WATER": 0,
+      "CENTER-WATER": 0
+    },
+    "COVE": {
+      "TOWN": 1,
+      "FAR": 3,
+      "NEAR": 1,
+      "CENTER": 0,
+      "NEAR-SUBTERRANEAN": 6,
+      "CENTER-SUBTERRANEAN": 1,
+      "NEAR-WATER": 6,
+      "CENTER-WATER": 1
+    },
+    "SG2": {
+      "TOWN": 1,
+      "FAR": 3,
+      "NEAR": 1,
+      "CENTER": 0,
+      "NEAR-SUBTERRANEAN": 4,
+      "CENTER-SUBTERRANEAN": 2,
+      "NEAR-WATER": 4,
+      "CENTER-WATER": 2
     }
   },
   "EXPANSION_FILTER_DESC": {
@@ -77,7 +145,8 @@
     "INFERNO": "Inferno",
     "STRONGHOLD": "Stronghold",
     "CONFLUX": "Conflux",
-    "COVE": "Cove"
+    "COVE": "Cove",
+    "SG2": "Stretch Goals 2"
   },
   "FACTIONS": {
     "CASTLE": "Castle",
