@@ -120,10 +120,14 @@ export class SelectTileComponent {
       FAR: 0,
       NEAR: 0,
       CENTER: 0,
+      SUBTERRANEAN: 0,
+      WATER: 0,
       TOWN_MAX: 0,
       FAR_MAX: 0,
       NEAR_MAX: 0,
       CENTER_MAX: 0,
+      SUBTERRANEAN_MAX: 0,
+      WATER_MAX: 0,
     };
     this.getExpansionSelection().forEach((selectedExpansion: any) => {
       const content =
@@ -137,10 +141,14 @@ export class SelectTileComponent {
       totals.FAR += content.FAR;
       totals.NEAR += content.NEAR;
       totals.CENTER += content.CENTER;
+      totals.SUBTERRANEAN += content.SUBTERRANEAN;
+      totals.WATER += content.WATER;
       totals.TOWN_MAX += content.TOWN;
       totals.FAR_MAX += content.FAR;
       totals.NEAR_MAX += content.NEAR;
       totals.CENTER_MAX += content.CENTER;
+      totals.SUBTERRANEAN_MAX += content.SUBTERRANEAN;
+      totals.WATER_MAX += content.WATER;
     });
 
     this.signalStore.tileList().forEach((tile) => {
@@ -185,6 +193,7 @@ export class SelectTileComponent {
     const left = this.getTilesLeft();
 
     if (groupEnum === this.config.GROUP()['RANDOM']) {
+      console.log(selectedExpansionsIDs);
       return config
         .filter((item: any) => {
           return (

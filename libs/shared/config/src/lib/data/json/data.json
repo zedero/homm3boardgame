@@ -16,14 +16,18 @@
     "STARTINGTILE",
     "FAR",
     "NEAR",
-    "CENTER"
+    "CENTER",
+    "SUBTERRANEAN",
+    "WATER"
   ],
   "GROUP_DESC": {
     "STARTINGTILE": "Starting Town Tiles",
     "RANDOM": "Random Tiles",
     "FAR": "Far Tiles",
     "NEAR": "Near Tiles",
-    "CENTER": "Center Tiles"
+    "CENTER": "Center Tiles",
+    "SUBTERRANEAN": "Subterranean Tiles",
+    "WATER": "Water Tiles"
   },
   "EXPANSION": [
     "RANDOM",
@@ -31,8 +35,11 @@
     "TOWER",
     "RAMPART",
     "FORTRESS",
-    "INFERNO"
-
+    "INFERNO",
+    "STRONGHOLD",
+    "CONFLUX",
+    "COVE",
+    "SG2"
   ],
   "EXPANSION_CONTENTS": {
     "RANDOM": {
@@ -40,100 +47,80 @@
       "FAR": 0,
       "NEAR": 0,
       "CENTER": 0,
-      "NEAR-SUBTERRANEAN": 0,
-      "CENTER-SUBTERRANEAN": 0,
-      "NEAR-WATER": 0,
-      "CENTER-WATER": 0
+      "SUBTERRANEAN": 0,
+      "WATER": 0
     },
     "CORE": {
       "TOWN": 3,
       "FAR": 9,
       "NEAR": 6,
       "CENTER": 2,
-      "NEAR-SUBTERRANEAN": 0,
-      "CENTER-SUBTERRANEAN": 0,
-      "NEAR-WATER": 0,
-      "CENTER-WATER": 0
+      "SUBTERRANEAN": 0,
+      "WATER": 0
     },
     "TOWER": {
       "TOWN": 1,
       "FAR": 10,
       "NEAR": 2,
       "CENTER": 1,
-      "NEAR-SUBTERRANEAN": 0,
-      "CENTER-SUBTERRANEAN": 0,
-      "NEAR-WATER": 0,
-      "CENTER-WATER": 0
+      "SUBTERRANEAN": 0,
+      "WATER": 0
     },
     "RAMPART": {
       "TOWN": 1,
       "FAR": 3,
       "NEAR": 2,
       "CENTER": 1,
-      "NEAR-SUBTERRANEAN": 0,
-      "CENTER-SUBTERRANEAN": 0,
-      "NEAR-WATER": 0,
-      "CENTER-WATER": 0
+      "SUBTERRANEAN": 0,
+      "WATER": 0
     },
     "FORTRESS": {
       "TOWN": 1,
       "FAR": 3,
       "NEAR": 2,
       "CENTER": 1,
-      "NEAR-SUBTERRANEAN": 0,
-      "CENTER-SUBTERRANEAN": 0,
-      "NEAR-WATER": 0,
-      "CENTER-WATER": 0
+      "SUBTERRANEAN": 0,
+      "WATER": 0
     },
     "INFERNO": {
       "TOWN": 1,
       "FAR": 3,
       "NEAR": 2,
       "CENTER": 1,
-      "NEAR-SUBTERRANEAN": 0,
-      "CENTER-SUBTERRANEAN": 0,
-      "NEAR-WATER": 0,
-      "CENTER-WATER": 0
+      "SUBTERRANEAN": 0,
+      "WATER": 0
     },
     "STRONGHOLD": {
       "TOWN": 1,
       "FAR": 3,
       "NEAR": 1,
       "CENTER": 0,
-      "NEAR-SUBTERRANEAN": 6,
-      "CENTER-SUBTERRANEAN": 1,
-      "NEAR-WATER": 0,
-      "CENTER-WATER": 0
+      "SUBTERRANEAN": 7,
+      "WATER": 0
     },
     "CONFLUX": {
       "TOWN": 1,
       "FAR": 3,
       "NEAR": 8,
       "CENTER": 0,
-      "NEAR-SUBTERRANEAN": 0,
-      "CENTER-SUBTERRANEAN": 0,
-      "NEAR-WATER": 0,
-      "CENTER-WATER": 0
+      "SUBTERRANEAN": 0,
+      "WATER": 0
     },
     "COVE": {
       "TOWN": 1,
       "FAR": 3,
       "NEAR": 1,
       "CENTER": 0,
-      "NEAR-SUBTERRANEAN": 6,
-      "CENTER-SUBTERRANEAN": 1,
-      "NEAR-WATER": 6,
-      "CENTER-WATER": 1
+      "SUBTERRANEAN": 7,
+      "WATER": 7
     },
     "SG2": {
       "TOWN": 1,
       "FAR": 3,
       "NEAR": 1,
       "CENTER": 0,
-      "NEAR-SUBTERRANEAN": 4,
-      "CENTER-SUBTERRANEAN": 2,
-      "NEAR-WATER": 4,
-      "CENTER-WATER": 2
+      "SUBTERRANEAN": 6,
+      "WATER": 6
     }
   },
   "EXPANSION_FILTER_DESC": {

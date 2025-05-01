@@ -11,7 +11,14 @@ type Portrait = {
   faction: string;
 };
 type ExpansionContents = {
-  [key: string]: { TOWN: number; FAR: number; NEAR: number; CENTER: number };
+  [key: string]: {
+    TOWN: number;
+    FAR: number;
+    NEAR: number;
+    CENTER: number;
+    SUBTERRANEAN: number;
+    WATER: number;
+  };
 };
 
 type TileConfig = {
@@ -55,6 +62,7 @@ export class DataConfigService {
   public TILES: Signal<TileMap> = signal(
     this.tileJsonToData({
       ...TilesConfig.TILES,
+      ...TilesConfig.UPCOMING_TILES,
       ...TilesConfig.RANDOM_TILES,
     })
   );

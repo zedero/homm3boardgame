@@ -738,5 +738,24 @@
         1
       ]
     }
+  },
+  "UPCOMING_TILES": {
+    "W6": {
+      "id": "W6",
+      "img": "assets/map-editor/tiles/W6.png",
+      "desc": "Water Near Tile W6",
+      "expansionID": "EXPANSION.COVE",
+      "groundType": "GROUNDTYPE.WATER",
+      "group": "GROUP.WATER",
+      "blocked": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
   }
 }
