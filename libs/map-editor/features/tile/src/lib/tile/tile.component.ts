@@ -42,7 +42,10 @@ export class TileComponent implements OnInit {
   tileGuid = input.required<string>();
   displayMode = input<boolean>(false);
   tileData = computed(() => {
-    const tile = this.signalStore.selectTileByGuid(this.tileGuid());
+    let tile = this.signalStore.selectTileByGuid(this.tileGuid());
+    if (tile && this.displayMode()) {
+      tile = { ...tile, rotation: 0 };
+    }
     return tile ?? BASE_TILE;
   });
 
