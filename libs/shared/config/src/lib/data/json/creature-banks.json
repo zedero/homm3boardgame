@@ -1,15 +1,5 @@
 {
   "CREATURE_BANKS": {
-    "R1": {
-      "id": "R1",
-      "img": "assets/map-editor/creature-banks/R1.png",
-      "desc": "Random - Far"
-    },
-    "R2": {
-      "id": "R2",
-      "img": "assets/map-editor/creature-banks/R2.png",
-      "desc": "Random - Near"
-    },
     "CB1": {
       "id": "CB1",
       "img": "assets/map-editor/creature-banks/CB1.png",
@@ -21,6 +11,18 @@
       "img": "assets/map-editor/creature-banks/CB2.png",
       "desc": "Pyramid",
       "amount": 2
+    }
+  },
+  "UNFINISHED": {
+    "R1": {
+      "id": "R1",
+      "img": "assets/map-editor/creature-banks/R1.png",
+      "desc": "Random - Far"
+    },
+    "R2": {
+      "id": "R2",
+      "img": "assets/map-editor/creature-banks/R2.png",
+      "desc": "Random - Near"
     },
     "CB3": {
       "id": "CB3",

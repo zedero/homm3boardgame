@@ -18,6 +18,7 @@ import { TileMapStore } from '../../../../../domain/state/tile-map/tile-map.redu
 import { BlockedHexComponent } from '../../../../../ui/blocked-hex/blocked-hex.component';
 import { Store } from '@ngrx/store';
 import { domainEventActions } from '@homm3boardgame/domain/state';
+import { CreatureBankComponent } from '../../../../../ui/creature-bank/creature-bank.component';
 
 @Component({
   selector: 'feature-tile',
@@ -28,6 +29,7 @@ import { domainEventActions } from '@homm3boardgame/domain/state';
     CubeComponent,
     PortraitComponent,
     BlockedHexComponent,
+    CreatureBankComponent,
   ],
   templateUrl: './tile.component.html',
   styleUrl: './tile.component.scss',

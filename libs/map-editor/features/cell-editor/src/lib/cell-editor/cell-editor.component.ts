@@ -170,7 +170,6 @@ export class CellEditorComponent implements OnInit, OnDestroy {
         return h;
       }) as TileHexArray<string>,
     });
-    console.log(cb, this.signalStore.selectTileByGuid(this.tileGuid()));
   }
 
   setBlockedState(state: boolean) {

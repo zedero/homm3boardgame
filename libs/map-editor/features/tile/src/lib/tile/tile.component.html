@@ -12,17 +12,17 @@
   }
   <div class="game-components" [style.rotate]="rotation()" [style.opacity]="suggestedPlacement()">
     <div class="row">
-      <div class="cell"><app-cube [id]="tileData().cubes[0]" ></app-cube><app-portrait [id]="tileData().hero[0]" [rotation]="tileData().rotation"></app-portrait><app-blocked-hex [visible]="tileData().blockedHex[0]"></app-blocked-hex></div>
-      <div class="cell"><app-cube [id]="tileData().cubes[1]" ></app-cube><app-portrait [id]="tileData().hero[1]" [rotation]="tileData().rotation"></app-portrait><app-blocked-hex [visible]="tileData().blockedHex[1]"></app-blocked-hex></div>
+      <div class="cell"><app-cube [id]="tileData().cubes[0]" ></app-cube><app-portrait [id]="tileData().hero[0]" [rotation]="tileData().rotation"></app-portrait><app-blocked-hex [visible]="tileData().blockedHex[0]"></app-blocked-hex><app-creature-bank [id]="tileData().creaturebanks[0]"></app-creature-bank></div>
+      <div class="cell"><app-cube [id]="tileData().cubes[1]" ></app-cube><app-portrait [id]="tileData().hero[1]" [rotation]="tileData().rotation"></app-portrait><app-blocked-hex [visible]="tileData().blockedHex[1]"></app-blocked-hex><app-creature-bank [id]="tileData().creaturebanks[1]"></app-creature-bank></div>
     </div>
     <div class="row">
-      <div class="cell"><app-cube [id]="tileData().cubes[2]" ></app-cube><app-portrait [id]="tileData().hero[2]" [rotation]="tileData().rotation"></app-portrait><app-blocked-hex [visible]="tileData().blockedHex[2]"></app-blocked-hex></div>
-      <div class="cell"><app-cube [id]="tileData().cubes[3]" ></app-cube><app-portrait [id]="tileData().hero[3]" [rotation]="tileData().rotation"></app-portrait><app-blocked-hex [visible]="tileData().blockedHex[3]"></app-blocked-hex></div>
-      <div class="cell"><app-cube [id]="tileData().cubes[4]" ></app-cube><app-portrait [id]="tileData().hero[4]" [rotation]="tileData().rotation"></app-portrait><app-blocked-hex [visible]="tileData().blockedHex[4]"></app-blocked-hex></div>
+      <div class="cell"><app-cube [id]="tileData().cubes[2]" ></app-cube><app-portrait [id]="tileData().hero[2]" [rotation]="tileData().rotation"></app-portrait><app-blocked-hex [visible]="tileData().blockedHex[2]"></app-blocked-hex><app-creature-bank [id]="tileData().creaturebanks[2]"></app-creature-bank></div>
+      <div class="cell"><app-cube [id]="tileData().cubes[3]" ></app-cube><app-portrait [id]="tileData().hero[3]" [rotation]="tileData().rotation"></app-portrait><app-blocked-hex [visible]="tileData().blockedHex[3]"></app-blocked-hex><app-creature-bank [id]="tileData().creaturebanks[3]"></app-creature-bank></div>
+      <div class="cell"><app-cube [id]="tileData().cubes[4]" ></app-cube><app-portrait [id]="tileData().hero[4]" [rotation]="tileData().rotation"></app-portrait><app-blocked-hex [visible]="tileData().blockedHex[4]"></app-blocked-hex><app-creature-bank [id]="tileData().creaturebanks[4]"></app-creature-bank></div>
     </div>
     <div class="row">
-      <div class="cell"><app-cube [id]="tileData().cubes[5]" ></app-cube><app-portrait [id]="tileData().hero[5]" [rotation]="tileData().rotation"></app-portrait><app-blocked-hex [visible]="tileData().blockedHex[5]"></app-blocked-hex></div>
-      <div class="cell"><app-cube [id]="tileData().cubes[6]" ></app-cube><app-portrait [id]="tileData().hero[6]" [rotation]="tileData().rotation"></app-portrait><app-blocked-hex [visible]="tileData().blockedHex[6]"></app-blocked-hex></div>
+      <div class="cell"><app-cube [id]="tileData().cubes[5]" ></app-cube><app-portrait [id]="tileData().hero[5]" [rotation]="tileData().rotation"></app-portrait><app-blocked-hex [visible]="tileData().blockedHex[5]"></app-blocked-hex><app-creature-bank [id]="tileData().creaturebanks[5]"></app-creature-bank></div>
+      <div class="cell"><app-cube [id]="tileData().cubes[6]" ></app-cube><app-portrait [id]="tileData().hero[6]" [rotation]="tileData().rotation"></app-portrait><app-blocked-hex [visible]="tileData().blockedHex[6]"></app-blocked-hex><app-creature-bank [id]="tileData().creaturebanks[6]"></app-creature-bank></div>
     </div>
   </div>
   <img src="{{image()}}" alt="{{desc()}}" [style.rotate]="rotation()" [style.opacity]="suggestedPlacement()">
