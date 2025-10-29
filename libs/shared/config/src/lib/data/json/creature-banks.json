@@ -1,0 +1,86 @@
+{
+  "CREATURE_BANKS": {
+    "R1": {
+      "id": "R1",
+      "img": "assets/map-editor/creature-banks/R1.png",
+      "desc": "Random - Far"
+    },
+    "R2": {
+      "id": "R2",
+      "img": "assets/map-editor/creature-banks/R2.png",
+      "desc": "Random - Near"
+    },
+    "CB1": {
+      "id": "CB1",
+      "img": "assets/map-editor/creature-banks/CB1.png",
+      "desc": "Derelict Ship",
+      "amount": 2
+    },
+    "CB2": {
+      "id": "CB2",
+      "img": "assets/map-editor/creature-banks/CB2.png",
+      "desc": "Pyramid",
+      "amount": 2
+    },
+    "CB3": {
+      "id": "CB3",
+      "img": "assets/map-editor/creature-banks/CB3.png",
+      "desc": "Shipwreck",
+      "amount": 2
+    },
+    "CB4": {
+      "id": "CB4",
+      "img": "assets/map-editor/creature-banks/CB4.png",
+      "desc": "Dragon Fly Hive",
+      "amount": 2
+    },
+    "CB5": {
+      "id": "CB5",
+      "img": "assets/map-editor/creature-banks/CB5.png",
+      "desc": "Medusa Stores",
+      "amount": 2
+    },
+    "CB6": {
+      "id": "CB6",
+      "img": "assets/map-editor/creature-banks/CB6.png",
+      "desc": "Dwarven Treasury",
+      "amount": 2
+    },
+    "CB7": {
+      "id": "CB7",
+      "img": "assets/map-editor/creature-banks/CB7.png",
+      "desc": "Griffin Conservatory",
+      "amount": 2
+    },
+    "CB8": {
+      "id": "CB8",
+      "img": "assets/map-editor/creature-banks/CB8.png",
+      "desc": "Naga Bank",
+      "amount": 2
+    },
+    "CB9": {
+      "id": "CB9",
+      "img": "assets/map-editor/creature-banks/CB9.png",
+      "desc": "Crypt",
+      "amount": 2
+    },
+    "CB10": {
+      "id": "CB10",
+      "img": "assets/map-editor/creature-banks/CB10.png",
+      "desc": "Imp Cache",
+      "amount": 2
+    },
+    "CB11": {
+      "id": "CB11",
+      "img": "assets/map-editor/creature-banks/CB11.png",
+      "desc": "Cyclops Stockpile",
+      "amount": 2
+    },
+    "CB12": {
+      "id": "CB12",
+      "img": "assets/map-editor/creature-banks/CB12.png",
+      "desc": "Dragon Utopia",
+      "amount": 2
+    }
+  }
+}

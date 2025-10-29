@@ -13,11 +13,11 @@
     }
   </select>
 <!--  For single hex placement-->
-<!--  <select name="cube" #cube (change)="selectCube(cube.value)" [(ngModel)]="selectedCube">-->
-<!--    @for(cube of cubes(); track cube) {-->
-<!--      <option [value]="cube.value">{{cube.name}}</option>-->
-<!--    }-->
-<!--  </select>-->
+  <select name="creaturebank" #creaturebank (change)="selectCreatureBank(creaturebank.value)" [(ngModel)]="selectedCreatureBank">
+    @for(cb of creatureBanks(); track cb) {
+      <option [value]="cb.value">{{ cb.name}}</option>
+    }
+  </select>
 </div>
 <app-cube [id]="selectedCube()"></app-cube>
 <app-portrait [id]="selectedHero()"></app-portrait>

@@ -15,7 +15,6 @@ import { DataConfigService } from '@homm3boardgame/config';
 import { CubeComponent } from '../../../../../ui/cube/cube.component';
 import { PortraitComponent } from '../../../../../ui/portrait/portrait.component';
 import { FormsModule } from '@angular/forms';
-import { Store } from '@ngrx/store';
 import { Subject } from 'rxjs';
 import { TileMapStore } from '../../../../../domain/state/tile-map/tile-map.reducer';
 import { CheckboxComponent } from '../../../../../../shared/ui/src/lib/ui/components/checkbox/checkbox.component';
@@ -36,7 +35,7 @@ import { BlockedHexComponent } from '../../../../../ui/blocked-hex/blocked-hex.c
 })
 export class CellEditorComponent implements OnInit, OnDestroy {
   // Injects
-  private configService = inject(DataConfigService);
+  protected configService = inject(DataConfigService);
   protected signalStore = inject(TileMapStore);
 
   // Inputs
@@ -69,9 +68,15 @@ export class CellEditorComponent implements OnInit, OnDestroy {
     { value: '11', name: 'Cove cube' },
   ]);
 
+  creatureBanks: WritableSignal<any[]> = signal([
+    { value: '0', name: '- No Creature Bank -' },
+  ]);
+  selectedCreatureBank: WritableSignal<string> = signal('');
+
   constructor() {
     this.factions.set(Object.keys(this.configService.FACTIONS()));
     this.createHeroesSelect();
+    this.createCreatureBankSelect();
     this.blockedHex = computed(() => {
       return (
         this.signalStore.selectTileByGuid(this.tileGuid())?.blockedHex?.[
@@ -86,6 +91,7 @@ export class CellEditorComponent implements OnInit, OnDestroy {
     this.tileData.set(data);
     this.selectedCube.set(this.tileData().cubes[this.index()]);
     this.selectedHero.set(this.tileData().hero[this.index()]);
+    this.selectedCreatureBank.set(this.tileData().creaturebanks[this.index()]);
   }
 
   createHeroesSelect() {
@@ -113,6 +119,20 @@ export class CellEditorComponent implements OnInit, OnDestroy {
     this.heroes.set(heroes);
   }
 
+  createCreatureBankSelect() {
+    let banks = Object.entries(this.configService.CREATURE_BANKS()).map(
+      ([key, val]: any) => {
+        return {
+          value: key,
+          name: val.desc,
+        };
+      }
+    );
+
+    banks.unshift({ value: '', name: '- No CB (Creature Bank) -' });
+    this.creatureBanks.set(banks);
+  }
+
   selectCube(_cube: string) {
     const cube = parseInt(_cube);
     const tile = this.signalStore.selectTileByGuid(this.tileGuid()) as Tile;
@@ -137,6 +157,20 @@ export class CellEditorComponent implements OnInit, OnDestroy {
         return h;
       }) as TileHexArray<string>,
     });
+  }
+
+  selectCreatureBank(cb: string) {
+    const tile = this.signalStore.selectTileByGuid(this.tileGuid()) as Tile;
+    this.signalStore.updateTile({
+      ...tile,
+      creaturebanks: tile.creaturebanks.map((h, i) => {
+        if (i === this.index()) {
+          return cb;
+        }
+        return h;
+      }) as TileHexArray<string>,
+    });
+    console.log(cb, this.signalStore.selectTileByGuid(this.tileGuid()));
   }
 
   setBlockedState(state: boolean) {

@@ -2,6 +2,7 @@ import { Injectable, Signal, signal } from '@angular/core';
 import * as TilesConfig from './json/tiles.json';
 import * as DataConfig from './json/data.json';
 import * as PortraitsConfig from './json/portraits.json';
+import * as CreatureBanksConfig from './json/creature-banks.json';
 
 type Enum = { [key: string]: number } & { [key: number]: string };
 type NonRevEnum = { [key: string]: string };
@@ -66,6 +67,9 @@ export class DataConfigService {
       ...TilesConfig.RANDOM_TILES,
     })
   );
+  public CREATURE_BANKS: Signal<any> = signal(
+    this.creatureBanksJsonToData(CreatureBanksConfig.CREATURE_BANKS)
+  );
 
   public filterOptions = {
     RANDOM: true,
@@ -90,6 +94,14 @@ export class DataConfigService {
       val.expansionID = this.EXPANSION()[val.expansionID.split('.')[1]];
       val.groundType = this.GROUND_TYPE()[val.groundType.split('.')[1]];
       val.group = this.GROUP()[val.group.split('.')[1]];
+      return [key, val];
+    });
+
+    return Object.fromEntries(result);
+  }
+
+  private creatureBanksJsonToData(data: any) {
+    const result = Object.entries(data).map(([key, val]: [string, any]) => {
       return [key, val];
     });
 

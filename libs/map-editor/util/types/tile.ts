@@ -6,6 +6,7 @@ export interface Tile {
   id: string;
   tileId: string;
   cubes: TileHexArray<number>;
+  creaturebanks: TileHexArray<string>;
   hero: TileHexArray<string>;
   rotation: number;
   suggestedPlacement: boolean;
@@ -19,6 +20,7 @@ export const BASE_TILE: Tile = {
   tileId: 'PLACEHOLDER',
   id: '',
   cubes: [0, 0, 0, 0, 0, 0, 0],
+  creaturebanks: ['', '', '', '', '', '', ''],
   hero: ['', '', '', '', '', '', ''],
   rotation: 0,
   suggestedPlacement: false,
