@@ -1,1 +1,0 @@
-import{Ab as n,Bb as i,Pb as r,gb as o,vc as a}from"./chunk-IEC7RUIM.js";var f=(()=>{class e{static \u0275fac=function(t){return new(t||e)};static \u0275cmp=o({type:e,selectors:[["feature-battle-ai"]],decls:2,vars:0,template:function(t,p){t&1&&(n(0,"p"),r(1,"BattleAi works!"),i())},dependencies:[a],encapsulation:2})}return e})();export{f as BattleAiComponent};

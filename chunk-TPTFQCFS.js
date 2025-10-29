@@ -1,1 +1,0 @@
-import{Ab as n,Bb as r,Pb as i,gb as o,vc as m}from"./chunk-IEC7RUIM.js";var s=(()=>{class e{static \u0275fac=function(t){return new(t||e)};static \u0275cmp=o({type:e,selectors:[["feature-simulator"]],decls:2,vars:0,template:function(t,p){t&1&&(n(0,"p"),i(1,"Simulator works!"),r())},dependencies:[m],encapsulation:2})}return e})();export{s as SimulatorComponent};
