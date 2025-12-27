@@ -737,9 +737,156 @@
         1,
         1
       ]
-    }
-  },
-  "UPCOMING_TILES": {
+    },
+    "#N8": {
+      "id": "#N8",
+      "img": "assets/map-editor/tiles/__N8.png",
+      "desc": "Near Tile N8",
+      "expansionID": "EXPANSION.COVE",
+      "groundType": "GROUNDTYPE.WATER",
+      "group": "GROUP.NEAR",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "#N9": {
+      "id": "#N9",
+      "img": "assets/map-editor/tiles/__N9.png",
+      "desc": "Near Tile N9",
+      "expansionID": "EXPANSION.COVE",
+      "groundType": "GROUNDTYPE.WATER",
+      "group": "GROUP.NEAR",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "#N10": {
+      "id": "#N10",
+      "img": "assets/map-editor/tiles/__N10.png",
+      "desc": "Near Tile N10",
+      "expansionID": "EXPANSION.COVE",
+      "groundType": "GROUNDTYPE.WATER",
+      "group": "GROUP.NEAR",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "#N11": {
+      "id": "#N11",
+      "img": "assets/map-editor/tiles/__N11.png",
+      "desc": "Near Tile N11",
+      "expansionID": "EXPANSION.COVE",
+      "groundType": "GROUNDTYPE.WATER",
+      "group": "GROUP.NEAR",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "W1": {
+      "id": "W1",
+      "img": "assets/map-editor/tiles/W1.png",
+      "desc": "Water Near Tile W1",
+      "expansionID": "EXPANSION.COVE",
+      "groundType": "GROUNDTYPE.WATER",
+      "group": "GROUP.WATER",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    "W2": {
+      "id": "W2",
+      "img": "assets/map-editor/tiles/W2.png",
+      "desc": "Water Near Tile W2",
+      "expansionID": "EXPANSION.COVE",
+      "groundType": "GROUNDTYPE.WATER",
+      "group": "GROUP.WATER",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "W3": {
+      "id": "W3",
+      "img": "assets/map-editor/tiles/W3.png",
+      "desc": "Water Near Tile W3",
+      "expansionID": "EXPANSION.COVE",
+      "groundType": "GROUNDTYPE.WATER",
+      "group": "GROUP.WATER",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "W4": {
+      "id": "W4",
+      "img": "assets/map-editor/tiles/W4.png",
+      "desc": "Water Near Tile W4",
+      "expansionID": "EXPANSION.COVE",
+      "groundType": "GROUNDTYPE.WATER",
+      "group": "GROUP.WATER",
+      "blocked": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "W5": {
+      "id": "W5",
+      "img": "assets/map-editor/tiles/W5.png",
+      "desc": "Water Near Tile W5",
+      "expansionID": "EXPANSION.COVE",
+      "groundType": "GROUNDTYPE.WATER",
+      "group": "GROUP.WATER",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
     "W6": {
       "id": "W6",
       "img": "assets/map-editor/tiles/W6.png",
@@ -757,5 +904,7 @@
         0
       ]
     }
+  },
+  "UPCOMING_TILES": {
   }
 }
