@@ -626,6 +626,28 @@
         0
       ]
     },
+    "S7": { "id": "S7", "img": "assets/map-editor/tiles/S7.png", "desc": "Startingtile Tile S7", "expansionID": "EXPANSION.STRONGHOLD", "groundType": "GROUNDTYPE.ROUGH", "group": "GROUP.STARTINGTILE", "blocked": [ 0, 1, 0, 1, 1, 1 ] },
+    "F19": { "id": "F19", "img": "assets/map-editor/tiles/F19.png", "desc": "Far Tile F19", "expansionID": "EXPANSION.STRONGHOLD", "groundType": "GROUNDTYPE.ROUGH", "group": "GROUP.FAR", "blocked": [ 0, 0, 0, 0, 0, 0 ] },
+    "F20": { "id": "F20", "img": "assets/map-editor/tiles/F20.png", "desc": "Far Tile F20", "expansionID": "EXPANSION.STRONGHOLD", "groundType": "GROUNDTYPE.ROUGH", "group": "GROUP.FAR", "blocked": [ 0, 0, 0, 1, 0, 0 ] },
+    "F21": { "id": "F21", "img": "assets/map-editor/tiles/F21.png", "desc": "Far Tile F21", "expansionID": "EXPANSION.STRONGHOLD", "groundType": "GROUNDTYPE.ROUGH", "group": "GROUP.FAR", "blocked": [ 0, 0, 0, 0, 1, 0 ] },
+    "N13": { "id": "N13", "img": "assets/map-editor/tiles/N13.png", "desc": "Near Tile N13", "expansionID": "EXPANSION.STRONGHOLD", "groundType": "GROUNDTYPE.ROUGH", "group": "GROUP.NEAR", "blocked": [ 0, 0, 1, 0, 0, 0 ] },
+    "S8": { "id": "S8", "img": "assets/map-editor/tiles/S8.png", "desc": "Startingtile Tile S8", "expansionID": "EXPANSION.CONFLUX", "groundType": "GROUNDTYPE.GRASS", "group": "GROUP.STARTINGTILE", "blocked": [ 1, 1, 1, 0, 1, 0 ] },
+    "F22": { "id": "F22", "img": "assets/map-editor/tiles/F22.png", "desc": "Far Tile F22", "expansionID": "EXPANSION.CONFLUX", "groundType": "GROUNDTYPE.GRASS", "group": "GROUP.FAR", "blocked": [ 1, 0, 0, 0, 0, 0 ] },
+    "F23": { "id": "F23", "img": "assets/map-editor/tiles/F23.png", "desc": "Far Tile F23", "expansionID": "EXPANSION.CONFLUX", "groundType": "GROUNDTYPE.GRASS", "group": "GROUP.FAR", "blocked": [ 0, 0, 0, 0, 0, 0 ] },
+    "F24": { "id": "F24", "img": "assets/map-editor/tiles/F24.png", "desc": "Far Tile F24", "expansionID": "EXPANSION.CONFLUX", "groundType": "GROUNDTYPE.GRASS", "group": "GROUP.FAR", "blocked": [ 0, 0, 0, 0, 1, 0 ] },
+    "N14": { "id": "N14", "img": "assets/map-editor/tiles/N14.png", "desc": "Elemental Fire Near Tile N14", "expansionID": "EXPANSION.CONFLUX", "groundType": "GROUNDTYPE.ELEMENTAL_FIRE", "group": "GROUP.NEAR", "blocked": [ 0, 0, 0, 0, 0, 0 ] },
+    "N15": { "id": "N15", "img": "assets/map-editor/tiles/N15.png", "desc": "Elemental Fire Near Tile N15", "expansionID": "EXPANSION.CONFLUX", "groundType": "GROUNDTYPE.ELEMENTAL_FIRE", "group": "GROUP.NEAR", "blocked": [ 0, 1, 0, 0, 0, 0 ] },
+    "N16": { "id": "N16", "img": "assets/map-editor/tiles/N16.png", "desc": "Elemental Water Near Tile N16", "expansionID": "EXPANSION.CONFLUX", "groundType": "GROUNDTYPE.ELEMENTAL_WATER", "group": "GROUP.NEAR", "blocked": [ 0, 0, 0, 0, 1, 0 ] },
+    "N17": { "id": "N17", "img": "assets/map-editor/tiles/N17.png", "desc": "Elemental Water Near Tile N17", "expansionID": "EXPANSION.CONFLUX", "groundType": "GROUNDTYPE.ELEMENTAL_WATER", "group": "GROUP.NEAR", "blocked": [ 1, 0, 0, 0, 0, 0 ] },
+    "N18": { "id": "N18", "img": "assets/map-editor/tiles/N18.png", "desc": "Elemental Air Near Tile N18", "expansionID": "EXPANSION.CONFLUX", "groundType": "GROUNDTYPE.ELEMENTAL_AIR", "group": "GROUP.NEAR", "blocked": [ 0, 0, 0, 1, 0, 0 ] },
+    "N19": { "id": "N19", "img": "assets/map-editor/tiles/N19.png", "desc": "Elemental Air Near Tile N19", "expansionID": "EXPANSION.CONFLUX", "groundType": "GROUNDTYPE.ELEMENTAL_AIR", "group": "GROUP.NEAR", "blocked": [ 0, 0, 1, 0, 0, 0 ] },
+    "N20": { "id": "N20", "img": "assets/map-editor/tiles/N20.png", "desc": "Elemental Earth Near Tile N20", "expansionID": "EXPANSION.CONFLUX", "groundType": "GROUNDTYPE.ELEMENTAL_EARTH", "group": "GROUP.NEAR", "blocked": [ 1, 0, 0, 0, 0, 0 ] },
+    "N21": { "id": "N21", "img": "assets/map-editor/tiles/N21.png", "desc": "Elemental Earth Near Tile N21", "expansionID": "EXPANSION.CONFLUX", "groundType": "GROUNDTYPE.ELEMENTAL_EARTH", "group": "GROUP.NEAR", "blocked": [ 0, 0, 0, 0, 0, 1 ] },
+    "S9": { "id": "S9", "img": "assets/map-editor/tiles/S9.png", "desc": "Startingtile Tile S9", "expansionID": "EXPANSION.COVE", "groundType": "GROUNDTYPE.HIGHLANDS", "group": "GROUP.STARTINGTILE", "blocked": [ 1, 1, 1, 0, 1, 0 ] },
+    "F25": { "id": "F25", "img": "assets/map-editor/tiles/F25.png", "desc": "Far Tile F25", "expansionID": "EXPANSION.COVE", "groundType": "GROUNDTYPE.HIGHLANDS", "group": "GROUP.FAR", "blocked": [ 1, 0, 0, 0, 0, 0 ] },
+    "F26": { "id": "F26", "img": "assets/map-editor/tiles/F26.png", "desc": "Far Tile F26", "expansionID": "EXPANSION.COVE", "groundType": "GROUNDTYPE.HIGHLANDS", "group": "GROUP.FAR", "blocked": [ 0, 0, 0, 0, 1, 0 ] },
+    "F27": { "id": "F27", "img": "assets/map-editor/tiles/F27.png", "desc": "Far Tile F27", "expansionID": "EXPANSION.COVE", "groundType": "GROUNDTYPE.HIGHLANDS", "group": "GROUP.FAR", "blocked": [ 0, 0, 0, 1, 0, 0 ] },
+    "N22": { "id": "N22", "img": "assets/map-editor/tiles/N22.png", "desc": "Near Tile N22", "expansionID": "EXPANSION.COVE", "groundType": "GROUNDTYPE.HIGHLANDS", "group": "GROUP.NEAR", "blocked": [ 0, 0, 1, 0, 0, 0 ] },
     "N12": {
       "id": "N12",
       "img": "assets/map-editor/tiles/N12.png",
@@ -741,66 +763,38 @@
     "#N8": {
       "id": "#N8",
       "img": "assets/map-editor/tiles/__N8.png",
-      "desc": "Near Tile N8",
-      "expansionID": "EXPANSION.COVE",
+      "desc": "Water Tile #N8",
+      "expansionID": "EXPANSION.SG2",
       "groundType": "GROUNDTYPE.WATER",
-      "group": "GROUP.NEAR",
-      "blocked": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ]
+      "group": "GROUP.WATER",
+      "blocked": [0, 0, 0, 0, 0, 0, 0]
     },
     "#N9": {
       "id": "#N9",
       "img": "assets/map-editor/tiles/__N9.png",
-      "desc": "Near Tile N9",
-      "expansionID": "EXPANSION.COVE",
+      "desc": "Water Tile #N9",
+      "expansionID": "EXPANSION.SG2",
       "groundType": "GROUNDTYPE.WATER",
-      "group": "GROUP.NEAR",
-      "blocked": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ]
+      "group": "GROUP.WATER",
+      "blocked": [0, 0, 0, 0, 0, 0, 0]
     },
     "#N10": {
       "id": "#N10",
       "img": "assets/map-editor/tiles/__N10.png",
-      "desc": "Near Tile N10",
-      "expansionID": "EXPANSION.COVE",
+      "desc": "Water Tile #N10",
+      "expansionID": "EXPANSION.SG2",
       "groundType": "GROUNDTYPE.WATER",
-      "group": "GROUP.NEAR",
-      "blocked": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ]
+      "group": "GROUP.WATER",
+      "blocked": [0, 0, 0, 0, 0, 0, 0]
     },
     "#N11": {
       "id": "#N11",
       "img": "assets/map-editor/tiles/__N11.png",
-      "desc": "Near Tile N11",
-      "expansionID": "EXPANSION.COVE",
+      "desc": "Water Tile #N11",
+      "expansionID": "EXPANSION.SG2",
       "groundType": "GROUNDTYPE.WATER",
-      "group": "GROUP.NEAR",
-      "blocked": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ]
+      "group": "GROUP.WATER",
+      "blocked": [0, 0, 0, 0, 0, 0, 0]
     },
     "W1": {
       "id": "W1",
@@ -898,6 +892,326 @@
         0,
         0,
         1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "U1": {
+      "id": "U1",
+      "img": "assets/map-editor/tiles/U1.png",
+      "desc": "Subterranean Tile U1",
+      "expansionID": "EXPANSION.STRONGHOLD",
+      "groundType": "GROUNDTYPE.SUBTERRAIN",
+      "group": "GROUP.SUBTERRANEAN",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "U2": {
+      "id": "U2",
+      "img": "assets/map-editor/tiles/U2.png",
+      "desc": "Subterranean Tile U2",
+      "expansionID": "EXPANSION.STRONGHOLD",
+      "groundType": "GROUNDTYPE.SUBTERRAIN",
+      "group": "GROUP.SUBTERRANEAN",
+      "blocked": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "U3": {
+      "id": "U3",
+      "img": "assets/map-editor/tiles/U3.png",
+      "desc": "Subterranean Tile U3",
+      "expansionID": "EXPANSION.STRONGHOLD",
+      "groundType": "GROUNDTYPE.SUBTERRAIN",
+      "group": "GROUP.SUBTERRANEAN",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    "U4": {
+      "id": "U4",
+      "img": "assets/map-editor/tiles/U4.png",
+      "desc": "Subterranean Tile U4",
+      "expansionID": "EXPANSION.STRONGHOLD",
+      "groundType": "GROUNDTYPE.SUBTERRAIN",
+      "group": "GROUP.SUBTERRANEAN",
+      "blocked": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "U5": {
+      "id": "U5",
+      "img": "assets/map-editor/tiles/U5.png",
+      "desc": "Subterranean Tile U5",
+      "expansionID": "EXPANSION.STRONGHOLD",
+      "groundType": "GROUNDTYPE.SUBTERRAIN",
+      "group": "GROUP.SUBTERRANEAN",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "U6": {
+      "id": "U6",
+      "img": "assets/map-editor/tiles/U6.png",
+      "desc": "Subterranean Tile U6",
+      "expansionID": "EXPANSION.STRONGHOLD",
+      "groundType": "GROUNDTYPE.SUBTERRAIN",
+      "group": "GROUP.SUBTERRANEAN",
+      "blocked": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "U7": {
+      "id": "U7",
+      "img": "assets/map-editor/tiles/U7.png",
+      "desc": "Subterranean Tile U7",
+      "expansionID": "EXPANSION.STRONGHOLD",
+      "groundType": "GROUNDTYPE.SUBTERRAIN",
+      "group": "GROUP.SUBTERRANEAN",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "W7": {
+      "id": "W7",
+      "img": "assets/map-editor/tiles/W7.png",
+      "desc": "Water Tile W7",
+      "expansionID": "EXPANSION.COVE",
+      "groundType": "GROUNDTYPE.WATER",
+      "group": "GROUP.WATER",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "#F11": {
+      "id": "#F11",
+      "img": "assets/map-editor/tiles/__F11.png",
+      "desc": "Far Tile #F11",
+      "expansionID": "EXPANSION.SG2",
+      "groundType": "GROUNDTYPE.ROUGH",
+      "group": "GROUP.FAR",
+      "blocked": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "#F12": {
+      "id": "#F12",
+      "img": "assets/map-editor/tiles/__F12.png",
+      "desc": "Far Tile #F12",
+      "expansionID": "EXPANSION.SG2",
+      "groundType": "GROUNDTYPE.GRASS",
+      "group": "GROUP.FAR",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "#F13": {
+      "id": "#F13",
+      "img": "assets/map-editor/tiles/__F13.png",
+      "desc": "Far Tile #F13",
+      "expansionID": "EXPANSION.SG2",
+      "groundType": "GROUNDTYPE.HIGHLANDS",
+      "group": "GROUP.FAR",
+      "blocked": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "#N4": {
+      "id": "#N4",
+      "img": "assets/map-editor/tiles/__N4.png",
+      "desc": "Subterranean Tile #N4",
+      "expansionID": "EXPANSION.SG2",
+      "groundType": "GROUNDTYPE.SUBTERRAIN",
+      "group": "GROUP.SUBTERRANEAN",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    "#N5": {
+      "id": "#N5",
+      "img": "assets/map-editor/tiles/__N5.png",
+      "desc": "Subterranean Tile #N5",
+      "expansionID": "EXPANSION.SG2",
+      "groundType": "GROUNDTYPE.SUBTERRAIN",
+      "group": "GROUP.SUBTERRANEAN",
+      "blocked": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "#N6": {
+      "id": "#N6",
+      "img": "assets/map-editor/tiles/__N6.png",
+      "desc": "Subterranean Tile #N6",
+      "expansionID": "EXPANSION.SG2",
+      "groundType": "GROUNDTYPE.SUBTERRAIN",
+      "group": "GROUP.SUBTERRANEAN",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "#N7": {
+      "id": "#N7",
+      "img": "assets/map-editor/tiles/__N7.png",
+      "desc": "Subterranean Tile #N7",
+      "expansionID": "EXPANSION.SG2",
+      "groundType": "GROUNDTYPE.SUBTERRAIN",
+      "group": "GROUP.SUBTERRANEAN",
+      "blocked": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "#C2": {
+      "id": "#C2",
+      "img": "assets/map-editor/tiles/__C2.png",
+      "desc": "Subterranean Tile #C2",
+      "expansionID": "EXPANSION.SG2",
+      "groundType": "GROUNDTYPE.SUBTERRAIN",
+      "group": "GROUP.SUBTERRANEAN",
+      "blocked": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "#C3": {
+      "id": "#C3",
+      "img": "assets/map-editor/tiles/__C3.png",
+      "desc": "Subterranean Tile #C3",
+      "expansionID": "EXPANSION.SG2",
+      "groundType": "GROUNDTYPE.SUBTERRAIN",
+      "group": "GROUP.SUBTERRANEAN",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "#C4": {
+      "id": "#C4",
+      "img": "assets/map-editor/tiles/__C4.png",
+      "desc": "Water Tile #C4",
+      "expansionID": "EXPANSION.SG2",
+      "groundType": "GROUNDTYPE.WATER",
+      "group": "GROUP.WATER",
+      "blocked": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "#C5": {
+      "id": "#C5",
+      "img": "assets/map-editor/tiles/__C5.png",
+      "desc": "Water Tile #C5",
+      "expansionID": "EXPANSION.SG2",
+      "groundType": "GROUNDTYPE.WATER",
+      "group": "GROUP.WATER",
+      "blocked": [
+        0,
+        0,
+        0,
         0,
         0,
         0,
