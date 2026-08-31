@@ -3,6 +3,7 @@ import * as TilesConfig from './json/tiles.json';
 import * as DataConfig from './json/data.json';
 import * as PortraitsConfig from './json/portraits.json';
 import * as CreatureBanksConfig from './json/creature-banks.json';
+import * as MapLocationsConfig from './json/map-locations.json';
 
 type Enum = { [key: string]: number } & { [key: number]: string };
 type NonRevEnum = { [key: string]: string };
@@ -70,6 +71,7 @@ export class DataConfigService {
   public CREATURE_BANKS: Signal<any> = signal(
     this.creatureBanksJsonToData(CreatureBanksConfig.CREATURE_BANKS)
   );
+  public MAP_LOCATIONS: Signal<any> = signal(MapLocationsConfig.MAP_LOCATIONS);
 
   public filterOptions = {
     RANDOM: true,

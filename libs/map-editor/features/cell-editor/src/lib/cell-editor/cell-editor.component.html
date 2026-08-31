@@ -12,12 +12,22 @@
       <option [value]="cube.value">{{cube.name}}</option>
     }
   </select>
-<!--  For single hex placement-->
-  <select name="creaturebank" #creaturebank (change)="selectCreatureBank(creaturebank.value)" [(ngModel)]="selectedCreatureBank">
-    @for(cb of creatureBanks(); track cb) {
-      <option [value]="cb.value">{{ cb.name}}</option>
+<!-- Single field replacement: Creature Banks + Wave 2 map locations -->
+  <div class="field-replacement-row">
+    <select name="fieldReplacement" #fieldReplacement
+            (change)="selectFieldReplacement(fieldReplacement.value)"
+            [(ngModel)]="selectedFieldReplacement">
+      @for(replacement of fieldReplacements(); track replacement.value) {
+        <option [value]="replacement.value">{{ replacement.name }}</option>
+      }
+    </select>
+    @if(selectedFieldReplacement()) {
+      <button type="button"
+      class="replacement-rotate"
+      (click)="rotateFieldReplacement()"
+      title="Rotate field replacement by 60°">↻</button>
     }
-  </select>
+  </div>
 </div>
 <app-cube [id]="selectedCube()"></app-cube>
 <app-portrait [id]="selectedHero()"></app-portrait>

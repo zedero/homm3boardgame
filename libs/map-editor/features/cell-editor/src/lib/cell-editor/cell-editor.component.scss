@@ -40,3 +40,31 @@ app-portrait {
 
   transform: translateX(-50%) translateY(-50%) scale(1.5);
 }
+
+
+.field-replacement-row {
+  display: flex;
+  width: 100%;
+  gap: 2px;
+
+  select {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: auto;
+  }
+
+  .replacement-rotate {
+    box-sizing: border-box;
+    flex: 0 0 30px;
+    width: 30px;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+
+    &:disabled {
+      cursor: default;
+      opacity: 0.35;
+    }
+  }
+}

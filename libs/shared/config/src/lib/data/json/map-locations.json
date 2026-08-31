@@ -1,0 +1,89 @@
+{
+  "MAP_LOCATIONS": {
+    "subterranean-gate-surface": {
+      "id": "subterranean-gate-surface",
+      "img": "assets/map-editor/map-locations/subterranean-gate-surface.png",
+      "desc": "Gate: Surface"
+    },
+    "subterranean-gate-underground": {
+      "id": "subterranean-gate-underground",
+      "img": "assets/map-editor/map-locations/subterranean-gate-underground.png",
+      "desc": "Gate: Subterranean"
+    },
+    "monolith-2w-01a": {
+      "id": "monolith-2w-01a",
+      "img": "assets/map-editor/map-locations/monolith-2w-01a.png",
+      "desc": "Monolith 2W 01A"
+    },
+    "monolith-2w-01b": {
+      "id": "monolith-2w-01b",
+      "img": "assets/map-editor/map-locations/monolith-2w-01b.png",
+      "desc": "Monolith 2W 01B"
+    },
+    "monolith-2w-02a": {
+      "id": "monolith-2w-02a",
+      "img": "assets/map-editor/map-locations/monolith-2w-02a.png",
+      "desc": "Monolith 2W 02A"
+    },
+    "monolith-2w-02b": {
+      "id": "monolith-2w-02b",
+      "img": "assets/map-editor/map-locations/monolith-2w-02b.png",
+      "desc": "Monolith 2W 02B"
+    },
+    "monolith-2w-03a": {
+      "id": "monolith-2w-03a",
+      "img": "assets/map-editor/map-locations/monolith-2w-03a.png",
+      "desc": "Monolith 2W 03A"
+    },
+    "monolith-2w-03b": {
+      "id": "monolith-2w-03b",
+      "img": "assets/map-editor/map-locations/monolith-2w-03b.png",
+      "desc": "Monolith 2W 03B"
+    },
+    "monolith-1w-01-in": {
+      "id": "monolith-1w-01-in",
+      "img": "assets/map-editor/map-locations/monolith-1w-01-in.png",
+      "desc": "Monolith 1W 01 Entrance"
+    },
+    "monolith-1w-01-out": {
+      "id": "monolith-1w-01-out",
+      "img": "assets/map-editor/map-locations/monolith-1w-01-out.png",
+      "desc": "Monolith 1W 01 Exit"
+    },
+    "monolith-1w-02-in": {
+      "id": "monolith-1w-02-in",
+      "img": "assets/map-editor/map-locations/monolith-1w-02-in.png",
+      "desc": "Monolith 1W 02 Entrance"
+    },
+    "monolith-1w-02-out": {
+      "id": "monolith-1w-02-out",
+      "img": "assets/map-editor/map-locations/monolith-1w-02-out.png",
+      "desc": "Monolith 1W 02 Exit"
+    },
+    "monolith-1w-03-in": {
+      "id": "monolith-1w-03-in",
+      "img": "assets/map-editor/map-locations/monolith-1w-03-in.png",
+      "desc": "Monolith 1W 03 Entrance"
+    },
+    "monolith-1w-03-out": {
+      "id": "monolith-1w-03-out",
+      "img": "assets/map-editor/map-locations/monolith-1w-03-out.png",
+      "desc": "Monolith 1W 03 Exit"
+    },
+    "whirlpool-plus1": {
+      "id": "whirlpool-plus1",
+      "img": "assets/map-editor/map-locations/whirlpool-plus1.png",
+      "desc": "Whirlpool +1"
+    },
+    "whirlpool-zero": {
+      "id": "whirlpool-zero",
+      "img": "assets/map-editor/map-locations/whirlpool-zero.png",
+      "desc": "Whirlpool 0"
+    },
+    "whirlpool-minus1": {
+      "id": "whirlpool-minus1",
+      "img": "assets/map-editor/map-locations/whirlpool-minus1.png",
+      "desc": "Whirlpool -1"
+    }
+  }
+}
