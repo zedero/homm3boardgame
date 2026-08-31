@@ -68,15 +68,16 @@ export class CellEditorComponent implements OnInit, OnDestroy {
     { value: '11', name: 'Cove cube' },
   ]);
 
-  creatureBanks: WritableSignal<any[]> = signal([
-    { value: '0', name: '- No Creature Bank -' },
+  fieldReplacements: WritableSignal<any[]> = signal([
+    { value: '', name: '- No Field Replacement -' },
   ]);
-  selectedCreatureBank: WritableSignal<string> = signal('');
+  selectedFieldReplacement: WritableSignal<string> = signal('');
+  selectedFieldReplacementRotation: WritableSignal<number> = signal(0);
 
   constructor() {
     this.factions.set(Object.keys(this.configService.FACTIONS()));
     this.createHeroesSelect();
-    this.createCreatureBankSelect();
+    this.createFieldReplacementSelect();
     this.blockedHex = computed(() => {
       return (
         this.signalStore.selectTileByGuid(this.tileGuid())?.blockedHex?.[
@@ -91,7 +92,14 @@ export class CellEditorComponent implements OnInit, OnDestroy {
     this.tileData.set(data);
     this.selectedCube.set(this.tileData().cubes[this.index()]);
     this.selectedHero.set(this.tileData().hero[this.index()]);
-    this.selectedCreatureBank.set(this.tileData().creaturebanks[this.index()]);
+    const cb = this.tileData().creaturebanks[this.index()];
+    const location = this.tileData().mapLocations?.[this.index()] ?? '';
+    this.selectedFieldReplacement.set(
+      cb ? `cb:${cb}` : location ? `location:${location}` : ''
+    );
+    this.selectedFieldReplacementRotation.set(
+      this.tileData().fieldReplacementRotations?.[this.index()] ?? 0
+    );
   }
 
   createHeroesSelect() {
@@ -119,18 +127,30 @@ export class CellEditorComponent implements OnInit, OnDestroy {
     this.heroes.set(heroes);
   }
 
-  createCreatureBankSelect() {
-    let banks = Object.entries(this.configService.CREATURE_BANKS()).map(
+  createFieldReplacementSelect() {
+    const banks = Object.entries(this.configService.CREATURE_BANKS()).map(
       ([key, val]: any) => {
         return {
-          value: key,
-          name: val.desc,
+          value: `cb:${key}`,
+          name: `[CB] ${val.desc}`,
         };
       }
     );
 
-    banks.unshift({ value: '', name: '- No CB (Creature Bank) -' });
-    this.creatureBanks.set(banks);
+    const locations = Object.entries(this.configService.MAP_LOCATIONS()).map(
+      ([key, val]: any) => {
+        return {
+          value: `location:${key}`,
+          name: `[Map] ${val.desc}`,
+        };
+      }
+    );
+
+    this.fieldReplacements.set([
+      { value: '', name: '- No Field Replacement -' },
+      ...banks,
+      ...locations,
+    ]);
   }
 
   selectCube(_cube: string) {
@@ -159,17 +179,67 @@ export class CellEditorComponent implements OnInit, OnDestroy {
     });
   }
 
-  selectCreatureBank(cb: string) {
+  selectFieldReplacement(value: string) {
     const tile = this.signalStore.selectTileByGuid(this.tileGuid()) as Tile;
+
+    const creatureBank = value.startsWith('cb:') ? value.substring(3) : '';
+    const mapLocation = value.startsWith('location:')
+      ? value.substring('location:'.length)
+      : '';
+
     this.signalStore.updateTile({
       ...tile,
       creaturebanks: tile.creaturebanks.map((h, i) => {
         if (i === this.index()) {
-          return cb;
+          return creatureBank;
         }
         return h;
       }) as TileHexArray<string>,
+      mapLocations: tile.mapLocations.map((h, i) => {
+        if (i === this.index()) {
+          return mapLocation;
+        }
+        return h;
+      }) as TileHexArray<string>,
+      fieldReplacementRotations: tile.fieldReplacementRotations.map((r, i) => {
+        if (i === this.index()) {
+          return 0;
+        }
+        return r;
+      }) as TileHexArray<number>,
+      blockedHex: value
+        ? tile.blockedHex.map((h, i) => {
+            if (i === this.index()) {
+              return false;
+            }
+            return h;
+          }) as TileHexArray<boolean>
+        : tile.blockedHex,
     });
+
+    this.selectedFieldReplacementRotation.set(0);
+  }
+
+  rotateFieldReplacement() {
+    if (!this.selectedFieldReplacement()) {
+      return;
+    }
+
+    const tile = this.signalStore.selectTileByGuid(this.tileGuid()) as Tile;
+    const current = tile.fieldReplacementRotations[this.index()] ?? 0;
+    const next = (current + 1) % 6;
+
+    this.signalStore.updateTile({
+      ...tile,
+      fieldReplacementRotations: tile.fieldReplacementRotations.map((r, i) => {
+        if (i === this.index()) {
+          return next;
+        }
+        return r;
+      }) as TileHexArray<number>,
+    });
+
+    this.selectedFieldReplacementRotation.set(next);
   }
 
   setBlockedState(state: boolean) {
@@ -182,7 +252,36 @@ export class CellEditorComponent implements OnInit, OnDestroy {
         }
         return h;
       }) as TileHexArray<boolean>,
+      creaturebanks: state
+        ? tile.creaturebanks.map((h, i) => {
+            if (i === this.index()) {
+              return '';
+            }
+            return h;
+          }) as TileHexArray<string>
+        : tile.creaturebanks,
+      mapLocations: state
+        ? tile.mapLocations.map((h, i) => {
+            if (i === this.index()) {
+              return '';
+            }
+            return h;
+          }) as TileHexArray<string>
+        : tile.mapLocations,
+      fieldReplacementRotations: state
+        ? tile.fieldReplacementRotations.map((r, i) => {
+            if (i === this.index()) {
+              return 0;
+            }
+            return r;
+          }) as TileHexArray<number>
+        : tile.fieldReplacementRotations,
     });
+
+    if (state) {
+      this.selectedFieldReplacement.set('');
+      this.selectedFieldReplacementRotation.set(0);
+    }
   }
 
   getFactionDesc(faction: string) {

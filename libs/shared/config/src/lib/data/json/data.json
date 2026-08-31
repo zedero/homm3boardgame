@@ -9,7 +9,13 @@
     "SWAMP",
     "LAVA",
     "UNDERGROUND",
-    "WATER"
+    "WATER",
+    "ROUGH",
+    "HIGHLANDS",
+    "ELEMENTAL_FIRE",
+    "ELEMENTAL_WATER",
+    "ELEMENTAL_AIR",
+    "ELEMENTAL_EARTH"
   ],
   "GROUP": [
     "RANDOM",
@@ -61,7 +67,7 @@
     "TOWER": {
       "TOWN": 1,
       "FAR": 10,
-      "NEAR": 2,
+      "NEAR": 3,
       "CENTER": 1,
       "SUBTERRANEAN": 0,
       "WATER": 0
@@ -111,13 +117,13 @@
       "FAR": 3,
       "NEAR": 1,
       "CENTER": 0,
-      "SUBTERRANEAN": 7,
+      "SUBTERRANEAN": 0,
       "WATER": 7
     },
     "SG2": {
-      "TOWN": 1,
+      "TOWN": 0,
       "FAR": 3,
-      "NEAR": 1,
+      "NEAR": 0,
       "CENTER": 0,
       "SUBTERRANEAN": 6,
       "WATER": 6

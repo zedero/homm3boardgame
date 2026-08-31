@@ -1,0 +1,16 @@
+:host {
+  display: block;
+  width: 150px;
+  height: 150px;
+}
+
+.map-location,
+.map-location img {
+  display: block;
+  width: 150px;
+  height: 150px;
+}
+
+.map-location img {
+  object-fit: contain;
+}

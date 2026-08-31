@@ -64,53 +64,138 @@ export class TileMapService {
   isValid() {
     const tileList = this.signalStore.tileList();
     const walkable = this.generateWalkableCellsList(tileList);
+
     if (!tileList.length) {
-      console.log('EMPTY LIST');
       return true;
     }
-    const start = tileList[0].row + '.' + tileList[0].col;
 
-    const frontier: any = [];
-    frontier.push(start);
-    const reached = new Set();
-    reached.add(start);
+    const teleportLinks = this.generateTeleportLinks(tileList);
+    const start = tileList[0].row + '.' + tileList[0].col;
+    const frontier: string[] = [start];
+    const reached = new Set<string>([start]);
 
     while (frontier.length > 0) {
-      const current = frontier.shift();
-      const pos = current.split('.').map((a: any) => {
-        return Number(a);
-      });
+      const current = frontier.shift() as string;
+      const pos = current.split('.').map((a: string) => Number(a));
       const row = pos[0];
       const col = pos[1];
-      // console.log(row, col, this.getCellNeighbours(row, col));
-      this.getCellNeighbours(row, col).forEach((next: any) => {
+
+      const normalNeighbours = this.getCellNeighbours(row, col);
+      const teleportNeighbours = [...(teleportLinks.get(current) ?? [])];
+
+      [...normalNeighbours, ...teleportNeighbours].forEach((next: string) => {
         if (!reached.has(next) && walkable.has(next)) {
           frontier.push(next);
           reached.add(next);
         }
       });
     }
+
     return reached.size === walkable.size;
   }
 
   generateWalkableCellsList(tileList: Tile[]) {
-    const walkableCells = new Set();
+    const walkableCells = new Set<string>();
+
+    // Cell layout inside one physical tile:
+    //       0   1
+    //     2   3   4
+    //       5   6
+    //
+    // Six-value legacy blocked arrays are clockwise, beginning at upper-right.
+    // Seven-value Sea/Subterranean arrays are field-index based.
+    const EDGE_CELL_INDEX_BY_SIDE = [1, 4, 6, 5, 2, 0];
+
     tileList.forEach((tile) => {
-      let blockedList = this.config.TILES()[tile.tileId]?.blocked;
-      if (!blockedList) {
-        return;
-      }
-      // double the list for easier cell rotation calculation
-      blockedList = [...blockedList, ...blockedList];
+      const rawBlocked = this.config.TILES()[tile.tileId]?.blocked ?? [];
+      const staticBlockedBySide =
+        rawBlocked.length === 7
+          ? EDGE_CELL_INDEX_BY_SIDE.map((cellIndex) => !!rawBlocked[cellIndex])
+          : Array.from({ length: 6 }, (_, index) => !!rawBlocked[index]);
+
       const cells = this.getCellNeighbours(tile.row, tile.col);
       walkableCells.add(tile.row + '.' + tile.col);
-      cells.forEach((cell: any, index: number) => {
-        if (!blockedList[index + 6 - tile.rotation]) {
+
+      cells.forEach((cell: string, worldSideIndex: number) => {
+        const localSideIndex = (worldSideIndex + 6 - tile.rotation) % 6;
+        const fieldIndex = EDGE_CELL_INDEX_BY_SIDE[localSideIndex];
+
+        const hasReplacement =
+          !!tile.creaturebanks?.[fieldIndex] ||
+          !!tile.mapLocations?.[fieldIndex];
+        const manuallyBlocked = !!tile.blockedHex?.[fieldIndex];
+        const staticallyBlocked = staticBlockedBySide[localSideIndex];
+
+        // For structural map validity, a replacement supersedes the printed or
+        // manually blocked field at that edge.
+        if (hasReplacement || (!staticallyBlocked && !manuallyBlocked)) {
           walkableCells.add(cell);
         }
       });
     });
+
     return walkableCells;
+  }
+
+  generateTeleportLinks(tileList: Tile[]) {
+    const links = new Map<string, Set<string>>();
+    const groups = new Map<string, Set<string>>();
+
+    const addToGroup = (group: string, tile: Tile) => {
+      if (!groups.has(group)) {
+        groups.set(group, new Set<string>());
+      }
+      groups.get(group)?.add(tile.row + '.' + tile.col);
+    };
+
+    tileList.forEach((tile) => {
+      (tile.mapLocations ?? []).forEach((location) => {
+        if (!location) {
+          return;
+        }
+
+        const twoWay = location.match(/^monolith-2w-(\d{2})[ab]$/);
+        if (twoWay) {
+          addToGroup(`monolith-2w-${twoWay[1]}`, tile);
+          return;
+        }
+
+        const oneWay = location.match(/^monolith-1w-(\d{2})-(?:in|out)$/);
+        if (oneWay) {
+          // isValid() is a structural connectivity check. Because its start tile
+          // is arbitrary, one-way pairs are treated as weak/undirected links here.
+          addToGroup(`monolith-1w-${oneWay[1]}`, tile);
+          return;
+        }
+
+        if (location.startsWith('whirlpool-')) {
+          // Every Whirlpool can lead to another Whirlpool; the die determines
+          // which target is used during actual play.
+          addToGroup('whirlpool-network', tile);
+        }
+      });
+    });
+
+    const addLink = (from: string, to: string) => {
+      if (from === to) {
+        return;
+      }
+      if (!links.has(from)) {
+        links.set(from, new Set<string>());
+      }
+      links.get(from)?.add(to);
+    };
+
+    groups.forEach((positions) => {
+      const nodes = [...positions];
+      for (const from of nodes) {
+        for (const to of nodes) {
+          addLink(from, to);
+        }
+      }
+    });
+
+    return links;
   }
 
   getCellNeighbours(row: number, col: number) {

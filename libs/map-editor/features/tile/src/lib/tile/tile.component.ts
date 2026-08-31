@@ -19,6 +19,7 @@ import { BlockedHexComponent } from '../../../../../ui/blocked-hex/blocked-hex.c
 import { Store } from '@ngrx/store';
 import { domainEventActions } from '@homm3boardgame/domain/state';
 import { CreatureBankComponent } from '../../../../../ui/creature-bank/creature-bank.component';
+import { MapLocationComponent } from '../../../../../ui/map-location/map-location.component';
 
 @Component({
   selector: 'feature-tile',
@@ -30,6 +31,7 @@ import { CreatureBankComponent } from '../../../../../ui/creature-bank/creature-
     PortraitComponent,
     BlockedHexComponent,
     CreatureBankComponent,
+    MapLocationComponent,
   ],
   templateUrl: './tile.component.html',
   styleUrl: './tile.component.scss',

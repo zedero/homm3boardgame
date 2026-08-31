@@ -9,6 +9,8 @@ import { CommonModule } from '@angular/common';
 })
 export class CreatureBankComponent {
   id = input.required<string>();
+  rotation = input<number>(0);
+  protected rotate = computed(() => this.rotation() * 60 + 'deg');
 
   visible = computed(() => {
     return this.id() !== '';
