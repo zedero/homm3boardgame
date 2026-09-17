@@ -54,6 +54,24 @@
       "group": "GROUP.RANDOM",
       "blocked": [0,0,0,0,0,0,0]
     },
+    "NU0": {
+      "id": "NU0",
+      "img": "assets/map-editor/tiles/special/random-4-5-subterranean.png",
+      "desc": "Random Near Subterranean Tile",
+      "expansionID": "EXPANSION.RANDOM",
+      "groundType": "GROUNDTYPE.SUBTERRAIN",
+      "group": "GROUP.RANDOM",
+      "blocked": [0,0,0,0,0,0,0]
+    },
+    "CU0": {
+      "id": "CU0",
+      "img": "assets/map-editor/tiles/special/random-6-7-subterranean.png",
+      "desc": "Random Center Subterranean Tile",
+      "expansionID": "EXPANSION.RANDOM",
+      "groundType": "GROUNDTYPE.SUBTERRAIN",
+      "group": "GROUP.RANDOM",
+      "blocked": [0,0,0,0,0,0,0]
+    },
     "PLACEHOLDER": {
       "id": "PLACEHOLDER",
       "img": "assets/map-editor/tiles/special/placeholder-debug.png",

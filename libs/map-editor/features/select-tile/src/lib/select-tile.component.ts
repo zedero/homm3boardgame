@@ -168,6 +168,9 @@ export class SelectTileComponent {
       if (this.config.GROUP()[groupId] === this.config.GROUP()['CENTER']) {
         totals.CENTER--;
       }
+      if (this.config.GROUP()[groupId] === this.config.GROUP()['SUBTERRANEAN']) {
+        totals.SUBTERRANEAN--;
+      }
       if (this.config.GROUP()[groupId] === this.config.GROUP()['RANDOM']) {
         if (tile.tileId === 'S0') {
           totals.TOWN--;
@@ -180,6 +183,9 @@ export class SelectTileComponent {
         }
         if (tile.tileId === 'C0') {
           totals.CENTER--;
+        }
+        if (tile.tileId === 'NU0' || tile.tileId === 'CU0') {
+          totals.SUBTERRANEAN--;
         }
       }
     });
@@ -219,6 +225,12 @@ export class SelectTileComponent {
             return true;
           }
           if (item.id === 'CW0' && left.CENTER > 0) {
+            return true;
+          }
+          if (item.id === 'NU0' && left.SUBTERRANEAN > 0) {
+            return true;
+          }
+          if (item.id === 'CU0' && left.SUBTERRANEAN > 0) {
             return true;
           }
           return false;
