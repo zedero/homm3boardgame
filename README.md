@@ -17,5 +17,7 @@ Here are some projects within the homm3bg community that are definitely worth a 
 
 - [Rulebook Rewrite Project](https://github.com/Heegu-sama/Homm3BG)
 - [Fan-Made Mission Book](https://github.com/qwrtln/Homm3BG-mission-book)
-- [Board Game Cards Databse](https://github.com/Mirzipan/Homm3_BG_Database)
+- [Game Wiki](https://github.com/Mirzipan/Homm3_BG_Database)
 - [Factory Rule Book](https://github.com/piotrbruzda/Homm3BG-FactoryRulebook)
+- [Hero Creator](https://github.com/K-Adam/Homm3_hero_creator)
+- [Music Companion PWA](https://github.com/ExeVirus/h3omm_bgm)
